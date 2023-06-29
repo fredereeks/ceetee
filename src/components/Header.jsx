@@ -58,19 +58,19 @@ function Header(){
 
     return (
         <header ref={header} className={`bg-white z-[999] p-2 fixed ${fixed ? 'shadow-md shadow-cyan-100' : 'shadow-none'} w-full left-0 top-0`}>
-            <div className="container mx-w-[960px] mx-auto flex justify-between items-center md:gap-3">
+            <div className="container max-w-[960px] mx-auto flex justify-between items-center md:gap-3">
                 <div className="md:width-[500px] flex flex-start ">
                     <Link to="/" className='w-[70px] h-[50px] mt-2 text-gray-100'>
                         <img src={logo} alt="CTTI Logo" className="w-full h-[50px] object-contain sm:object-contain" />
                     </Link>
                 </div>
-                <nav ref={navRef}  style={{left: '0 !important'}} className={` flex-1 flex flex-col md:flex-row md:justify-between absolute md:relative shadow-md transition-all duration-300 ${navshow ? 'left-0 top-full z-50' : 'left-[110%] md:left-0 z-0 top-full'} md:top-0 w-screen md:w-max md:shadow-none bg-white md:mx-0`}>
+                <nav ref={navRef}  style={{left: '0 !important'}} className={` flex-1 flex flex-col md:flex-row md:justify-center absolute md:relative shadow-md transition-all duration-300 ${navshow ? 'left-0 top-full z-50' : 'left-[110%] md:left-0 z-0 top-full'} md:top-0 w-screen md:w-max md:shadow-none bg-white md:mx-0`}>
                     <ul className="list-style-none flex flex-col md:flex-1 md:flex-row md:gap-4">
                         {
                             headerLinks.map((link) => <LinkCard key={link.id} {...link} dropdown={dropdowns[link.title.toLowerCase()]} onClick={toggleDropdown} />)
                         }
                     </ul>
-                    <div className="flex flex-col justify-center pt-1 h-full w-full md:w-max md:flex-row md:gap-3">
+                    <div className="md:ml-auto flex flex-col justify-center pt-1 h-full w-full md:w-max md:flex-row md:gap-3">
                         <Link to="/login" className="text-sm grid place-items-center md:border-[1px] md:border-indigo-400 text-indigo-400 md:rounded-md h-10 md:h-8 w-full md:w-max px-2 md:px-4 relative">Login
                         </Link>
                         <Link to="/signup" className="text-sm grid place-items-center text-white bg-indigo-400 md:rounded-md h-10 md:h-8 w-full md:w-max px-2 md:px-4 relative">Signup
