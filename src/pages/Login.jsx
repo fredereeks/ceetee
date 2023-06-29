@@ -1,6 +1,6 @@
 import React, {useEffect, useState, useRef} from 'react'
 import { rocket } from '../assets/images'
-// import axios from 'axios'
+import axios from 'axios'
 import {Button} from '../components/Button'
 import {TextInput} from '../components/TextInput'
 import { Link } from 'react-router-dom'
@@ -31,9 +31,9 @@ function Login(){
             setLoading(true)
             setError(undefined)
             setSuccess("")
-            // const res = await axios.post(`http://localhost:4119/api/auth/login`, inputs)
+            const res = await axios.post(`http://localhost:4119/api/auth/login`, inputs)
+            setSuccess(res.data)
             formRef.current.reset();
-            // setSuccess(res.data)
         }catch(err){
             console.log({err})
             setError(err.message)

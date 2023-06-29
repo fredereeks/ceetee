@@ -38,6 +38,7 @@ function Header(){
             setFixed(false);
             window.scrollTo(0,0)
             setNavShow(false);
+            setDropdowns({ about: false, courses: false, solutions: false, resources: false,})
         }
     },[location])
 
@@ -57,15 +58,15 @@ function Header(){
     },[dropdowns, navshow]) */
 
     return (
-        <header ref={header} className={`bg-white z-[999] p-2 fixed ${fixed ? 'shadow-md shadow-cyan-100' : 'shadow-none'} w-full left-0 top-0`}>
+        <header ref={header} className={`bg-white z-[999] p-2 fixed ${fixed ? 'shadow-md shadow-slate-200' : 'shadow-none'} w-full left-0 top-0`}>
             <div className="container max-w-[960px] mx-auto flex justify-between items-center md:gap-3">
-                <div className="md:width-[500px] flex flex-start ">
-                    <Link to="/" className='w-[70px] h-[50px] mt-2 text-gray-100'>
+                <div className="md:width-[600px] flex flex-start">
+                    <Link to="/" className='w-[70px] h-[50px] mt-0 text-gray-100'>
                         <img src={logo} alt="CTTI Logo" className="w-full h-[50px] object-contain sm:object-contain" />
                     </Link>
                 </div>
-                <nav ref={navRef}  style={{left: '0 !important'}} className={` flex-1 flex flex-col md:flex-row md:justify-center absolute md:relative shadow-md transition-all duration-300 ${navshow ? 'left-0 top-full z-50' : 'left-[110%] md:left-0 z-0 top-full'} md:top-0 w-screen md:w-max md:shadow-none bg-white md:mx-0`}>
-                    <ul className="list-style-none flex flex-col md:flex-1 md:flex-row md:gap-4">
+                <nav ref={navRef}  style={{left: '0 !important'}} className={`flex-1 sm:flex-4 flex flex-col md:flex-row md:justify-center md:pl-[6rem] absolute md:relative shadow-md transition-all duration-300 ${navshow ? 'left-0 top-full z-50' : 'left-[110%] md:left-0 z-0 top-full'} md:top-0 w-screen md:w-max md:shadow-none bg-white md:mx-0`}>
+                    <ul className="list-style-none mx-auto flex flex-col md:flex-1 md:flex-row gap-2">
                         {
                             headerLinks.map((link) => <LinkCard key={link.id} {...link} dropdown={dropdowns[link.title.toLowerCase()]} onClick={toggleDropdown} />)
                         }

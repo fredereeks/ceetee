@@ -12,6 +12,34 @@
     .rounded-base{
         border-radius: 3px;
     }
+    .fancy-bg{
+        position: relative;
+        overflow: hidden;
+    }
+    .fancy-bg::before{
+        content: '';
+        position: absolute;
+        height: 20rem;
+        width: 20rem;
+        border-radius: 50%;
+        opacity: .7;
+        background: linear-gradient(aqua, #09dba0);
+        top: -20%;
+        left: -5rem;
+        z-index: 0;
+    }
+    .fancy-bg::after{
+        content: '';
+        position: absolute;
+        height: 30rem;
+        width: 30rem;
+        border-radius: 50%;
+        opacity: .7;
+        background: linear-gradient(orange, #fac451);
+        top: 80%;
+        right: -5rem;
+        z-index: 0;
+    }
     .fadeOut{
         animation: skeleton 1s ease-in-out infinite alternate;
     }
