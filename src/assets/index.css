@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer{
+    .diff{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .shad{
+        box-shadow: 4px 4px 16px 6px #0001;
+    }
+    .rounded-base{
+        border-radius: 3px;
+    }
+    .fadeOut{
+        animation: skeleton 1s ease-in-out infinite alternate;
+    }
+    @keyframes skeleton {
+        to{
+            opacity: 0.5;
+        }
+    }
+}

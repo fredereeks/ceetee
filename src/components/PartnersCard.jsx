@@ -1,0 +1,17 @@
+import React from 'react'
+
+function PartnersCard({background, image, title, text, direction}) {
+  return (
+    <aside className={`group py-8 flex flex-col gap-3 md:gap-5 md:items-center ${direction ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+        <div className="relative h-[100px] md:h-full w-[100px] md:flex-1 flex-shrink-0 group-hover:shad bg-white rounded-md">
+            <img src={image} alt="title" className="h-full w-full object-contain" />
+        </div>
+        <div className="flex flex-col gap-2 p-4 flex-1 md:flex-2">
+            <h4 className={`text-md md:text-lg text-transparent font-bold ${background}`}>{title}</h4>
+            <p className="text-slate-400 text-md md:text-base leading-loose py-2 pr-2">{text}</p>
+        </div>
+    </aside>
+  )
+}
+
+export default PartnersCard
