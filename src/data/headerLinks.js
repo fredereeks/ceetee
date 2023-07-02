@@ -50,77 +50,77 @@ export const headerLinks = [
         sublinks: [
             {
                 id: 1130,
-                link: "/career-development-course",
+                link: "/courses/career-development-course",
                 title: "Career Development Courses"
             },
             {
                 id: 1131,
-                link: "/agile-and-scrum",
+                link: "/courses/agile-and-scrum",
                 title: "Agile and Scrum"
             },
             {
                 id: 1132,
-                link: "/business-applications",
+                link: "/courses/business-applications",
                 title: "Business Applications"
             },
             {
                 id: 1133,
-                link: "/it-infrastructure",
+                link: "/courses/it-infrastructure",
                 title: "IT Infrastructure"
             },
             {
                 id: 1134,
-                link: "/cybersecurity",
+                link: "/courses/cybersecurity",
                 title: "Cybersecurity"
             },
             {
                 id: 1135,
-                link: "/web-development",
+                link: "/courses/web-development",
                 title: "Web Development"
             },
             {
                 id: 1136,
-                link: "/software-development",
+                link: "/courses/software-development",
                 title: "Software Development"
             },
             {
                 id: 1137,
-                link: "/office-applications",
+                link: "/courses/office-applications",
                 title: "Office Applications"
             },
             {
                 id: 1138,
-                link: "/data-analytics-and-ai",
+                link: "/courses/data-analytics-and-ai",
                 title: "Data Analytics and AI"
             },
             {
                 id: 1139,
-                link: "/cloud-computing",
+                link: "/courses/cloud-computing",
                 title: "Cloud Computing"
             },
             {
                 id: 1140,
-                link: "/it-service-management",
+                link: "/courses/it-service-management",
                 title: "IT Service Management"
             },
             {
                 id: 1141,
-                link: "/project-management",
+                link: "/courses/project-management",
                 title: "Project Management"
             },
             {
                 id: 1142,
-                link: "/cerfitications",
+                link: "/courses/cerfitications",
                 title: "Cerfitications"
             },
             {
                 id: 1143,
-                link: "/vendors",
+                link: "/courses/vendors",
                 title: "Vendors"
             },
             {
                 id: 1144,
-                link: "/courses-schedule",
+                link: "/courses/courses-schedule",
                 title: "Courses Schedule"
             },
         ]

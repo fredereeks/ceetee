@@ -8,6 +8,9 @@ import Header from './components/Header'
 const About = lazy(() => import ('./pages/About'))
 const BlogPage = lazy(() => import ('./pages/BlogPage'))
 const Contact = lazy(() => import ('./pages/Contact'))
+const Course = lazy(() => import ('./pages/Course'))
+const CourseSingle = lazy(() => import ('./pages/CourseSingle'))
+const CoursesPage = lazy(() => import ('./pages/CoursesPage'))
 const Error = lazy(() => import ('./pages/Error'))
 const Login = lazy(() => import ('./pages/Login'))
 const News = lazy(() => import ('./pages/News'))
@@ -51,6 +54,18 @@ function App() {
         {
           path: "/contact",
           element: <Contact />
+        },
+        {
+          path: "/courses/:coursename",
+          element: <Course />
+        },
+        {
+          path: "/course/:coursename/:id",
+          element: <CourseSingle />
+        },
+        {
+          path: "/courses",
+          element: <CoursesPage />
         },
         {
           path: "/login",

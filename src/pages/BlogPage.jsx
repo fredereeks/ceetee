@@ -21,7 +21,7 @@ function BlogPage(){
                         <div className="flex flex-col flex-3 md:flex-row md:gap-2 justify-center py-5 px-3">
                             {
                                loading ? "Loading..." : data?.results?.map((user => {
-                                    return(<BlogCard  key={user.id.value} {...user}/>)
+                                    return(<BlogCard  key={user?.id} {...user}/>)
                                 }))
                             }
                         </div>

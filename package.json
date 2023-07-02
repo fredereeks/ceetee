@@ -37,7 +37,7 @@
     ]
   },
   "homepage": ".",
-  "proxy": "http://localhost:4119",
+  "proxy": "http://localhost:4119/api",
   "browserslist": {
     "production": [
       ">0.2%",

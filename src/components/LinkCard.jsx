@@ -26,7 +26,7 @@ const LinkCard = ({title, link, sublinks, onClick, dropdown}) => {
                 </div>
                 <ul className={`transition-all duration-300 relative md:absolute z-[888] overflow-hidden top-full left-0 border-0 border-t-2 w-full md:min-w-[15rem] md:max-w-[25rem] md:shadow-md ${dropdown ? 'border-indigo-200 max-h-max' : 'border-t-transparent max-h-0'}  flex-col bg-white`}>
                 {sublinks.map(({id,link,title}) => (
-                    <li className={`relative`}>
+                    <li key={id} className={`relative`}>
                         <Link to={link} key={id} className={`text-sm py-2 px-3 text-slate-500 hover:text-white hover:bg-cyan-400 md:hover:bg-transparent md:hover:text-slate-600 flex gap-1 items-center`}>{title}</Link>
                     </li>
                 ))}
