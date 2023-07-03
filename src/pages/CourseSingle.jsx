@@ -9,15 +9,14 @@ import { IoMdCart, IoMdGift } from 'react-icons/io'
 function CourseSingle() {
   const location = useLocation();
   const {state} = location;
-  console.log({state})
 
   useEffect(() => {
     document.title = `CTTI e-learning Centre: ${state?.title}`;
 },[location.pathname, state?.title])
   return (
-    <main  className='flex flex-col bg-gray-100 pt-20 justify-center'>
+    <main  className='flex flex-col bg-gray-100 pt-8 justify-center'>
       <div className="container relative mx-auto max-w-[980px] px-4 flex flex-col">
-        <div className="flex flex-wrap gap-2 items-center pt-5 pb-7">
+        <div className="flex flex-wrap gap-2 items-center pt-5 pb-7 text-slate-400">
           <Link to="/" className="font-bold hover:text-slate-500 px-2 text-md md:text-lg text-slate-600  ">Home</Link>
           /
           <Link to="/courses" className="font-bold hover:text-slate-500 px-2 text-md md:text-lg text-slate-600  ">Courses</Link>
@@ -37,13 +36,13 @@ function CourseSingle() {
                   <div className="flex flex-col gap-1 bottom-5 right-4 absolute z-20">
                     <p className="text-white text-xs md:text-sm">{(state?.rating * 1000).toLocaleString()} reviews</p>
                     <div className="flex gap-1 items-center">
-                      {new Array(4).fill(randomNumber(2,100)+Math.random()).map(item => <FaStar className='text-xs text-yellow-500' key={item}/>)} 
+                      {new Array(4).fill(randomNumber(2,100)+randomNumber(4,121)).map(item => <FaStar className='text-xs text-yellow-500' key={item}/>)} 
                       <FaStarHalfAlt className='text-xs text-yellow-500' key={Math.random().toString()}/>
                     </div>
                   </div>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <h3 className="text-2xl text-3xl text-thin text-slate-700 capitalize">{state?.title}</h3>
+                  <h3 className="text-2xl text-3xl text-thin text-slate-800 capitalize">{state?.title}</h3>
                   <div className="flex flex-col gap-4">
                     <p className="text-slate-500 leading-loose text-sm">Tempora, quisquam voluptas? Laboriosam nulla ipsum officia quos? Veritatis eius cupiditate perferendis? Dolorem incidunt obcaecati illum minus neque. </p>
                     {/* <p className="text-slate-500 leading-loose text-sm">Mollitia, voluptates fugiat aperiam deleniti, ex ut corrupti? Quae deleniti reprehenderit iusto sit et nisi cumque delectus quaerat laborum repellendus error tempora, quisquam voluptas? Laboriosam nulla ipsum officia quos? Veritatis eius cupiditate perferendis? Dolorem incidunt obcaecati illum minus neque. Provident odit repudiandae magni sunt, sapiente culpa quod laborum et error porro, aspernatur perspiciatis voluptates officia cum at illum fugit nostrum. Quis neque nisi magni illo. Dolore voluptas tempora minus numquam repudiandae?</p> */}
@@ -52,7 +51,7 @@ function CourseSingle() {
               </aside>
               <aside className="col-span-1 md:col-span-2 flex flex-col gap-3 md:px-4">
                 <div className="flex flex-col gap-2">
-                  <h3 className="text-xl md:text-2xl text-gray-500">&#8358;{(state?.price).toLocaleString()}</h3>
+                  <h3 className="text-xl md:text-2xl text-gray-500 text-slate-800">&#8358;{(state?.price).toLocaleString()}</h3>
                   <div className="flex gap-2">
                     <Link className="flex-1 w-[3rem] bg-indigo-500 p-3 rounded-lg flex items-center justify-center gap-2">
                         <IoMdCart className='text-sm md:text-md text-white'/>
@@ -64,17 +63,17 @@ function CourseSingle() {
                     </Link>
                   </div>
                   <div className="flex flex-col gap-2">
-                    <p className="text-lg md:text-xl pt-2 text-thin text-slate-700">Prerequisite</p>
+                    <p className="text-lg md:text-xl pt-2 text-thin text-slate-800">Prerequisite</p>
                     <div className="flex flex-col bg-gray-100 rounded-md p-4">
-                      <p className="text-slate-700 py-1 leading-loose text-sm flex items-center gap-2 border-0 border-b-[1px] border-b-slate-300"><FaCheck className='bg-green-400 text-white h-[15px] w-[15px] text-xs p-1 grid place-items-center rounded-full' /> Basic Computer Appreciation</p>
-                      <p className="text-slate-700 py-1 leading-loose text-sm flex items-center gap-2 border-0 border-b-[1px] border-b-slate-300"><FaCheck className='bg-green-400 text-white h-[15px] w-[15px] text-xs p-1 grid place-items-center rounded-full' /> Quality Laptop</p>
-                      <p className="text-slate-700 py-1 leading-loose text-sm flex items-center gap-2 border-0 border-b-[1px] border-b-slate-300"><FaCheck className='bg-green-400 text-white h-[15px] w-[15px] text-xs p-1 grid place-items-center rounded-full' /> Optimum Dedication and Concentration</p>
+                      <p className="text-slate-800 py-1 leading-loose text-sm flex items-center gap-2 border-0 border-b-[1px] border-b-slate-300"><FaCheck className='bg-green-400 text-white h-[15px] w-[15px] text-xs p-1 grid place-items-center rounded-full' /> Basic Computer Appreciation</p>
+                      <p className="text-slate-800 py-1 leading-loose text-sm flex items-center gap-2 border-0 border-b-[1px] border-b-slate-300"><FaCheck className='bg-green-400 text-white h-[15px] w-[15px] text-xs p-1 grid place-items-center rounded-full' /> Quality Laptop</p>
+                      <p className="text-slate-800 py-1 leading-loose text-sm flex items-center gap-2"><FaCheck className='bg-green-400 text-white h-[15px] w-[15px] text-xs p-1 grid place-items-center rounded-full' /> Optimum Dedication and Concentration</p>
                     </div>
-                    <p className="text-lg md:text-xl pt-2 text-thin text-slate-700">Course Table of Contents</p>
+                    <p className="text-lg md:text-xl pt-2 text-thin text-slate-800">Course Table of Contents</p>
                     <div className="flex flex-col bg-gray-100 rounded-md p-4">
-                      <p className="text-slate-700 p-1 leading-loose text-sm flex justify-between border-0 border-b-[1px] border-b-slate-300">Introduction <span className="ml-auto">+</span></p>
-                      <p className="text-slate-700 p-1 leading-loose text-sm flex justify-between border-0 border-b-[1px] border-b-slate-300">Getting Started <span className="ml-auto">x</span></p>
-                      <p className="text-slate-700 p-1 leading-loose text-sm flex justify-between border-0 border-b-[1px] border-b-slate-300">Packages to Learn <span className="ml-auto">+</span></p>
+                      <p className="text-slate-800 p-1 leading-loose text-sm flex justify-between border-0 border-b-[1px] border-b-slate-300">Introduction <span className="ml-auto">+</span></p>
+                      <p className="text-slate-800 p-1 leading-loose text-sm flex justify-between border-0 border-b-[1px] border-b-slate-300">Getting Started <span className="ml-auto">x</span></p>
+                      <p className="text-slate-800 p-1 leading-loose text-sm flex justify-between">Packages to Learn <span className="ml-auto">+</span></p>
                     </div>
                   </div>
                 </div>

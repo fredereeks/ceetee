@@ -58,10 +58,10 @@ function Header(){
     },[dropdowns, navshow]) */
 
     return (
-        <header ref={header} className={`bg-white z-[999] p-2 fixed ${fixed ? 'shadow-md shadow-slate-200' : 'shadow-none'} w-full left-0 top-0`}>
+        <header ref={header} className={`bg-white z-[999] p-2 fixed ${fixed ? 'shadow-md shadow-gray-400' : 'shadow-none'} w-full left-0 top-0`}>
             <div className="container max-w-[960px] mx-auto flex justify-between items-center md:gap-3">
                 <div className="md:width-[600px] flex flex-start">
-                    <Link to="/" className='w-[70px] h-[50px] mt-0 text-gray-100'>
+                    <Link to="/" className='w-[70px] h-[70px] mt-0 text-gray-100'>
                         <img src={logo} alt="CTTI Logo" className="w-full h-[50px] object-contain sm:object-contain" />
                     </Link>
                 </div>
@@ -72,9 +72,9 @@ function Header(){
                         }
                     </ul>
                     <div className="md:ml-auto flex flex-col justify-center pt-1 h-full w-full md:w-max md:flex-row md:gap-3">
-                        <Link to="/login" className="text-sm grid place-items-center md:border-[1px] md:border-indigo-400 text-indigo-400 md:rounded-md h-10 md:h-8 w-full md:w-max px-2 md:px-4 relative">Login
+                        <Link to="/login" className="text-sm grid place-items-center md:border-[1px] md:border-indigo-600 text-indigo-600 md:rounded-md h-10 md:h-8 w-full md:w-max px-2 md:px-4 relative">Login
                         </Link>
-                        <Link to="/signup" className="text-sm grid place-items-center text-white bg-indigo-400 md:rounded-md h-10 md:h-8 w-full md:w-max px-2 md:px-4 relative">Signup
+                        <Link to="/signup" className="text-sm grid place-items-center text-white bg-indigo-600 md:rounded-md h-10 md:h-8 w-full md:w-max px-2 md:px-4 relative">Signup
                         </Link>
                     </div>
                 </nav>

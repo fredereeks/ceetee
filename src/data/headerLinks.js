@@ -133,42 +133,42 @@ export const headerLinks = [
         sublinks: [
             {
                 id: 1140,
-                link: "/coaching",
+                link: "/solutions/coaching",
                 title: "Coaching"
             },
             {
                 id: 1141,
-                link: "/skills-assessment",
+                link: "/solutions/skills-assessment",
                 title: "Skills Assessment"
             },
             {
                 id: 1142,
-                link: "/enterprise-solutions-advisory",
+                link: "/solutions/enterprise-solutions-advisory",
                 title: "Enterprise Solutions Advisory"
             },
             {
                 id: 1143,
-                link: "/management-training-services",
+                link: "/solutions/management-training-services",
                 title: "Management Training Services"
             },
             {
                 id: 1144,
-                link: "/team-training",
+                link: "/solutions/team-training",
                 title: "Team Training"
             },
             {
                 id: 1145,
-                link: "/virtual-corporate-training",
+                link: "/solutions/virtual-corporate-training",
                 title: "Virtual Corporate Training"
             },
             {
                 id: 1146,
-                link: "/customized-courseware-development",
+                link: "/solutions/customized-courseware-development",
                 title: "Customized Courseware Development"
             },
             {
                 id: 1147,
-                link: "/customized-training",
+                link: "/solutions/customized-training",
                 title: "Customized Training"
             },
         ]

@@ -1,5 +1,5 @@
 /* https://www.youtube.com/watch?v=Xoz31I1FuiY */
-import React, {lazy, Suspense} from 'react'
+import React, {lazy, Suspense, useTransition} from 'react'
 import { createBrowserRouter, RouterProvider, Outlet} from "react-router-dom"
 
 import Footer from './components/Footer'
@@ -16,6 +16,7 @@ const Login = lazy(() => import ('./pages/Login'))
 const News = lazy(() => import ('./pages/News'))
 const Signup = lazy(() => import ('./pages/Signup'))
 const SingleBlog = lazy(() => import ('./pages/SingleBlog'))
+const SkillAssessment = lazy(() => import ('./pages/SkillAssessment'))
 const Home = lazy(() => import ('./pages/Home'))
 // const Home = lazy(() => import ('./pages/Home'))
 const Partners = lazy(() => import ('./pages/Partners'))
@@ -24,11 +25,13 @@ const Partners = lazy(() => import ('./pages/Partners'))
 
 function App() {
 
+  // const [isPending, startTransition] = useTransition()
+
   const Layout = () => {
     return(
       <>
         <Header />
-        <Suspense fallback={"<p>Loading...</p>"}><Outlet /></Suspense>
+          <Suspense fallback={<></>}><Outlet /></Suspense>
         <Footer />
       </>
     )
@@ -87,13 +90,21 @@ function App() {
           path: "/post/:id",
           element: <SingleBlog />
         },
+        {
+          path: "/solutions",
+          element: <Course />
+        },
+        {
+          path: "/solutions/skills-assessment",
+          element: <SkillAssessment />
+        },
       ],
       errorElement: <Error />,
       // lazy: <Skeleton  type={"courses"} total={3} key={419} />,
     }
   ])
   return (
-    <div className="bg-slate-50">
+    <div className="bg-slate-50 pt-10">
       <RouterProvider router={router}></RouterProvider>
     </div>
   );
