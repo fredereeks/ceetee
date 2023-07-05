@@ -1,7 +1,10 @@
 import React, { lazy, useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { man_image } from '../assets/images'
 import { IoIosArrowDropright } from 'react-icons/io'
+import {Carousel} from 'react-responsive-carousel'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
+
+import { blog_slider1, blog_slider2, man_image } from '../assets/images'
 import { categories, courses, differences } from '../data'
 import Skeleton from '../components/Skeleton'
 const DiffCard = lazy(() => import ('../components/DiffCard'))
@@ -27,18 +30,52 @@ function Home() {
 
   return (
     <>
-      <section className="bg-slate-50 fancy-bg px-4 py-20">
-          <div className="container max-w-[960px] relative z-50 mx-auto items-center px-4 py-20 grid grid-cols-1 md:grid-cols-2 gap-2">
-            <div className="flex flex-col gap-2">
-              <h2 className="text-2xl md:text-4xl text-transparent  bg-gradient-to-r from-indigo-500 to-cyan-300 bg-clip-text font-bold capitalize py-2">Explore your learning area and gather knowledge</h2>
-              <p className="text-slate-400 text-sm font-thin leading-loose pr-2 pb-2">Learning is the process of acquiring new or modifying exiting knowledge, behaviours, skills, values or preferences</p>
-              <Link to="/" className="text-sm text-white w-max rounded-[2rem] py-2 px-4 sm:px-6 bg-gradient-to-tr from-sky-500 to-indigo-600 shadow-sky-200 drop-shadow-md">Get Started</Link>
+      <section className="bg-slate-50 fancy-bg pt-12">
+          <div className="container border-2 border-red-600 mx-auto max-w-[960px] max-h-[70vh] h-[70vh] relative overflow-hidden">
+            <Carousel 
+              autoPlay={true}
+              className='w-full h-full border-2 border-slate-600 flex flex-col justify-start items-stretch'
+              infiniteLoop={true}
+              showArrows={false}
+              showIndicators={false}
+              showThumbs={false}
+              showStatus={false}
+            >
+            <div className="border-2 border-red-600 container w-full h-full relative z-50 mx-auto items-center flex gap-2">
+              <div className="flex flex-1 flex-col gap-2">
+                <h2 className="text-2xl md:text-4xl text-transparent  bg-gradient-to-r from-indigo-500 to-cyan-300 bg-clip-text font-bold capitalize py-2">Explore your learning area and gather knowledge</h2>
+                <p className="text-slate-400 text-sm font-thin leading-loose pr-2 pb-2">Learning is the process of acquiring new or modifying exiting knowledge, behaviours, skills, values or preferences</p>
+                <Link to="/about" className="text-sm text-white w-max rounded-[2rem] py-2 px-4 sm:px-6 bg-gradient-to-tr from-sky-500 to-indigo-600 shadow-sky-200 drop-shadow-md">Get Started</Link>
+              </div>
+              <div className="flex max-w-[30rem] flex-col items-center justify-center">
+                <img src={man_image} alt="Hero Student" className="h-120 w-120 rounded-t-r-full rounded-t-r-xl object-cover rounded-full" />
+              </div>
             </div>
-            <div className="flex flex-col items-center justify-center">
-              <img src={man_image} alt="Hero Student" className="h-120 w-120 rounded-t-r-full rounded-t-r-xl object-cover rounded-full" />
-            </div>
+            </Carousel>
           </div>
       </section>
+      <section>
+  <div className="container max-w-[960px] relative z-50 mx-auto items-center px-4 grid grid-cols-1 md:grid-cols-2 gap-2">
+    <div className="flex flex-col gap-2">
+      <h2 className="text-2xl md:text-4xl text-transparent  bg-gradient-to-r from-indigo-500 to-cyan-300 bg-clip-text font-bold capitalize py-2">Become a Certified tested and tried IT Personnel</h2>
+      <p className="text-slate-400 text-sm font-thin leading-loose pr-2 pb-2">Our mammoth resource pool will fortify you with all you need to know in whatever course you enroll for</p>
+      <Link to="/courses" className="text-sm text-white w-max rounded-[2rem] py-2 px-4 sm:px-6 bg-gradient-to-tr from-sky-500 to-indigo-600 shadow-sky-200 drop-shadow-md">Get Started</Link>
+    </div>
+    <div className="flex flex-col items-center justify-center">
+      <img src={blog_slider2} alt="Hero Student" className="h-120 w-120 rounded-t-r-full rounded-t-r-xl object-cover rounded-full" />
+    </div>
+  </div>
+  <div className="container max-w-[960px] relative z-50 mx-auto items-center px-4 grid grid-cols-1 md:grid-cols-2 gap-2">
+    <div className="flex flex-col gap-2">
+      <h2 className="text-2xl md:text-4xl text-transparent  bg-gradient-to-r from-indigo-500 to-cyan-300 bg-clip-text font-bold capitalize py-2">Become a Certified tested and tried IT Personnel</h2>
+      <p className="text-slate-400 text-sm font-thin leading-loose pr-2 pb-2">With access to an unprecedented amount of ready-to-help community of developers and like-minded peers, you are always in good hands and among 'friends'</p>
+      <Link to="/courses" className="text-sm text-white w-max rounded-[2rem] py-2 px-4 sm:px-6 bg-gradient-to-tr from-sky-500 to-indigo-600 shadow-sky-200 drop-shadow-md">Enroll Now</Link>
+    </div>
+    <div className="flex flex-col items-center justify-center">
+      <img src={blog_slider1} alt="Hero Student" className="h-120 w-120 rounded-t-r-full rounded-t-r-xl object-cover rounded-full" />
+    </div>
+  </div>
+</section>
       <section className="counter bg-gradient-to-l from-indigo-500 to-sky-500">
         <div className="container mx-auto justify-center max-w-[960px] grid grid-cols-2 md:grid-cols-4 py-10 px-4">
           {

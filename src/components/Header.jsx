@@ -58,7 +58,7 @@ function Header(){
     },[dropdowns, navshow]) */
 
     return (
-        <header ref={header} className={`bg-white z-[999] p-2 fixed ${fixed ? 'shadow-md shadow-gray-400' : 'shadow-none'} w-full left-0 top-0`}>
+        <header ref={header} className={`bg-white z-[999] p-2 fixed ${fixed ? 'shadow-md shadow-gray-200' : 'shadow-none'} w-full left-0 top-0`}>
             <div className="container max-w-[960px] mx-auto flex justify-between items-center md:gap-3">
                 <div className="md:width-[600px] flex flex-start">
                     <Link to="/" className='w-[70px] h-[70px] mt-0 text-gray-100'>

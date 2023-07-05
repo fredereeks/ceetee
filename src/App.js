@@ -12,13 +12,13 @@ const Course = lazy(() => import ('./pages/Course'))
 const CourseSingle = lazy(() => import ('./pages/CourseSingle'))
 const CoursesPage = lazy(() => import ('./pages/CoursesPage'))
 const Error = lazy(() => import ('./pages/Error'))
+const Home = lazy(() => import ('./pages/Home'))
 const Login = lazy(() => import ('./pages/Login'))
 const News = lazy(() => import ('./pages/News'))
 const Signup = lazy(() => import ('./pages/Signup'))
 const SingleBlog = lazy(() => import ('./pages/SingleBlog'))
 const SkillAssessment = lazy(() => import ('./pages/SkillAssessment'))
-const Home = lazy(() => import ('./pages/Home'))
-// const Home = lazy(() => import ('./pages/Home'))
+const TeamTraining = lazy(() => import ('./pages/TeamTraining'))
 const Partners = lazy(() => import ('./pages/Partners'))
 
 // const Home = lazy(() => import ('./pages/Home'))
@@ -97,6 +97,10 @@ function App() {
         {
           path: "/solutions/skills-assessment",
           element: <SkillAssessment />
+        },
+        {
+          path: "/solutions/team-training",
+          element: <TeamTraining />
         },
       ],
       errorElement: <Error />,

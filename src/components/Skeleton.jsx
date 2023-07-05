@@ -3,7 +3,7 @@ import { randomColor } from '../utils'
 
 function Skeleton({type, total}) {
     const CourseCard = () => {
-        <aside key={Math.random().toString()+new Date().getTime()} className="fadeOut bg-white flex flex-col gap-2 p-3 sm:p-4 max-w-[25rem] group shad hover:shadow-2xl rounded-base transition-all duration-300">
+        <aside  className="fadeOut bg-white flex flex-col gap-2 p-3 sm:p-4 max-w-[25rem] group shad hover:shadow-2xl rounded-base transition-all duration-300">
             <div className={`relative h-[200px] w-full mb-2 rounded-md grid place-items-center`} style={{background: randomColor(.5)}}>
             </div>
             <div className="flex flex-col justify-between items-start">
@@ -25,7 +25,7 @@ function Skeleton({type, total}) {
             </div>
         </aside>
     }
-  if(type === "course") return (new Array(total || 3).fill(<CourseCard />))
+//   if(type === "course") return (new Array(total || 3).fill(<CourseCard key={Math.random().toString()+new Date().getTime()+Math.random()}/>))
 }
 
 export default Skeleton

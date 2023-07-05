@@ -1,16 +1,10 @@
 import React, { useEffect } from 'react'
-import { masonry8, masonry9 } from '../assets/images'
-import { Link, useLocation } from 'react-router-dom'
-import { FaCheck, FaChevronRight, FaStar, FaStarHalfAlt } from 'react-icons/fa'
-import { randomColor } from '../utils'
-import { randomNumber } from '../utils/randomNumber'
-import { IoMdCart, IoMdGift } from 'react-icons/io'
+import { Link } from 'react-router-dom'
 import { BreadCrumb } from '../components'
 import { skills } from '../data'
 import SkillCard from '../components/SkillCard'
 
 function SkillAssessment() {
-  const location = useLocation();
 
   useEffect(() => {
     document.title = `CTTI e-learning Centre :: Skill Assessment`;
@@ -41,7 +35,7 @@ function SkillAssessment() {
                 })
               }
             </div>
-            <p className="text-slate-600 text-md md:text-base leading-loose text-justify py-2 px-5">Contact us today to discuss your organisation's skills assessment needs. Let us help you uncover the true potential of your workforce through accurate and insightful skills assessments. <br/>At CTTI, we are dedicated to supporting your organisation's growth and success through comprehensive skills assessment services.</p>
+            <p className="text-slate-600 text-md md:text-base leading-loose text-justify py-2 px-5"><Link to="/contact" className="text-indigo-500 font-bold underline">Contact us today</Link> to discuss your organisation's skills assessment needs. Let us help you uncover the true potential of your workforce through accurate and insightful skills assessments. <br/>At CTTI, we are dedicated to supporting your organisation's growth and success through comprehensive skills assessment services.</p>
         </div> 
       </section>
     </main>
