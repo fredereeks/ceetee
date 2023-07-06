@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { masonry4, category_2 } from '../assets/images'
+import { masonry4 } from '../assets/images'
 import { Link } from 'react-router-dom'
 import { trainings } from '../data/trainings';
 // import { randomColor } from '../utils'

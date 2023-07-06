@@ -36,22 +36,25 @@ function CourseSingle() {
                   <div className="flex flex-col gap-1 bottom-5 right-4 absolute z-20">
                     <p className="text-white text-xs md:text-sm">{(state?.rating * 1000).toLocaleString()} reviews</p>
                     <div className="flex gap-1 items-center">
-                      {new Array(4).fill(randomNumber(2,100)+randomNumber(4,121)).map(item => <FaStar className='text-xs text-yellow-500' key={item}/>)} 
-                      <FaStarHalfAlt className='text-xs text-yellow-500' key={Math.random().toString()}/>
+                      <FaStar className='text-xs text-yellow-500' key={12}/>
+                      <FaStar className='text-xs text-yellow-500' key={23}/>
+                      <FaStar className='text-xs text-yellow-500' key={56}/>
+                      <FaStar className='text-xs text-yellow-500' key={87}/>
+                      <FaStarHalfAlt className='text-xs text-yellow-500' key={782}/>
                     </div>
                   </div>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <h3 className="text-2xl text-3xl text-thin text-slate-800 capitalize">{state?.title}</h3>
+                  <h3 className="text-2xl md:text-3xl text-thin text-slate-800 capitalize">{state?.title}</h3>
                   <div className="flex flex-col gap-4">
-                    <p className="text-slate-500 leading-loose text-sm">Tempora, quisquam voluptas? Laboriosam nulla ipsum officia quos? Veritatis eius cupiditate perferendis? Dolorem incidunt obcaecati illum minus neque. </p>
+                    <p className="text-slate-500 leading-loose text-sm">This is the description of {state?.title} that would be long and detailed that would be coming in soon enough as we are still in development mode</p>
                     {/* <p className="text-slate-500 leading-loose text-sm">Mollitia, voluptates fugiat aperiam deleniti, ex ut corrupti? Quae deleniti reprehenderit iusto sit et nisi cumque delectus quaerat laborum repellendus error tempora, quisquam voluptas? Laboriosam nulla ipsum officia quos? Veritatis eius cupiditate perferendis? Dolorem incidunt obcaecati illum minus neque. Provident odit repudiandae magni sunt, sapiente culpa quod laborum et error porro, aspernatur perspiciatis voluptates officia cum at illum fugit nostrum. Quis neque nisi magni illo. Dolore voluptas tempora minus numquam repudiandae?</p> */}
                   </div>
                 </div>
               </aside>
               <aside className="col-span-1 md:col-span-2 flex flex-col gap-3 md:px-4">
                 <div className="flex flex-col gap-2">
-                  <h3 className="text-xl md:text-2xl text-gray-500 text-slate-800">&#8358;{(state?.price).toLocaleString()}</h3>
+                  <h3 className="text-xl md:text-2xl text-gray-600">&#8358;{(state?.price).toLocaleString()}</h3>
                   <div className="flex gap-2">
                     <Link className="flex-1 w-[3rem] bg-indigo-500 p-3 rounded-lg flex items-center justify-center gap-2">
                         <IoMdCart className='text-sm md:text-md text-white'/>

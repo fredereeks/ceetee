@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider, Outlet} from "react-router-dom"
 
 import Footer from './components/Footer'
 import Header from './components/Header'
+import ErrorBoundary from './components/ErrorBoundary'
 
 const About = lazy(() => import ('./pages/About'))
 const BlogPage = lazy(() => import ('./pages/BlogPage'))
@@ -44,63 +45,63 @@ function App() {
       children: [
         {
           path: "/",
-          element: <Home />,
+          element: <Suspense fallback={<></>}><Home />,</Suspense>,
         },
         {
           path: "/about",
-          element: <About />
+          element: <Suspense fallback={<></>}><About /></Suspense>,
         },
         {
           path: "/blogs",
-          element: <BlogPage />
+          element: <Suspense fallback={<></>}><BlogPage /></Suspense>,
         },
         {
           path: "/contact",
-          element: <Contact />
+          element: <Suspense fallback={<></>}><Contact /></Suspense>,
         },
         {
           path: "/courses/:coursename",
-          element: <Course />
+          element: <Suspense fallback={<></>}><Course /></Suspense>,
         },
         {
           path: "/course/:coursename/:id",
-          element: <CourseSingle />
+          element: <Suspense fallback={<></>}><CourseSingle /></Suspense>,
         },
         {
           path: "/courses",
-          element: <CoursesPage />
+          element: <Suspense fallback={<></>}><CoursesPage /></Suspense>,
         },
         {
           path: "/login",
-          element: <Login />
+          element: <Suspense fallback={<></>}><Login /></Suspense>,
         },
         {
           path: "/news",
-          element: <News />
+          element: <Suspense fallback={<></>}><News /></Suspense>,
         },
         {
           path: "/partners",
-          element: <Partners />
+          element: <Suspense fallback={<></>}><Partners /></Suspense>,
         },
         {
           path: "/signup",
-          element: <Signup />
+          element: <Suspense fallback={<></>}><Signup /></Suspense>,
         },
         {
           path: "/post/:id",
-          element: <SingleBlog />
+          element: <Suspense fallback={<></>}><SingleBlog /></Suspense>,
         },
         {
           path: "/solutions",
-          element: <Course />
+          element: <Suspense fallback={<></>}><Course /></Suspense>,
         },
         {
           path: "/solutions/skills-assessment",
-          element: <SkillAssessment />
+          element: <Suspense fallback={<></>}><SkillAssessment /></Suspense>,
         },
         {
           path: "/solutions/team-training",
-          element: <TeamTraining />
+          element: <Suspense fallback={<></>}><TeamTraining /></Suspense>,
         },
       ],
       errorElement: <Error />,
@@ -109,7 +110,9 @@ function App() {
   ])
   return (
     <div className="bg-slate-50 pt-10">
-      <RouterProvider router={router}></RouterProvider>
+      <ErrorBoundary>
+        <RouterProvider router={router}></RouterProvider>
+      </ErrorBoundary>
     </div>
   );
 }
