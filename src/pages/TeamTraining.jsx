@@ -40,7 +40,8 @@ function TeamTraining() {
         <section className="bg-white py-20 relative after:left-0 after:top-0 after:absolute after:z-5 after:bg-[#8881] after:w-full after:h-full">
           {/* <img src={category_2} alt="" className="absolute w-full h-full z-2 top-0 left-0 object-cover" /> */}
           <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center container max-w-[960px] px-5 py-10 mx-auto">
-              <h2 className="col-span-1 sm:col-span-2 text-2xl md:text-4xl text-indigo-700 pt-0 pb-10 text-center font-bold">CTTI Advantages for Corporate and Government Clients</h2>
+              {/* <h2 className="col-span-1 sm:col-span-2 text-2xl md:text-4xl text-indigo-700 pt-0 pb-10 text-center font-bold">CTTI Advantages for Corporate and Government Clients</h2> */}
+              <h3 className="col-span-1 sm:col-span-2 pb-10 text-2xl md:text-3xl font-bold text-blue-600 mx-auto max-w-[90%] sm:max-w-[50%] text-center leading-loose capitalize">CTTI Advantages<span className ="text-cyan-400"> Cororate</span> and <span className ="text-cyan-400"> Government</span> Clients </h3>
             {
               trainings.map((training,i) => {
                 const light = i % 2 === 1 ? "-translate-y-4 hover:translate-y-0" : "hover:-translate-y-4 translate-y-0"
