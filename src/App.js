@@ -32,11 +32,17 @@ function App() {
     return(
       <>
         <Header />
-          <Suspense fallback={<></>}><Outlet /></Suspense>
+          <ErrorBoundary>
+            <Suspense fallback={<main><Loader /></main>}><Outlet /></Suspense>
+          </ErrorBoundary>
         <Footer />
       </>
     )
   }
+
+  const Loader = () => (<section className="min-h-[60vh] w-full flex flex-col justify-center items-center gap-3">
+    <h3 className="py-20 text-xl md:text-3xl text-indigo-600 text-center">Please wait a moment...</h3>
+  </section>)
 
   const router = createBrowserRouter([
     {
@@ -45,63 +51,63 @@ function App() {
       children: [
         {
           path: "/",
-          element: <Suspense fallback={<></>}><Home />,</Suspense>,
+          element: <Suspense fallback={<main><Loader /></main>}><Home />,</Suspense>,
         },
         {
           path: "/about",
-          element: <Suspense fallback={<></>}><About /></Suspense>,
+          element: <Suspense fallback={<main><Loader /></main>}><About /></Suspense>,
         },
         {
           path: "/blogs",
-          element: <Suspense fallback={<></>}><BlogPage /></Suspense>,
+          element: <Suspense fallback={<main><Loader /></main>}><BlogPage /></Suspense>,
         },
         {
           path: "/contact",
-          element: <Suspense fallback={<></>}><Contact /></Suspense>,
+          element: <Suspense fallback={<main><Loader /></main>}><Contact /></Suspense>,
         },
         {
           path: "/courses/:coursename",
-          element: <Suspense fallback={<></>}><Course /></Suspense>,
+          element: <Suspense fallback={<main><Loader /></main>}><Course /></Suspense>,
         },
         {
           path: "/course/:coursename/:id",
-          element: <Suspense fallback={<></>}><CourseSingle /></Suspense>,
+          element: <Suspense fallback={<main><Loader /></main>}><CourseSingle /></Suspense>,
         },
         {
           path: "/courses",
-          element: <Suspense fallback={<></>}><CoursesPage /></Suspense>,
+          element: <Suspense fallback={<main><Loader /></main>}><CoursesPage /></Suspense>,
         },
         {
           path: "/login",
-          element: <Suspense fallback={<></>}><Login /></Suspense>,
+          element: <Suspense fallback={<main><Loader /></main>}><Login /></Suspense>,
         },
         {
           path: "/news",
-          element: <Suspense fallback={<></>}><News /></Suspense>,
+          element: <Suspense fallback={<main><Loader /></main>}><News /></Suspense>,
         },
         {
           path: "/partners",
-          element: <Suspense fallback={<></>}><Partners /></Suspense>,
+          element: <Suspense fallback={<main><Loader /></main>}><Partners /></Suspense>,
         },
         {
           path: "/signup",
-          element: <Suspense fallback={<></>}><Signup /></Suspense>,
+          element: <Suspense fallback={<main><Loader /></main>}><Signup /></Suspense>,
         },
         {
           path: "/post/:id",
-          element: <Suspense fallback={<></>}><SingleBlog /></Suspense>,
+          element: <Suspense fallback={<main><Loader /></main>}><SingleBlog /></Suspense>,
         },
         {
           path: "/solutions",
-          element: <Suspense fallback={<></>}><Course /></Suspense>,
+          element: <Suspense fallback={<main><Loader /></main>}><Course /></Suspense>,
         },
         {
           path: "/solutions/skills-assessment",
-          element: <Suspense fallback={<></>}><SkillAssessment /></Suspense>,
+          element: <Suspense fallback={<main><Loader /></main>}><SkillAssessment /></Suspense>,
         },
         {
           path: "/solutions/team-training",
-          element: <Suspense fallback={<></>}><TeamTraining /></Suspense>,
+          element: <Suspense fallback={<main><Loader /></main>}><TeamTraining /></Suspense>,
         },
       ],
       errorElement: <Error />,
@@ -110,9 +116,9 @@ function App() {
   ])
   return (
     <div className="bg-slate-50 pt-10">
-      <ErrorBoundary>
+      {/* <ErrorBoundary> */}
         <RouterProvider router={router}></RouterProvider>
-      </ErrorBoundary>
+      {/* </ErrorBoundary> */}
     </div>
   );
 }

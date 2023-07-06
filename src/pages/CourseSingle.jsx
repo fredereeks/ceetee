@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react'
-import { man_image } from '../assets/images'
+// import { man_image } from '../assets/images'
 import { Link, useLocation } from 'react-router-dom'
-import { FaCheck, FaChevronRight, FaStar, FaStarHalfAlt } from 'react-icons/fa'
-import { randomColor } from '../utils'
-import { randomNumber } from '../utils/randomNumber'
+import { FaCheck, FaStar, FaStarHalfAlt } from 'react-icons/fa'
 import { IoMdCart, IoMdGift } from 'react-icons/io'
 
 function CourseSingle() {
