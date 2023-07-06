@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
-import { blog_slider3 } from '../assets/images'
+import { masonry4, category_2 } from '../assets/images'
 import { Link } from 'react-router-dom'
-import { FaArrowLeft } from 'react-icons/fa'
+import { trainings } from '../data/trainings';
 // import { randomColor } from '../utils'
 
 function TeamTraining() {
@@ -23,24 +23,41 @@ function TeamTraining() {
           </div>
           <aside className="flex flex-col gap-2 justify-center container max-w-[960px] py-5 px-2 mx-auto">
             <h2 className="text-2xl md:text-4xl text-white font-bold">Customized Training Solutions</h2>
-            <p className="text-white max-w-[80%] sm:max-w-[70%] md:max-w-[80%] leading-[1.8] text-md md:text-base py-2 text-justify">At CTTI, we understand that every organisation has unique training needs. We offer standard and customised training programs for corporate and government clients. Whether you want to enhance your team's skills or train individual employees, we have tailored solutions to meet your requirements. With our comprehensive training offerings and industry expertise, we can help your organisation achieve its goals and retain top talent.</p>
+            <p className="text-white w-full sm:max-w-[70%] md:max-w-[80%] leading-[2] text-md md:text-base py-2 text-justify">At CTTI, we understand that every organisation has unique training needs. We offer standard and customised training programs for corporate and government clients. Whether you want to enhance your team's skills or train individual employees, we have tailored solutions to meet your requirements. With our comprehensive training offerings and industry expertise, we can help your organisation achieve its goals and retain top talent.</p>
           </aside>
         </section>
         <section className="py-10 bg-white">
           <aside className="grid grid-cols-2 md:grid-cols-3 gap-2 justify-center container max-w-[960px] p-5 mx-auto">
-            <div className="relative h-150 w-200 border-indigo-700 border-4 rounded-md shadow-lg -skew-x-[5deg] overflow-hidden">
-              <img src={blog_slider3} alt="" className="absolute w-[150%] h-[150%] top-0 left-0 object-cover scale-120 skew-x-[5deg]" />
+            <div className="relative h-[330px] w-[320px] border-indigo-700 border-[6px] rounded-md shadow-lg mx-auto -skew-x-[5deg] ">
+              <img src={masonry4} alt="" className=" border-white border-[6px] w-full h-full top-0 -left-[1rem] object-cover scale-100" />
             </div>
-            <div className="col-span-2 py-20 px-5 flex flex-col gap-2">
+            <div className="col-span-2 p-5 md:py-20 md:px-10 flex flex-col gap-2">
               <h2 className="text-2xl md:text-4xl text-indigo-700 font-bold">Individual and Team Training</h2>
               <p className="text-gray-700 leading-[1.8] text-md md:text-base py-2 text-justify">Whether you want to train an individual or a team, our experienced trainers can deliver personalised instruction to individuals, addressing their specific learning objectives. Additionally, we can conduct comprehensive team training sessions, fostering collaboration and knowledge-sharing among your employees.</p>
             </div>
           </aside>
         </section>
-        <section className="bg-gray-50 py-10">
-          <aside className="grid grid-cols-2 md:grid-cols-3 gap-2 justify-center container max-w-[960px] p-5 mx-auto">
-              
-          </aside>
+        <section className="bg-white py-20 relative after:left-0 after:top-0 after:absolute after:z-5 after:bg-[#8881] after:w-full after:h-full">
+          {/* <img src={category_2} alt="" className="absolute w-full h-full z-2 top-0 left-0 object-cover" /> */}
+          <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center container max-w-[960px] px-5 py-10 mx-auto">
+              <h2 className="col-span-1 sm:col-span-2 text-2xl md:text-4xl text-indigo-700 pt-0 pb-10 text-center font-bold">CTTI Advantages for Corporate and Government Clients</h2>
+            {
+              trainings.map((training,i) => {
+                const light = i % 2 === 1 ? "-translate-y-4 hover:translate-y-0" : "hover:-translate-y-4 translate-y-0"
+                return(
+                  <aside key={training.id} className={`group relative ${training.background} ${light} py-8 px-4 rounded-md cursor-pointer flex flex-col gap-3 items-center justify-center overflow-hidden shadow-md`}>
+                    {/* <div className="relative flex flex-col items-center group-hover:top-0 h-full w-full overflow-hidden py-2"> */}
+                      <div className="flex flex-row gap-3 items-center">
+                        {training.icon}
+                        <h3 className={`text-lg md:text-xl text-left text-white font-bold`}>{training.title}</h3>
+                      </div>
+                      <p className="px-3 text-justify leading-loose text-sm md:text-md text-white font-normal">{training.text}</p>
+                    {/* </div> */}
+                  </aside>
+                )
+              })
+            }
+          </div>
         </section>
     </main>
   )
