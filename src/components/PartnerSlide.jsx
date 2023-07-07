@@ -1,4 +1,8 @@
 import React from 'react'
+import {Carousel} from 'react-responsive-carousel'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import { Link } from 'react-router-dom'
+
 import {
   exam_announcement,
   exam_courses,
@@ -7,7 +11,6 @@ import {
   exam_study,
   exam_template,
 } from '../assets/images'
-import { Link } from 'react-router-dom'
 
 function PartnerSlide() {
   return (
@@ -18,7 +21,21 @@ function PartnerSlide() {
               {/* <p className="text-slate-400 text-md md:text-base py-2 pr-2">Be the first to learn about our latest updates: discount, new courses and trends </p> */}
         </div>
         <div className="overflow-hidden w-full px-4 py-10">
-          <div className="flex gap-3 justify-center">
+            <Carousel 
+              autoPlay={true}
+              className='w-full h-full flex flex-col justify-start items-stretch'
+              infiniteLoop={true}
+              showArrows={false}
+              showIndicators={false}
+              showThumbs={false}
+              showStatus={false}
+              centerMode={true}
+              centerSlidePercentage={20}
+              preventMovementUntilSwipeScrollTolerance={true}
+              emulateTouch={true}
+              stopOnHover={true}
+              animationHandler={'fade'}
+            >
             <Link to="/partners" className='h-[50px] w-[120px] overflow-hidden shad relative'>
               <img src={exam_announcement} alt="exam_announcement" className="h-full w-full object-contain" />
             </Link>
@@ -37,7 +54,7 @@ function PartnerSlide() {
             <Link to="/partners" className='h-[50px] w-[120px] overflow-hidden shad relative'>
               <img src={exam_study} alt="exam_study" className="h-full w-full object-contain" />
             </Link>
-          </div>
+          </Carousel>
         </div>
       </div>
     </section>

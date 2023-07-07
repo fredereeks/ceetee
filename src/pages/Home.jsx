@@ -74,8 +74,6 @@ function Home() {
             </Carousel>
           </div>
       </section>
-      <section>
-</section>
       <section className="counter bg-gradient-to-l from-indigo-500 to-sky-500">
         <div className="container mx-auto justify-center max-w-[960px] grid grid-cols-2 md:grid-cols-4 py-10 px-4">
           {
@@ -83,7 +81,7 @@ function Home() {
               [111, "8K+", "Online Learners", "border-2 border-r-slate-50/30"],
               [112, "200+", "Expert Instructors", "md:border-2 md:border-r-slate-50/30"],
               [113, "105K+", "Validated Students", "border-2 border-r-slate-50/30"],
-              [114, "310+", "Trendy Subjects", "border-0"],
+              [114, "310+", "Trendy Courses", "border-0"],
             ].map(([id, stat, text, border]) => (
               <aside key={id} className={`flex flex-col p-3 items-center justify-center gap-3 text-white border-transparent ${border}`}>
                 <h3 className="text-inherit text-xl md:text-2xl font-bold">{stat}</h3>
@@ -94,7 +92,7 @@ function Home() {
         </div>
       </section>
       <section className="difference py-20 sm:px-4 bg-[#f8f8fa90]">
-        <div className="container justify-center items-stretch grid diff sm:grid-cols-3 mx-auto py-10 gap-x-2 gap-y-4 sm:gap-y-8 sm:gap-x-6 max-w-[960px] py-10 px-2 sm:px-4">
+        <div className="container justify-center items-stretch grid diff sm:grid-cols-3 mx-auto py-10 gap-x-2 gap-y-4 sm:gap-y-8 sm:gap-x-6 max-w-[960px]px-2 sm:px-4">
           <aside className="col-span-2 flex flex-col justify-center gap-2 px-2 py-4">
             <h3 className="text-2xl md:text-4xl font-bold text-sky-400">Why are we <span className="text-sky-600">different</span> from other?</h3>
             <p className="leading-loose text-justify text-slate-500 text-sm py-2 pr-2">At CTTI, we are committed to nurturing the next generation of IT professionals and supporting organisations in their digital transformation journeys. Whether you are a student looking to kick-start your IT career or an organisation seeking to upskill your workforce, we invite you to join us and embark on a transformative learning experience. Discover the power of knowledge with CTTI - your trusted IT training and education partner.</p>
@@ -109,11 +107,11 @@ function Home() {
         <div className="container max-w-[960px] flex flex-col gap-8 mx-auto py-20 px-4">
           <div className="flex flex-wrap gap-2 items-center md:justify-between">
             <div className="flex-2 flex flex-col gap-1 pr-5">
-              <h3 className="text-2xl md:text-4xl font-bold text-sky-600 capitalize">Explore <span className="text-cyan-400">Subjects</span> by Category</h3>
+              <h3 className="text-2xl md:text-4xl font-bold text-sky-600 capitalize">Explore <span className="text-cyan-400">Courses</span> by Category</h3>
               <p className="text-slate-400 text-md md:text-base py-2 pr-2">Browse through our courses categories to choose the best for your career and/or academic pursuits</p>
             </div>
             <div className="flex-1 flex items-end justify-center md:justify-end">
-              <button className="flex items-center gap-2 text-slate-500 group text-sm px-4 py-2 border-[1px] border-transparent border-b-2 border-b-sky-200">Explore More <IoIosArrowDropright className='mt-1 text-inherit group-hover:translate-x-2 transition-all duration-300' /></button>
+              <Link to="/courses" className="flex items-center gap-2 text-slate-500 group text-sm px-4 py-2 border-[1px] border-transparent border-b-2 border-b-sky-200">Explore More <IoIosArrowDropright className='mt-1 text-inherit group-hover:translate-x-2 transition-all duration-300' /></Link>
             </div>
           </div>
           <div className="py-5 grid grid-cols-2 md:grid-cols-3 gap-x-3 gap-y-8">
@@ -129,7 +127,7 @@ function Home() {
         <div className="container max-w-[960px] flex flex-col gap-3 mx-auto py-20 px-4">
           <div className="flex flex-wrap gap-2 items-center md:justify-between">
             <div className="flex-2 flex flex-col gap-1 pr-5">
-              <h3 className="text-2xl md:text-4xl font-bold text-sky-600 capitalize"><span className="text-cyan-400">Popular Subjects</span> for you</h3>
+              <h3 className="text-2xl md:text-4xl font-bold text-sky-600 capitalize"><span className="text-cyan-400">Popular Courses</span> for you</h3>
               <p className="text-slate-400 text-md md:text-base py-2 pr-2">Get the best course, with the best price, with a world-class tutor</p>
             </div>
             <div className="flex-1 flex items-end justify-end">
@@ -138,7 +136,7 @@ function Home() {
           </div>
           <div className="py-5 grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3">
             {
-              courses.slice(0,6).map(course => (<CourseCard key={course.id} {...course} />))
+              courses.slice(0,6).map(course => (<CourseCard key={course.id} state={course} {...course} />))
             }
           </div>
         </div>

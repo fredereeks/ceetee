@@ -61,8 +61,8 @@ function Header(){
         <header ref={header} className={`bg-white z-[999] p-2 fixed ${fixed ? 'shadow-md shadow-gray-200' : 'shadow-none'} w-full left-0 top-0`}>
             <div className="container max-w-[960px] mx-auto flex justify-between items-center md:gap-3">
                 <div className="md:width-[600px] flex flex-start">
-                    <Link to="/" className='w-[70px] h-[70px] mt-0 text-gray-100'>
-                        <img src={logo} alt="CTTI Logo" className="w-full h-[50px] object-contain sm:object-contain" />
+                    <Link to="/" className='w-[70px] h-[70px] mt-2 text-gray-100'>
+                        <img src={logo} alt="CTTI Logo" className="w-full h-[60px] object-contain sm:object-contain" />
                     </Link>
                 </div>
                 <nav ref={navRef}  style={{left: '0 !important'}} className={`flex-1 sm:flex-4 flex flex-col md:flex-row md:justify-center md:pl-[6rem] absolute md:relative shadow-md transition-all duration-300 ${navshow ? 'left-0 top-full z-50' : 'left-[110%] md:left-0 z-0 top-full'} md:top-0 w-screen md:w-max md:shadow-none bg-white md:mx-0`}>

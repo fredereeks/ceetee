@@ -1,4 +1,4 @@
-import {useEffect} from 'react'
+import {useEffect, useState} from 'react'
 import { partners } from '../data'
 import PartnersCard from '../components/PartnersCard'
 

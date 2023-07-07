@@ -5,13 +5,15 @@ import {
 } from '../assets/images'
 import { differences } from '../data'
 import DiffCard from '../components/DiffCard'
+import { BreadCrumb } from '../components';
 
 function About() {
   useEffect(() => {
     document.title = "CTTI e-learning Centre :: About";
 },[]);
   return (
-    <main className="bg-slate-50 py-20">
+    <main className="bg-slate-50 pb-20">
+      <BreadCrumb page={"About"} />
       <div className="container pt-10 mx-auto max-w-[960px] flex flex-col">
         <div className="flex flex-col gap-3 p-5 items-center md:items-start">
           <h3 className="text-2xl md:text-3xl font-bold text-indigo-600 capitalize">About Us at <span className="text-cyan-400">CTTI</span></h3>

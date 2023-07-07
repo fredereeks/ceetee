@@ -1,16 +1,88 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 // import { man_image } from '../assets/images'
 import { Link, useLocation } from 'react-router-dom'
 import { FaCheck, FaStar, FaStarHalfAlt } from 'react-icons/fa'
 import { IoMdCart, IoMdGift } from 'react-icons/io'
+import { usePaystackPayment } from 'react-paystack';
+import axios from 'axios'
 
 function CourseSingle() {
   const location = useLocation();
   const {state} = location;
-
+  const formRef = useRef(null)
+  const [inputs, setInputs] = useState({
+      fullname: "John Doe",
+      email: "johndoe@gmail.com",
+      amount: state?.price*100 || 100000000,
+      currency: "NGN",
+      phone: "",
+      message: "",
+      reference: '',
+      course: state?.title,
+  });
+  const [error, setError] = useState(undefined)
+  const [success, setSuccess] = useState('')
+  const [loading, setLoading] = useState(false)
+  
   useEffect(() => {
-    document.title = `CTTI e-learning Centre: ${state?.title}`;
-},[location.pathname, state?.title])
+      document.title = `CTTI e-learning Centre: ${state?.title}`;
+  },[location.pathname, state?.title])
+
+  const config = {
+        reference: 'CTTI'+ (new Date()).getTime().toString(),
+        email: inputs.email,
+        amount: inputs.amount, //Amount is in the country's lowest currency. E.g Kobo, so 20000 kobo = N200
+        publicKey: process.env.REACT_APP_PUBLIC_KEY,
+        label: `A donation from ${inputs?.fullname} worth ${inputs?.currency}${inputs?.amount}`,
+    };
+
+    const onSuccess = async(reference) => {
+        // Implementation for whatever you want to do with reference and after success call.
+        setInputs(prev => ({...prev, reference}))
+        try{
+            const res = await axios.post("http://localhost:4119/api/course/purchase", inputs)
+            console.log({data: res.data})
+            setSuccess(res.data)
+        }catch(err){
+            if(err.response){
+                setError(err.response.data)
+            }else{
+                setError(err.data)
+            }
+        }
+        setLoading(false)
+        console.log(reference);
+    };
+
+    const onClose = () => {
+        // implementation for  whatever you want to do when the Paystack dialog closed.
+        setLoading(false)
+        setError("Payment Cancelled!")
+    }
+    
+    const initializePayment = usePaystackPayment(config);
+
+    async function handleSubmit(e) {
+        e.preventDefault();
+        setError(undefined)
+        setSuccess('')
+        setLoading(true)
+        // const email = inputs?.email, currency = inputs?.currency, amount = +inputs?.amount, fullname = inputs?.fullname;
+        try{
+            initializePayment(onSuccess, onClose)    
+            // alert(`Thank you for donating ${currency}${amount} to Gray Child Foundation, ${fullname}.\nWe have sent a copy of the payment receipt to your email at ${email}`)
+            formRef.reset();
+        }catch(err){
+            if(err.response){
+                setError(err.response.data)
+            }else{
+                setError(err.data)
+            }
+        }
+        
+    }
+
+
   return (
     <main  className='flex flex-col bg-gray-100 pt-8 justify-center'>
       <div className="container relative mx-auto max-w-[980px] px-4 flex flex-col">
@@ -53,7 +125,7 @@ function CourseSingle() {
               <aside className="col-span-1 md:col-span-2 flex flex-col gap-3 md:px-4">
                 <div className="flex flex-col gap-2">
                   <h3 className="text-xl md:text-2xl text-gray-600">&#8358;{(state?.price).toLocaleString()}</h3>
-                  <div className="flex gap-2">
+                  <form ref={formRef} onSubmit={handleSubmit} className="flex gap-2">
                     <Link className="flex-1 w-[3rem] bg-indigo-500 p-3 rounded-lg flex items-center justify-center gap-2">
                         <IoMdCart className='text-sm md:text-md text-white'/>
                         <p className="text-white text-sm md:text-md">Enroll for Course</p>
@@ -62,7 +134,7 @@ function CourseSingle() {
                         <IoMdGift className='text-sm md:text-md text-gray-500'/>
                         <p className="text-gray-500 text-sm md:text-md">Buy as Gift</p>
                     </Link>
-                  </div>
+                  </form>
                   <div className="flex flex-col gap-2">
                     <p className="text-lg md:text-xl pt-2 text-thin text-slate-800">Prerequisite</p>
                     <div className="flex flex-col bg-gray-100 rounded-md p-4">

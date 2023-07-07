@@ -21,7 +21,7 @@ function DiffCard({id, icon, background, title, text, full}) {
           </span>
         </div>
         <h4 className={`${full ? 'text-lg md:text-xl' : 'text-base md:text-lg'} font-bold text-slate-500 capitalize`}>{title}</h4>
-        <p className={`text-md md:text-base text-justify leading-loose text-slate-400 ${full ? '' : 'overflow-hidden text-ellipsis line-clamp-2'}`}>{text}</p>
+        <p className={`text-md md:text-base font-medium text-justify leading-loose text-slate-400 ${full ? '' : 'overflow-hidden text-ellipsis line-clamp-2'}`}>{text}</p>
     </Link>
   )
 }

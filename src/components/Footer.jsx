@@ -1,10 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { logo } from '../assets/images'
 
 const Footer = () => {
   return (
         <div className="bg-slate-200 relative py-20 px-4">
             <div className="md:container md:px-10 pb-10 mx-0 md:mx-auto flex flex-col sm:flex-row justify-center md:justify-start md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-4 gap-6">
+                <div className="flex flex-col">
+                    <Link to="/" className='w-[70px] h-[70px] text-gray-100'>
+                        <img src={logo} alt="CTTI Logo" className="w-full h-[60px] object-contain sm:object-contain" />
+                    </Link>
+                    <p className="text-xs md:text-sm text-slate-600 text-justify">...the best in what we do</p>
+                </div>
                 <div className="flex flex-col">
                     <h3 className="text-md md:text-xl font-bold text-slate-800 pb-2 uppercase">Working Hours</h3>
                     <div className="flex flex-col gap-1">

@@ -18,6 +18,9 @@
     .rounded-base{
         border-radius: 3px;
     }
+    .leading-loose{
+        line-height: 2 !important;
+    }
     .fancy-bg{
         position: relative;
         overflow: hidden;
