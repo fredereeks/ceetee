@@ -20,7 +20,7 @@ function VirtualTraining() {
                   <p className="text-slate-400 text-md md:text-base leading-loose text-justify py-2 pr-2">At CTTI, we are dedicated to supporting your organisation's growth and success through comprehensive skills assessment services.</p>
             </div> */}
             <aside className={`group py-0 px-4 flex flex-col items-stretch sm:items-center md:items-stretch gap-3 md:gap-5 md:flex-row`}>
-                <div className="relative flex-1 mx-auto flex h-full w-full  py-4 md:w-[400px] flex-shrink-0 group-hover:shad bg-white rounded-md overflow-hidden rounded-tl-full rounded-ss-[2rem] rounded-se-3xl rounded-br-full">
+                <div className="relative flex-1 mx-auto flex h-full w-full py-4 md:w-[400px] flex-shrink-0 group-hover:shad bg-white rounded-md overflow-hidden rounded-ss-[2rem] rounded-se-[2rem]">
                     <img src={masonry9} alt={"Virtual Corporate Training"} className="h-full w-full rounded-md hover:shadow-xl shadow-lg object-cover md:object-cover scale-[1.5] group-hover:rotate-6 group-hover:scale-[1.3]" />
                 </div>
                 <div className="flex-1 flex flex-col justify-center gap-2 py-4">

@@ -1,62 +1,8 @@
-/*import { IoIosLaptop, IoIosMan, IoIosNotificationsOutline, IoLogoEuro, IoMdBriefcase, IoMdColorPalette } from 'react-icons/io'
+// import { blog_slider1, blog_slider2, blog_slider3, masonry2, masonry4, masonry6, masonry8 } from '../assets/images'
+import {FaBriefcase, FaBuilding, FaCloudMeatball,  FaMicrosoft, FaNetworkWired, FaPalette, FaProjectDiagram} from 'react-icons/fa' 
+import {IoIosAnalytics, IoIosCode, IoIosCodeDownload} from 'react-icons/io' 
 
 export const catalogues = [
-    {
-        id: 341,
-        icon: <IoMdColorPalette className='text-2xl text-sky-500 group-hover:text-white md:text-3xl' />,
-        background: "bg-sky-100 group-hover:bg-sky-500",
-        title: "Design & Development",
-        text: "4+ Courses Here"
-    },
-    {
-        id: 342,
-        icon: <IoIosNotificationsOutline className='text-2xl text-purple-500 group-hover:text-white md:text-3xl' />,
-        background: "bg-purple-100 group-hover:bg-purple-500",
-        title: "Marketing & Communication",
-        text: "6+ Courses Here"
-    },
-    {
-        id: 343,
-        icon: <IoIosLaptop className='text-2xl text-yellow-500 group-hover:text-white md:text-3xl' />,
-        background: "bg-yellow-100 group-hover:bg-yellow-500",
-        title: "Digital Marketing",
-        text: "9+ Courses Here"
-    },
-    {
-        id: 344,
-        icon: <IoMdBriefcase className='text-2xl text-indigo-500 group-hover:text-white md:text-3xl' />,
-        background: "bg-indigo-100 group-hover:bg-indigo-500",
-        title: "Business & Counselling",
-        text: "5+ Courses Here"
-    },
-    {
-        id: 345,
-        icon: <IoLogoEuro className='text-2xl text-pink-500 group-hover:text-white md:text-3xl' />,
-        background: "bg-pink-100 group-hover:bg-pink-500",
-        title: "Finance Management",
-        text: "7+ Courses Here"
-    },
-    {
-        id: 346,
-        icon: <IoIosMan className='text-2xl text-green-500 group-hover:text-white md:text-3xl' />,
-        background: "bg-green-100 group-hover:bg-green-500",
-        title: "Self Development",
-        text: "10+ Courses Here"
-    },
-    // {
-    //     id: 348,
-    //     icon: <IoMdFlashlight className='text-lg md:text-2xl text-white' group-hover:text-white />,
-    //     3ackground: "bg-gradient-to-br from-orange-500 to-orange-600",
-    // color: '2xl text-white',
-    //     title: "Creative Thinking",
-    //     text: "Our course brings out the best in you that you never knew was even there. We guarantee to send your creativity and problem-solving skills nuclear!"
-    // },
-] */
-
-import {FaBriefcase, FaBuilding, FaCloudMeatball,  FaMicrosoft, FaNetworkWired, FaPalette, FaDatabase, FaProjectDiagram} from 'react-icons/fa' 
-import {IoIosTrendingUp, IoIosCode, IoIosLaptop, } from 'react-icons/io' 
-
-export const categories = [
     {
         id: 3894,
         title: "Programming and Development",
@@ -72,6 +18,7 @@ export const categories = [
         ],
         delivery: "Classroom, Virtual, Hybrid",
     },
+
     {
         id: 3844,
         title: "Networking and Cybersecurity",
@@ -102,6 +49,7 @@ export const categories = [
         ],
         delivery: "Classroom, Virtual, Hybrid",
     },
+
     {
         id: 3895,
         icon: <FaCloudMeatball className='text-2xl text-purple-500 group-hover:text-white md:text-3xl'/>,
@@ -116,7 +64,7 @@ export const categories = [
     },
     {
         id: 3134,
-        icon: <IoIosTrendingUp className='text-2xl text-orange-500 group-hover:text-white md:text-3xl'/>,
+        icon: <IoIosAnalytics className='text-2xl text-orange-500 group-hover:text-white md:text-3xl'/>,
         title: "Data Science and Analytics",
         background: "bg-orange-100 group-hover:bg-orange-500",
         courses: [
@@ -144,7 +92,7 @@ export const categories = [
         delivery: "Classroom, Virtual, Hybrid",
     },
     {
-        id: 3094,
+        id: 3894,
         icon: <FaDatabase className='text-2xl text-blue-500 group-hover:text-white md:text-3xl'/>,
         title: "Database Administration",
         background: "bg-blue-100 group-hover:bg-blue-500",
@@ -158,7 +106,7 @@ export const categories = [
     },
     {
         id: 3877,
-        icon: <IoIosLaptop className='text-2xl text-teal-500 group-hover:text-white md:text-3xl'/>,
+        icon: <IoIosCodeDownload className='text-2xl text-teal-500 group-hover:text-white md:text-3xl'/>,
         title: "IT Service Management",
         background: "bg-teal-100 group-hover:bg-teal-500",
         courses: [
@@ -169,7 +117,7 @@ export const categories = [
         delivery: "Classroom, Virtual, Hybrid",
     },
     {
-        id: 3749,
+        id: 3894,
         icon: <FaBriefcase className='text-2xl text-fuchsia-500 group-hover:text-white md:text-3xl'/>,
         title: "Business Analysis",
         background: "bg-fuchsia-100 group-hover:bg-fuchsia-500",
@@ -186,7 +134,7 @@ export const categories = [
         icon: <FaBuilding className='text-2xl text-red-500 group-hover:text-white md:text-3xl'/>,
         title: "Leadership",
         background: "bg-red-100 group-hover:bg-red-500",
-        courses: [
+        course: [
             "Business Skills",
             "Business Leadership ",
             "Soft Skills",
@@ -195,7 +143,7 @@ export const categories = [
         delivery: "Classroom, Virtual, Hybrid",
     },
     {
-        id: 3890,
+        id: 3894,
         icon: <FaPalette className='text-2xl text-cyan-500 group-hover:text-white md:text-3xl'/>,
         title: "Design",
         background: "bg-cyan-100 group-hover:bg-cyan-500",

@@ -34,7 +34,6 @@ function PartnerSlide() {
               preventMovementUntilSwipeScrollTolerance={true}
               emulateTouch={true}
               stopOnHover={true}
-              animationHandler={'fade'}
             >
             <Link to="/partners" className='h-[50px] w-[120px] overflow-hidden shad relative'>
               <img src={exam_announcement} alt="exam_announcement" className="h-full w-full object-contain" />

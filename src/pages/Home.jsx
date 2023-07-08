@@ -30,7 +30,7 @@ function Home() {
 
   return (
     <>
-      <section className="bg-slate-50 fancy-bg pt-12">
+      <section className="bg-slate-50 pt-12">
           <div className="container mx-auto z-[500] max-w-[960px] max-h-[70vh] h-[70vh] relative overflow-hidden">
             <Carousel 
               autoPlay={true}
@@ -40,6 +40,10 @@ function Home() {
               showIndicators={false}
               showThumbs={false}
               showStatus={false}
+              preventMovementUntilSwipeScrollTolerance={true}
+              emulateTouch={true}
+              stopOnHover={true}
+              // axis='vertical'
             >
             <div className="container max-w-[960px] relative z-50 mx-auto items-center px-4 grid grid-cols-1 md:grid-cols-2 gap-2">
               <div className="flex flex-col gap-2">
@@ -118,7 +122,7 @@ function Home() {
             {
               loading ? <Skeleton key={891} type={'course'} total={3} />
               : 
-              categories.map(category => (<CategoryCard {...category} />))
+              categories.slice(0,6).map(category => (<CategoryCard key={category.id} {...category} />))
             }
           </div>
         </div>

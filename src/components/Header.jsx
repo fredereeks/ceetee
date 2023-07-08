@@ -66,7 +66,7 @@ function Header(){
                     </Link>
                 </div>
                 <nav ref={navRef}  style={{left: '0 !important'}} className={`flex-1 sm:flex-4 flex flex-col md:flex-row md:justify-center md:pl-[6rem] absolute md:relative shadow-md transition-all duration-300 ${navshow ? 'left-0 top-full z-50' : 'left-[110%] md:left-0 z-0 top-full'} md:top-0 w-screen md:w-max md:shadow-none bg-white md:mx-0`}>
-                    <ul className="list-style-none mx-auto flex flex-col md:flex-1 md:flex-row gap-2">
+                    <ul className="list-style-none mx-auto w-full flex flex-col md:flex-1 md:flex-row gap-2">
                         {
                             headerLinks.map((link) => <LinkCard key={link.id} {...link} dropdown={dropdowns[link.title.toLowerCase()]} onClick={toggleDropdown} />)
                         }

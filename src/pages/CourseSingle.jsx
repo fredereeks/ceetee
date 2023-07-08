@@ -4,11 +4,16 @@ import { Link, useLocation } from 'react-router-dom'
 import { FaCheck, FaStar, FaStarHalfAlt } from 'react-icons/fa'
 import { IoMdCart, IoMdGift } from 'react-icons/io'
 import { usePaystackPayment } from 'react-paystack';
+import {Carousel} from 'react-responsive-carousel'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import axios from 'axios'
+import { courses } from '../data';
+import CourseCard from '../components/CourseCard';
 
 function CourseSingle() {
   const location = useLocation();
   const {state} = location;
+  console.log({related: courses.filter(course => course.category === state?.category && course.id !== state?.id)});
   const formRef = useRef(null)
   const [inputs, setInputs] = useState({
       fullname: "John Doe",
@@ -96,15 +101,15 @@ function CourseSingle() {
           <div className="font-normal hover:text-slate-500 px-2 text-md md:text-lg text-slate-500">{state?.title}</div>
         </div>
       </div>
-      <div className="bg-white">
+      <section className="bg-white">
         <div className="container relative mx-auto max-w-[980px] py-10 px-4 flex flex-col">
-          <section className="bg-white">
+          <article className="bg-white">
             <div className="container relative mx-auto max-w-[960px] grid grid-cols-1 md:grid-cols-5 gap-3">
               <aside className="col-span-1 md:col-span-3 flex flex-col gap-4">
                 <div className="rounded-lg relative h-[300px] md:h-[400px] w-full overflow-hidden before:z-10 before:w-full before:h-[30%] before:absolute before:bottom-0 before:left-0 before:bg-gradient-to-t before:from-gray-950 before:to-transparent">
                   <img src={state?.image} alt={state?.title} className="absolute w-full h-full left-0 top-0 object-cover" />
                   <div className="flex flex-col gap-1 bottom-5 right-4 absolute z-20">
-                    <p className="text-white text-xs md:text-sm">{(state?.rating * 1000).toLocaleString()} reviews</p>
+                    <p className="text-white text-xs md:text-sm">{(+state?.ratings * 1000).toLocaleString()} reviews</p>
                     <div className="flex gap-1 items-center">
                       <FaStar className='text-xs text-yellow-500' key={12}/>
                       <FaStar className='text-xs text-yellow-500' key={23}/>
@@ -126,35 +131,45 @@ function CourseSingle() {
                 <div className="flex flex-col gap-2">
                   <h3 className="text-xl md:text-2xl text-gray-600">&#8358;{(state?.price).toLocaleString()}</h3>
                   <form ref={formRef} onSubmit={handleSubmit} className="flex gap-2">
-                    <Link className="flex-1 w-[3rem] bg-indigo-500 p-3 rounded-lg flex items-center justify-center gap-2">
+                    <button type="submit" disabled={loading} className="flex-1 w-[3rem] bg-indigo-500 p-3 rounded-lg flex items-center justify-center gap-2">
                         <IoMdCart className='text-sm md:text-md text-white'/>
-                        <p className="text-white text-sm md:text-md">Enroll for Course</p>
-                    </Link>
-                    <Link className="flex-1 w-[3rem] border-[1px] border-indigo-500 p-3 rounded-lg flex items-center justify-center gap-2">
+                        <p className="text-white text-sm md:text-md">{loading ? 'Please wait...' : 'Enroll for Course'}</p>
+                    </button>
+                    <button type="button" disabled={loading} className="flex-1 w-[3rem] border-[1px] border-indigo-500 p-3 rounded-lg flex items-center justify-center gap-2">
                         <IoMdGift className='text-sm md:text-md text-gray-500'/>
                         <p className="text-gray-500 text-sm md:text-md">Buy as Gift</p>
-                    </Link>
+                    </button>
                   </form>
                   <div className="flex flex-col gap-2">
                     <p className="text-lg md:text-xl pt-2 text-thin text-slate-800">Prerequisite</p>
                     <div className="flex flex-col bg-gray-100 rounded-md p-4">
-                      <p className="text-slate-800 py-1 leading-loose text-sm flex items-center gap-2 border-0 border-b-[1px] border-b-slate-300"><FaCheck className='bg-green-400 text-white h-[15px] w-[15px] text-xs p-1 grid place-items-center rounded-full' /> Basic Computer Appreciation</p>
-                      <p className="text-slate-800 py-1 leading-loose text-sm flex items-center gap-2 border-0 border-b-[1px] border-b-slate-300"><FaCheck className='bg-green-400 text-white h-[15px] w-[15px] text-xs p-1 grid place-items-center rounded-full' /> Quality Laptop</p>
-                      <p className="text-slate-800 py-1 leading-loose text-sm flex items-center gap-2"><FaCheck className='bg-green-400 text-white h-[15px] w-[15px] text-xs p-1 grid place-items-center rounded-full' /> Optimum Dedication and Concentration</p>
+                      {
+                        state?.requisite?.map((req,i) => (<p key={i} className="text-slate-800 py-1 leading-loose text-sm flex items-center gap-2 border-0 border-b-[1px] border-b-slate-300"><FaCheck className='bg-green-400 text-white h-[15px] w-[15px] flex-shrink-0 text-xs p-1 grid place-items-center rounded-full' /> {req}</p>))
+                      }
                     </div>
                     <p className="text-lg md:text-xl pt-2 text-thin text-slate-800">Course Table of Contents</p>
                     <div className="flex flex-col bg-gray-100 rounded-md p-4">
-                      <p className="text-slate-800 p-1 leading-loose text-sm flex justify-between border-0 border-b-[1px] border-b-slate-300">Introduction <span className="ml-auto">+</span></p>
-                      <p className="text-slate-800 p-1 leading-loose text-sm flex justify-between border-0 border-b-[1px] border-b-slate-300">Getting Started <span className="ml-auto">x</span></p>
-                      <p className="text-slate-800 p-1 leading-loose text-sm flex justify-between">Packages to Learn <span className="ml-auto">+</span></p>
+                      {
+                        state?.contents?.map((content,i) => (<p key={i} className="text-slate-800 p-1 leading-loose text-sm flex justify-between border-0 border-b-[1px] border-b-slate-300">{content} <span className="ml-auto">+</span></p>))
+                      }
                     </div>
                   </div>
                 </div>
               </aside>
             </div>
-          </section>
+          </article>
         </div> 
-      </div>
+      </section>
+      <section className="bg-gray-50 px-4">
+        <div className="container relative mx-auto max-w-[980px] py-10 flex flex-col overflow-hidden">
+          <h3 className="py-2 px-3 bg-gray-100 text-indigo-500 border-0 border-l-[3px] border-l-indigo-500 font-bold text-lg md:text-xl">Related Courses</h3>
+          <div className="col-span-1 md:col-span-3 py-4 grid course__wrap bg-white gap-3" style={{gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))"}}>
+            {
+              courses.filter(course => course.category === state?.category && course.id !== state?.id).slice(0,4).map(course => <CourseCard key={course.id} {...course} state={course}/>)
+            }
+        </div>
+        </div>
+      </section>
     </main>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function SkillCard({image, title, text, direction}) {
+function VirtualCard({image, title, text, direction}) {
   return (
     <aside className={`group py-8 px-4 flex flex-col items-stretch gap-3 md:gap-5 ${direction ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
         <div className="relative flex-1 mx-auto flex h-full py-4 flex-shrink-0 group-hover:shad bg-white rounded-md overflow-hidden">
@@ -14,4 +14,4 @@ function SkillCard({image, title, text, direction}) {
   )
 }
 
-export default SkillCard
+export default VirtualCard

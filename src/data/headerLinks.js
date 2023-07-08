@@ -141,16 +141,16 @@ export const headerLinks = [
                 link: "/solutions/skills-assessment",
                 title: "Skills Assessment"
             },
-            {
-                id: 1142,
-                link: "/solutions/enterprise-solutions-advisory",
-                title: "Enterprise Solutions Advisory"
-            },
-            {
-                id: 1143,
-                link: "/solutions/management-training-services",
-                title: "Management Training Services"
-            },
+            // {
+            //     id: 1142,
+            //     link: "/solutions/enterprise-solutions-advisory",
+            //     title: "Enterprise Solutions Advisory"
+            // },
+            // {
+            //     id: 1143,
+            //     link: "/solutions/management-training-services",
+            //     title: "Management Training Services"
+            // },
             {
                 id: 1144,
                 link: "/solutions/team-training",
@@ -161,11 +161,11 @@ export const headerLinks = [
                 link: "/solutions/virtual-corporate-training",
                 title: "Virtual Corporate Training"
             },
-            {
-                id: 1146,
-                link: "/solutions/customized-courseware-development",
-                title: "Customized Courseware Development"
-            },
+            // {
+            //     id: 1146,
+            //     link: "/solutions/customized-courseware-development",
+            //     title: "Customized Courseware Development"
+            // },
             {
                 id: 1147,
                 link: "/solutions/customized-training",
