@@ -2,7 +2,7 @@ import React from 'react'
 import {randomColor} from "../utils"
 import { FaCheck } from 'react-icons/fa'
 
-function CorporateCard({title, contents}) {
+function CoachingCard({title, contents}) {
   return (
     <aside className="bg-white p-4 shadow-lg flex flex-col gap-2 m-2">
         <h3 style={{color: randomColor(.8)}} className={`text-lg md:text-xl font-bold p-2`}>{title}</h3>
@@ -15,4 +15,4 @@ function CorporateCard({title, contents}) {
   )
 }
 
-export default CorporateCard
+export default CoachingCard

@@ -1,7 +1,7 @@
 import {BreadCrumb} from "./BreadCrumb"
 import { Button } from "./Button"
 import CommentCard from "./CommentCard"
-import CorporateCard from "./CorporateCard"
+import CoachingCard from "./CoachingCard"
 import Footer from "./Footer"
 import Header from "./Header"
 import LinkCard from "./LinkCard"
@@ -15,7 +15,7 @@ export {
     BreadCrumb,
     Button,
     CommentCard,
-    CorporateCard,
+    CoachingCard,
     Footer,
     Header,
     LinkCard,

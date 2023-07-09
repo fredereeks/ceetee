@@ -1,9 +1,7 @@
 import {useEffect} from 'react'
-import { partners } from '../data'
-import PartnersCard from '../components/PartnersCard'
 import { Link } from 'react-router-dom';
 import { masonry8 } from '../assets/images';
-import { CorporateCard } from '../components'
+import { CoachingCard } from '../components'
 import { corporates, individuals } from '../data';
 
 function Coaching() {
@@ -35,7 +33,7 @@ function Coaching() {
                   <h3 className="text-2xl md:text-3xl font-bold text-indigo-600 capitalize p-5 pt-8">Customized <span className="text-cyan-400">Corporate</span> Training</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-2">
                       {
-                          corporates.map(corporate => <CorporateCard key={corporate.id} {...corporate} />)
+                          corporates.map(corporate => <CoachingCard key={corporate.id} {...corporate} />)
                       }
                   </div>
               </article>
@@ -47,7 +45,7 @@ function Coaching() {
                   <h3 className="text-2xl md:text-3xl font-bold text-cyan-500 capitalize p-5 pt-8">Customized <span className="text-indigo-600">Individual</span> Training</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-2">
                       {
-                          individuals.map(individual => <CorporateCard key={individual.id} {...individual} />)
+                          individuals.map(individual => <CoachingCard key={individual.id} {...individual} />)
                       }
                   </div>
               </article>
