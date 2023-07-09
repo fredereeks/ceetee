@@ -77,7 +77,7 @@ function Signup(){
                 </form>
             </div>
             <div className="relative hidden md:flex">
-                <img src={niit_building} alt="CTTI Swift Students" className="absolute w-full h-full left-0 top-0 object-cover" />
+                <img src={niit_building} alt="CTTI Swift Students" className="absolute w-full h-full left-0 top-0 object-contain" />
             </div>
         </section>
     )

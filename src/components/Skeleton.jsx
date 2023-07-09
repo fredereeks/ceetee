@@ -13,19 +13,20 @@ function Skeleton({type, total}) {
                 </div>
                 <div className="flex gap-3 items-center pt-4 pb-2">
                 <div className="flex items-center text-slate-400 gap-2 text-sm">
-                    <div className="flex gap-2 items-center bg-green-100 h-5 w-5 rounded-md grid place-items-center"></div>
+                    <div className="gap-2 items-center bg-green-100 h-5 w-5 rounded-md grid place-items-center"></div>
                 </div>
                 <div className="flex items-center text-slate-400 gap-2 text-sm">
-                    <div className="flex gap-2 items-center bg-yellow-100 h-5 w-5 rounded-md grid place-items-center"></div>
+                    <div className="gap-2 items-center bg-yellow-100 h-5 w-5 rounded-md grid place-items-center"></div>
                 </div>
                 <div className="flex items-center text-slate-400 gap-2 text-sm">
-                    <div className="flex gap-2 items-center bg-pink-100 h-5 w-5 rounded-md grid place-items-center"></div> 
+                    <div className="gap-2 items-center bg-pink-100 h-5 w-5 rounded-md grid place-items-center"></div> 
                 </div>
                 </div>
             </div>
         </aside>
     }
-//   if(type === "course") return (new Array(total || 3).fill(<CourseCard key={Math.random().toString()+new Date().getTime()+Math.random()}/>))
+  if(type === "course") return (Array(total || 3).fill(<CourseCard key={Math.random().toString()+new Date().getTime()+Math.random()}/>))
+    // return <section>Skeleton</section>
 }
 
 export default Skeleton

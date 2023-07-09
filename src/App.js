@@ -1,5 +1,5 @@
 /* https://www.youtube.com/watch?v=Xoz31I1FuiY */
-import React, {lazy, Suspense, useTransition} from 'react'
+import React, {lazy, Suspense} from 'react'
 import { createHashRouter, RouterProvider, Outlet} from "react-router-dom"
 
 import Footer from './components/Footer'

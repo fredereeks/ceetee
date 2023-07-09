@@ -156,7 +156,7 @@ export const courses = [
     },
     {
         id: 6983492,
-        image: blog_slider2,
+        image: category_2,
         category: "Networking and Cybersecurity",
         title: "Microsoft Certified Network Associate",
         users: 30,
@@ -175,7 +175,7 @@ export const courses = [
     },
     {
         id: 6992342,
-        image: blog_slider2,
+        image: blog_slider1,
         category: "Networking and Cybersecurity",
         title: "Cisco Certified Network Associate (CCNA) ",
         users: 30,
@@ -195,7 +195,7 @@ export const courses = [
     },
     {
         id: 6972392,
-        image: blog_slider2,
+        image: masonry4,
         category: "Networking and Cybersecurity",
         title: "Ethical Hacking and Penetration Testing ",
         users: 30,

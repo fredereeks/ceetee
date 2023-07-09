@@ -1,7 +1,7 @@
 import React from 'react'
-import { FaCommentAlt } from 'react-icons/fa'
+// import { FaCommentAlt } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import { randomColor } from '../utils'
+// import { randomColor } from '../utils'
 
 function NewsCard({id, image, title, text, comments, fullname, users, category, full}) {
   return (

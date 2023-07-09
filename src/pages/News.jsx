@@ -1,6 +1,6 @@
 import {useEffect} from 'react'
 import { FaCommentAlt } from 'react-icons/fa';
-import {blog_slider1, blog_slider2, blog_slider3, rocket} from "../assets/images"
+// import {blog_slider1, blog_slider2, blog_slider3, rocket} from "../assets/images"
 
 function News({image, user, title, category, text, comments}) {
   useEffect(() => {

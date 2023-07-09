@@ -4,7 +4,6 @@ import { Link, useLocation } from 'react-router-dom'
 import { FaCheck, FaStar, FaStarHalfAlt } from 'react-icons/fa'
 import { IoMdCart, IoMdGift } from 'react-icons/io'
 import { usePaystackPayment } from 'react-paystack';
-import {Carousel} from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import axios from 'axios'
 import { courses } from '../data';
@@ -13,7 +12,7 @@ import CourseCard from '../components/CourseCard';
 function CourseSingle() {
   const location = useLocation();
   const {state} = location;
-  console.log({related: courses.filter(course => course.category === state?.category && course.id !== state?.id)});
+  // console.log({related: courses.filter(course => course.category === state?.category && course.id !== state?.id)});
   const formRef = useRef(null)
   const [inputs, setInputs] = useState({
       fullname: "John Doe",
@@ -109,7 +108,7 @@ function CourseSingle() {
                 <div className="rounded-lg relative h-[300px] md:h-[400px] w-full overflow-hidden before:z-10 before:w-full before:h-[30%] before:absolute before:bottom-0 before:left-0 before:bg-gradient-to-t before:from-gray-950 before:to-transparent">
                   <img src={state?.image} alt={state?.title} className="absolute w-full h-full left-0 top-0 object-cover" />
                   <div className="flex flex-col gap-1 bottom-5 right-4 absolute z-20">
-                    <p className="text-white text-xs md:text-sm">{(+state?.ratings * 1000).toLocaleString()} reviews</p>
+                    <p className="text-white text-xs md:text-sm">{(+Math.ceil(state?.ratings) * 1000).toLocaleString()} reviews</p>
                     <div className="flex gap-1 items-center">
                       <FaStar className='text-xs text-yellow-500' key={12}/>
                       <FaStar className='text-xs text-yellow-500' key={23}/>
@@ -130,6 +129,8 @@ function CourseSingle() {
               <aside className="col-span-1 md:col-span-2 flex flex-col gap-3 md:px-4">
                 <div className="flex flex-col gap-2">
                   <h3 className="text-xl md:text-2xl text-gray-600">&#8358;{(state?.price).toLocaleString()}</h3>
+                    {success && <div className="text-sm text-white py-2 my-2 px-4 bg-green-500 text-center rounded-md">{success}</div>}
+                    {error && <div className="text-sm text-white py-2 my-2 px-4 bg-pink-500 text-center rounded-md">{error}</div>}
                   <form ref={formRef} onSubmit={handleSubmit} className="flex gap-2">
                     <button type="submit" disabled={loading} className="flex-1 w-[3rem] bg-indigo-500 p-3 rounded-lg flex items-center justify-center gap-2">
                         <IoMdCart className='text-sm md:text-md text-white'/>

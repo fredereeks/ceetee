@@ -6,8 +6,8 @@ import { randomColor } from '../utils'
 
 function CourseCard({id, image, title, rating, price, users, category, state}) {
   return (
-    <Link state={state} to={`/course/${category.toLowerCase().replaceAll(" ", "-")}/${id}`} key={id} className="bg-white flex flex-col gap-2 max-w-[25rem] group drop-shadow-xl hover:shadow-2xl rounded-base transition-all duration-300">
-        <div className={`relative h-[100px] sm:h-[150px] w-full rounded-md grid place-items-center`} style={{background: randomColor(.5)}}>
+    <Link state={state} to={`/course/${category.toLowerCase().replaceAll(" ", "-")}/${id}`} key={id} className="bg-white flex flex-col gap-2 max-w-[25rem] group  hover:shadow-2xl rounded-base transition-all duration-300">
+        <div className={`relative h-[100px] sm:h-[150px] w-full hover:rounded-none rounded-md grid place-items-center overflow-hidden`} style={{background: randomColor(.5)}}>
             <img src={image} alt={title} className="absolute w-full h-full top-0 left-0 object-cover" />
         </div>
         <div className="flex flex-1 flex-col p-3 pt-0 justify-between items-start">

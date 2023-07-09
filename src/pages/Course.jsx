@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
-import { error404 } from '../assets/images'
-import { Link } from 'react-router-dom'
-import { FaArrowLeft } from 'react-icons/fa'
+// import { error404 } from '../assets/images'
+// import { Link } from 'react-router-dom'
+// import { FaArrowLeft } from 'react-icons/fa'
 import { randomColor } from '../utils'
 
 function Course() {

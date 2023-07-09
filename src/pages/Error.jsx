@@ -16,7 +16,7 @@ function Error() {
             <p className="text-sm text-gray-200">Looks like this page does not exist...ouch!</p>
         </section>
         <section className="flex flex-col gap-1 items-center">
-            <img src={error404} alt="Error 404" className="h-15 w-15 object-cover" />
+            <img src={error404} alt="Error 404" className="h-15 w-15 object-contain" />
             <Link to="./" className="transition-all duration-300 hover:scale-100 scale-[.95]  flex items-center group gap-2"><FaArrowLeft className='pr-0 text-md pt-0 text-gray-200' /> <p className="text-md text-gray-200">Back to Home</p></Link>
         </section>
         {/* <Footer /> */}

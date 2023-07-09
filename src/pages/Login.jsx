@@ -61,7 +61,7 @@ function Login(){
                 </form>
             </div>
             <div style={{background: randomColor(.8)}} className="relative hidden md:flex">
-                <img src={rocket} alt="CTTI Web Students" className="absolute w-full h-full left-0 top-0 object-cover" />
+                <img src={rocket} alt="CTTI Web Students" className="absolute w-full h-full left-0 top-0 object-contain" />
             </div>
         </section>
     )
