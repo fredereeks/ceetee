@@ -20,7 +20,7 @@ function CustomizedTraining() {
                     </div>
                 </div>
             </section>
-            <section className="bg-gray-100">
+            <section className="bg-gray-100 pb-10">
                 <div className="container max-w-[960px] mx-auto py-10 flex flex-col gap-5">
                     <article className="flex flex-col gap-3">
                         <h3 className="text-2xl md:text-3xl font-bold text-indigo-600 capitalize p-5 pt-8">Customized <span className="text-cyan-400">Corporate</span> Training</h3>

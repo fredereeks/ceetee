@@ -35,22 +35,22 @@ function PartnerSlide() {
               emulateTouch={true}
               stopOnHover={true}
             >
-            <Link to="/partners" className='h-[50px] w-[120px] overflow-hidden shad relative'>
+            <Link target='_blank' to="/partners" className='h-[50px] w-[120px] overflow-hidden shad relative'>
               <img src={exam_announcement} alt="exam_announcement" className="h-full w-full object-contain" />
             </Link>
-            <Link to="/partners" className='h-[50px] w-[120px] overflow-hidden shad relative'>
+            <Link target='_blank' to="/partners" className='h-[50px] w-[120px] overflow-hidden shad relative'>
               <img src={exam_groupread} alt="exam_groupread" className="h-full w-full object-contain" />
             </Link>
-            <Link to="/partners" className='h-[50px] w-[120px] overflow-hidden shad relative'>
+            <Link target='_blank' to="/partners" className='h-[50px] w-[120px] overflow-hidden shad relative'>
               <img src={exam_slider} alt="exam_slider" className="h-full w-full object-contain" />
             </Link>
-            <Link to="/partners" className='h-[50px] w-[120px] overflow-hidden shad relative'>
+            <Link target='_blank' to="/partners" className='h-[50px] w-[120px] overflow-hidden shad relative'>
               <img src={exam_courses} alt="exam_courses" className="h-full w-full object-contain" />
             </Link>
-            <Link to="/partners" className='h-[50px] w-[120px] overflow-hidden shad relative'>
+            <Link target='_blank' to="/partners" className='h-[50px] w-[120px] overflow-hidden shad relative'>
               <img src={exam_template} alt="exam_template" className="h-full w-full object-contain" />
             </Link>
-            <Link to="/partners" className='h-[50px] w-[120px] overflow-hidden shad relative'>
+            <Link target='_blank' to="/partners" className='h-[50px] w-[120px] overflow-hidden shad relative'>
               <img src={exam_study} alt="exam_study" className="h-full w-full object-contain" />
             </Link>
           </Carousel>

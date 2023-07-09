@@ -27,7 +27,7 @@ function Coaching() {
           <p style={{lineHeight: 2}} className="text-white w-full sm:max-w-[70%] md:max-w-[90%] leading-[2] text-md md:text-base py-2 text-justify">At CTTI, we understand the importance of continuous growth and personal development in today's dynamic professional landscape. We offer individuals and corporate organisations comprehensive career development and coaching consulting services. Whether you're an individual seeking to enhance your career prospects or an organisation looking to invest in the success of your employees, our expert consultants are here to guide you on the path to success.</p>
         </aside>
       </section>
-      <section className="bg-gray-100">
+      <section className="bg-gray-100 pb-10">
           <div className="container max-w-[960px] mx-auto py-10 flex flex-col gap-5">
               <article className="flex flex-col gap-3">
                   <h3 className="text-2xl md:text-3xl font-bold text-indigo-600 capitalize p-5 pt-8">Customized <span className="text-cyan-400">Corporate</span> Training</h3>

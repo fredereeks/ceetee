@@ -1,16 +1,28 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { logo } from '../assets/images'
+import { IoLogoFacebook, IoLogoInstagram, IoLogoTwitter } from 'react-icons/io'
 
 const Footer = () => {
   return (
-        <div className="bg-slate-200 relative py-20 px-4">
+        <footer className="bg-slate-200 relative py-20 px-4">
             <div className="md:container md:px-10 pb-10 mx-0 md:mx-auto flex flex-col sm:flex-row justify-center md:justify-start md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-4 gap-6">
                 <div className="flex flex-col">
                     <Link to="/" className='w-[70px] h-[70px] text-gray-100'>
                         <img src={logo} alt="CTTI Logo" className="w-full h-[60px] object-contain sm:object-contain" />
                     </Link>
-                    <p className="text-xs md:text-sm text-slate-600 text-justify">...the best in what we do</p>
+                    {/* <p className="text-xs md:text-sm text-slate-600 text-justify">...the best in what we do</p> */}
+                    <div className="flex gap-2 items-center">
+                        <Link to="https://www.facebook.com/ctti" target='_blank'>
+                            <IoLogoFacebook className="text-lg md:text-xl text-blue-800" />
+                        </Link>
+                        <Link to="https://www.twitter.com/ctti" target='_blank'>
+                            <IoLogoTwitter className="text-lg md:text-xl text-cyan-500" />
+                        </Link>
+                        <Link to="https://www.instagram.com/ctti" target='_blank'>
+                            <IoLogoInstagram className="text-lg md:text-xl text-red-500" />
+                        </Link>
+                    </div>
                 </div>
                 <div className="flex flex-col">
                     <h3 className="text-md md:text-xl font-bold text-slate-800 pb-2 uppercase">Working Hours</h3>
@@ -40,7 +52,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
     )
 }
 
