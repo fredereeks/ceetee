@@ -1,4 +1,4 @@
-import React, { lazy, useState, useEffect } from 'react'
+import React, { lazy, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { IoIosArrowDropright } from 'react-icons/io'
 import {Carousel} from 'react-responsive-carousel'
@@ -6,23 +6,23 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
 import { blog_slider1, blog_slider2, blog_slider3 } from '../assets/images'
 import { categories, courses, differences } from '../data'
-import Skeleton from '../components/Skeleton'
+// import Skeleton from '../components/Skeleton'
 const DiffCard = lazy(() => import ('../components/DiffCard'))
 const CategoryCard = lazy(() => import ('../components/CategoryCard'))
 const CourseCard = lazy(() => import ('../components/CourseCard'))
 const PartnerSlide = lazy(() => import ('../components/PartnerSlide'))
 
 function Home() {
-  const [loading, setLoading] = useState(true)
+  // const [loading, setLoading] = useState(true)
 
-  useEffect(() => {
-      const timeout = window.setTimeout(() => {
-        setLoading(false)
-      },7000)
-      return () => {
-        clearTimeout(timeout)
-      }
-  },[])
+  // useEffect(() => {
+  //     const timeout = window.setTimeout(() => {
+  //       setLoading(false)
+  //     },7000)
+  //     return () => {
+  //       clearTimeout(timeout)
+  //     }
+  // },[])
   
   useEffect(() => {
     document.title = "CTTI e-learning Centre :: Home";
@@ -120,8 +120,8 @@ function Home() {
           </div>
           <div className="py-5 grid grid-cols-2 md:grid-cols-3 gap-x-3 gap-y-8">
             {
-              loading ? <Skeleton key={891} type={'course'} total={3} />
-              : 
+              // loading ? <Skeleton key={891} type={'course'} total={3} />
+              // : 
               categories.slice(0,6).map(category => (<CategoryCard key={category.id} {...category} />))
             }
           </div>

@@ -1,6 +1,6 @@
 /* https://www.youtube.com/watch?v=Xoz31I1FuiY */
 import React, {lazy, Suspense} from 'react'
-import { createBrowserRouter, RouterProvider, Outlet} from "react-router-dom"
+import { createHashRouter, RouterProvider, Outlet} from "react-router-dom"
 
 import Footer from './components/Footer'
 import Header from './components/Header'
@@ -48,7 +48,7 @@ function App() {
     <div className="relative h-3 w-3 rounded-full transition-all duration-75 animation-bounce delay-0 bg-blue-400 before:absolute before:-left-[200%] before:bg-cyan-600 before:rounded-full before:animate-bounce before:delay-75 before:h-full before:w-full before:transition-all before:duration-75 after:absolute after:left-[200%] after:bg-indigo-600 after:rounded-full after:animate-bounce after:delay-100 after:h-full after:w-full after:transition-all after:duration-75"></div>
   </section>)
 
-  const router = createBrowserRouter([
+  const router = createHashRouter([
     {
       path: "/",
       element: <Layout />,

@@ -1,7 +1,7 @@
 import React, { useEffect, useState, lazy } from 'react'
 import {Carousel} from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
-import { headerLinks, courses, categories, } from '../data';
+import {  courses, categories, } from '../data';
 import { BreadCrumb } from '../components'
 
 const CourseCard = lazy(() => import ('../components/CourseCard'))
@@ -27,7 +27,7 @@ function CoursesPage() {
         <section className="container bg-white relative mx-auto max-w-[960px] flex flex-col gap-5 py-20">
           <div className="flex flex-col gap-2 pb-10 justify-center items-center">
               {/* <h3 className="text-2xl md:text-2xl font-bold text-blue-600 mx-auto max-w-[90%] sm:max-w-[300px] text-center capitalize">We are equipped with<span className ="text-cyan-400">Expert Trainers</span> in the following courses </h3> */}
-              <h3 className="text-2xl md:text-3xl font-bold text-blue-600 mx-auto max-w-[90%] sm:max-w-[50%] text-center leading-loose capitalize">We are equipped with<span className ="text-cyan-400"> Expert Trainers</span> in the following courses </h3>
+              <h3 className="text-2xl md:text-3xl font-bold text-blue-600 mx-auto max-w-[90%] md:max-w-[50%] text-center leading-loose capitalize">We are equipped with<span className ="text-cyan-400"> Expert Trainers</span> in the following courses </h3>
               <p className="text-slate-600 text-md md:text-base py-2 px-4 text-center">Taking a course with us gives you access and guarantees of these following benefits</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
@@ -47,8 +47,8 @@ function CoursesPage() {
               >
                 <button onClick={() => changeSelectedCourse("All")} className={`py-2 px-4 w-full ${active === "All" ? 'bg-gradient-to-l from-blue-500 to-indigo-500 text-white' : 'hover:bg-indigo-500 hover:text-white'} rounded-br-full rounded-tr-full text-slate-600 text-xs md:text-sm text-center md:text-left`} >All</button>
                 {
-                  headerLinks[2].sublinks.map((links) => {
-                    const link = {...links}
+                  categories.map((category) => {
+                    const link = {...category}
                     return(<button onClick={() => changeSelectedCourse(link.title)} className={`py-2 px-4 w-full hover:text-white ${active === link.title ? 'bg-gradient-to-l from-blue-500 to-indigo-500 text-white' : 'hover:bg-indigo-500 hover:text-white'} rounded-sm md:rounded-br-full md:rounded-tr-full text-slate-600 text-xs md:text-sm text-center md:text-left`} key={link.id} >{link.title}</button>)
                   })
                 }
