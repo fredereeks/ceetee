@@ -1,9 +1,9 @@
-import { blog_slider1, blog_slider2, blog_slider3, blog_teaser, category_2, ctti_business, ctti_dev_ops, ctti_digital_marketing, ctti_graphics, ctti_mobile_app, ctti_ms_chart, ctti_web_development, exam_announcement, exam_courses, exam_groupread, exam_slider, exam_study, exam_template, masonry2, masonry4, masonry6, masonry8 } from '../assets/images'
+import { blog_slider1, blog_slider2, category_2, ctti_agile_biz, ctti_analytics, ctti_biz_app, ctti_biz_leadership, ctti_biz_skill, ctti_biz_start, ctti_business, ctti_ccna, ctti_cloud, ctti_cyber, ctti_database, ctti_datascience, ctti_dev_ops, ctti_digital_marketing, ctti_excel, ctti_graphics, ctti_graphics_design, ctti_it_essentials, ctti_itil_foundation, ctti_machine_learning, ctti_ms_chart, ctti_powerbi, ctti_project_management, ctti_project_mgt, ctti_project_pro, ctti_python, ctti_sharepoint, ctti_web_development, exam_announcement, exam_courses, exam_groupread, exam_slider, exam_study, exam_template, masonry2, masonry4, masonry6, masonry8, mobile_apps, rocket } from '../assets/images'
 
 export const courses = [
     {
         id: 699210,
-        image: ctti_mobile_app,
+        image: mobile_apps,
         category: "Programming and Development",
         title: "Java Programming- Full stack",
         users: 51,
@@ -42,7 +42,7 @@ export const courses = [
     },
     {
         id: 690909,
-        image: blog_slider1,
+        image: masonry2,
         category: "Programming and Development",
         title: "Web design – Front end",
         users: 76,
@@ -61,7 +61,7 @@ export const courses = [
     },
     {
         id: 699109,
-        image: blog_slider2,
+        image: ctti_python,
         category: "Programming and Development",
         title: "Python programming",
         users: 30,
@@ -80,7 +80,7 @@ export const courses = [
     },
     {
         id: 693462,
-        image: blog_slider3,
+        image: blog_slider1,
         category: "Programming and Development",
         title: "Mobile Application development",
         users: 30,
@@ -118,7 +118,7 @@ export const courses = [
     },
     {
         id: 692809,
-        image: category_2,
+        image: ctti_powerbi,
         category: "Networking and Cybersecurity",
         title: "Network Fundamentals ",
         users: 30,
@@ -137,7 +137,7 @@ export const courses = [
     },
     {
         id: 609192,
-        image: exam_announcement,
+        image: ctti_it_essentials,
         category: "Networking and Cybersecurity",
         title: "IT Essentials (Computer repairs and Maintenance)",
         users: 30,
@@ -175,7 +175,7 @@ export const courses = [
     },
     {
         id: 6992342,
-        image: blog_slider1,
+        image: ctti_ccna,
         category: "Networking and Cybersecurity",
         title: "Cisco Certified Network Associate (CCNA) ",
         users: 30,
@@ -195,7 +195,7 @@ export const courses = [
     },
     {
         id: 6972392,
-        image: masonry4,
+        image: ctti_cyber,
         category: "Networking and Cybersecurity",
         title: "Ethical Hacking and Penetration Testing ",
         users: 30,
@@ -214,7 +214,7 @@ export const courses = [
     },
     {
         id: 690122,
-        image: exam_study,
+        image: masonry8,
         category: "Networking and Cybersecurity",
         title: "Certified Information Systems Security Professional (CISSP) ",
         users: 30,
@@ -275,7 +275,7 @@ export const courses = [
     },
     {
         id: 693823,
-        image: blog_slider3,
+        image: ctti_project_management,
         category: "Business Applications",
         title: "Management information systems",
         users: 58,
@@ -294,7 +294,7 @@ export const courses = [
     },
     {
         id: 696631,
-        image: blog_slider1,
+        image: ctti_excel,
         category: "Business Applications",
         title: "Basic & Advanced Excel",
         users: 65,
@@ -313,7 +313,7 @@ export const courses = [
     },
     {
         id: 699319,
-        image: exam_study,
+        image: ctti_sharepoint,
         category: "Business Applications",
         title: "Microsoft SharePoint",
         users: 78,
@@ -351,7 +351,7 @@ export const courses = [
     },
     {
         id: 694723,
-        image: masonry2,
+        image: ctti_cloud,
         category: "Cloud Computing and Virtualization",
         title: "Introduction to Cloud Computing",
         users: 52,
@@ -370,7 +370,7 @@ export const courses = [
     },
     {
         id: 699235,
-        image: masonry8,
+        image: rocket,
         category: "Cloud Computing and Virtualization",
         title: "Microsoft Azure ",
         users: 71,
@@ -408,7 +408,7 @@ export const courses = [
     },
     {
         id: 682397,
-        image: masonry4,
+        image: ctti_biz_app,
         category: "Data Science and Analytics",
         title: "Data Analysis with Python (Basic)",
         users: 146,
@@ -427,7 +427,7 @@ export const courses = [
     },
     {
         id: 690927,
-        image: exam_groupread,
+        image: ctti_machine_learning,
         category: "Data Science and Analytics",
         title: "Machine Learning Fundamentals (Intermediate)",
         users: 16,
@@ -446,7 +446,7 @@ export const courses = [
     },
     {
         id: 699297,
-        image: category_2,
+        image: ctti_analytics,
         category: "Data Science and Analytics",
         title: "Big Data Analytics and Hadoop (Intermediate)",
         users: 141,
@@ -465,7 +465,7 @@ export const courses = [
     },
     {
         id: 699797,
-        image: masonry8,
+        image: ctti_datascience,
         category: "Data Science and Analytics",
         title: "Data Engineering and ETL (Advanced)",
         users: 105,
@@ -484,7 +484,7 @@ export const courses = [
     },
     {
         id: 690217,
-        image: blog_slider1,
+        image: ctti_powerbi,
         category: "Data Science and Analytics",
         title: "Power BI",
         users: 121,
@@ -503,7 +503,7 @@ export const courses = [
     },
     {
         id: 699897,
-        image: masonry4,
+        image: ctti_ms_chart,
         category: "Data Science and Analytics",
         title: "Tableau",
         users: 116,
@@ -522,7 +522,7 @@ export const courses = [
     },
     {
         id: 690777,
-        image: category_2,
+        image: ctti_project_mgt,
         category: "Project Management",
         title: "Project Management Fundamentals (Basic)",
         users: 78,
@@ -541,7 +541,7 @@ export const courses = [
     },
     {
         id: 6943094,
-        image: masonry6,
+        image: ctti_datascience,
         category: "Project Management",
         title: "Project Management Professional (PMP) Exam Prep",
         users: 42,
@@ -560,7 +560,7 @@ export const courses = [
     },
     {
         id: 692114,
-        image: category_2,
+        image: ctti_agile_biz,
         category: "Project Management",
         title: "Agile Scrum",
         users: 89,
@@ -579,7 +579,7 @@ export const courses = [
     },
     {
         id: 697421,
-        image: blog_slider1,
+        image: ctti_project_pro,
         category: "Project Management",
         title: "Program Management Professional",
         users: 78,
@@ -598,7 +598,7 @@ export const courses = [
     },
     {
         id: 699515,
-        image: blog_teaser,
+        image: ctti_database,
         category: "Database Administration",
         title: "Introduction to SQL and Database Design (Basic)",
         users: 78,
@@ -674,7 +674,7 @@ export const courses = [
     },
     {
         id: 663496,
-        image: blog_slider1,
+        image: ctti_itil_foundation,
         category: "IT Service Management",
         title: "ITIL Foundation (Basic)",
         users: 60,
@@ -712,7 +712,7 @@ export const courses = [
     },
     {
         id: 602356,
-        image: blog_slider1,
+        image: ctti_cloud,
         category: "IT Service Management",
         title: "IT Service Management Leadership (Advanced)",
         users: 85,
@@ -731,7 +731,7 @@ export const courses = [
     },
     {
         id: 605994,
-        image: masonry6,
+        image: ctti_biz_start,
         category: "Business Analysis",
         title: "Introduction to Business Analysis (Basic)",
         users: 59,
@@ -750,7 +750,7 @@ export const courses = [
     },
     {
         id: 690594,
-        image: exam_slider,
+        image: ctti_business,
         category: "Business Analysis",
         title: "Business Analysis Planning and Monitoring (Intermediate)",
         users: 56,
@@ -826,7 +826,7 @@ export const courses = [
     },
     {
         id: 699323,
-        image: exam_announcement,
+        image: ctti_biz_leadership,
         category: "Leadership",
         title: "Business Leadership ",
         users: 121,
@@ -845,7 +845,7 @@ export const courses = [
     },
     {
         id: 699273,
-        image: ctti_business,
+        image: ctti_biz_skill,
         category: "Leadership",
         title: "Soft Skills",
         users: 78,
@@ -864,7 +864,7 @@ export const courses = [
     },
     {
         id: 602393,
-        image: masonry6,
+        image: ctti_biz_start,
         category: "Leadership",
         title: "Business Start-up",
         users: 89,
@@ -902,7 +902,7 @@ export const courses = [
     },
     {
         id: 692134,
-        image: exam_template,
+        image: ctti_graphics_design,
         category: "Design",
         title: "UI/UX Design",
         users: 100,

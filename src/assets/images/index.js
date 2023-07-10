@@ -30,29 +30,74 @@ import niit_building from "./niit_building.jpeg"
 import niit_poster from "./niit_poster.jpeg" 
 import niit_swift_student from "./niit_swift_students.jpeg"
 
-import ctti_ms_chart from "./ctti_ms_chart.jpg" 
-import ctti_partners from "./ctti_partners.jpg" 
+
 import ctti_web_development from "./ctti_web_development.jpg" 
+import ctti_agile_biz from "./ctti_agile_biz.jpg" 
+import ctti_analytics from "./ctti_analytics.jpg" 
+import ctti_biz_app from "./ctti_biz_app.jpg" 
+import ctti_biz_leadership from "./ctti_biz_leadership.jpg" 
+import ctti_biz_skill from "./ctti_biz_skill.jpg" 
+import ctti_biz_start from "./ctti_biz_start.jpg" 
 import ctti_business from "./ctti_business.jpg" 
 import ctti_career from "./ctti_career.jpg" 
+import ctti_ccna from "./ctti_ccna.jpg" 
+import ctti_cloud from "./ctti_cloud.jpg" 
+import ctti_cyber from "./ctti_cyber.jpg" 
+import ctti_database from "./ctti_database.jpg" 
+import ctti_datascience from "./ctti_datascience.jpg" 
 import ctti_dev_ops from "./ctti_dev_ops.jpg" 
 import ctti_digital_marketing from "./ctti_digital_marketing.jpg" 
+import ctti_excel from "./ctti_excel.jpg" 
 import ctti_graphics from "./ctti_graphics.jpg" 
-import ctti_mobile_app from "./ctti_mobile_app.jpg"
+import ctti_graphics_design from "./ctti_graphics_design.jpg" 
+import ctti_it_essentials from "./ctti_it_essentials.jpg" 
+import ctti_itil_foundation from "./ctti_itil_foundation.jpg" 
+import ctti_machine_learning from "./ctti_machine_learning.jpg" 
+import ctti_powerbi from "./ctti_powerbi.jpg" 
+import ctti_ms_chart from "./ctti_ms_chart.jpg" 
+import ctti_partners from "./ctti_partners.jpg" 
+import ctti_project_management from "./ctti_project_management.jpg" 
+import ctti_project_mgt from "./ctti_project_mgt.jpg" 
+import ctti_project_pro from "./ctti_project_pro.jpg" 
+import ctti_python from "./ctti_python.jpg" 
+import ctti_sharepoint from "./ctti_sharepoint.jpg" 
+import ctti_soft_skill from "./ctti_soft_skill.jpg"
 
 export {
     logo,
 rocket,
 crypto,
-ctti_ms_chart,
-ctti_partners,
 ctti_web_development,
+ctti_agile_biz,
+ctti_analytics,
+ctti_biz_app,
+ctti_biz_leadership,
+ctti_biz_skill,
+ctti_biz_start,
 ctti_business,
 ctti_career,
+ctti_ccna,
+ctti_cloud,
+ctti_cyber,
+ctti_database,
+ctti_datascience,
 ctti_dev_ops,
 ctti_digital_marketing,
+ctti_excel,
 ctti_graphics,
-ctti_mobile_app,
+ctti_graphics_design,
+ctti_it_essentials,
+ctti_itil_foundation,
+ctti_machine_learning,
+ctti_powerbi,
+ctti_ms_chart,
+ctti_partners,
+ctti_project_management,
+ctti_project_mgt,
+ctti_project_pro,
+ctti_python,
+ctti_sharepoint,
+ctti_soft_skill,
 error404,
 error500,
 exam_announcement,

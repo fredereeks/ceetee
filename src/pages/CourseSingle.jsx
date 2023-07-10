@@ -164,8 +164,8 @@ function CourseSingle() {
       </section>
       <section className="bg-gray-50 px-4">
         <div className="container relative mx-auto max-w-[980px] py-10 flex flex-col overflow-hidden">
-          <h3 className="py-2 px-3 bg-gray-100 text-indigo-500 border-0 border-l-[3px] border-l-indigo-500 font-bold text-lg md:text-xl">Related Courses</h3>
-          <div className="col-span-1 md:col-span-3 py-4 grid course__wrap bg-white gap-3" style={{gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))"}}>
+          <h3 className="py-2 px-3 text-indigo-500 border-0 border-l-[3px] border-l-indigo-500 font-bold text-lg md:text-xl">Related Courses</h3>
+          <div className="col-span-1 md:col-span-3 pt-6 pb-4 grid course__wrap bg-white gap-3" style={{gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))"}}>
             {
               courses.filter(course => course.category === state?.category && course.id !== state?.id).slice(0,4).map(course => <CourseCard key={course.id} {...course} state={course}/>)
             }

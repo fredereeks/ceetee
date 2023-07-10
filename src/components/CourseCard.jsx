@@ -6,7 +6,7 @@ import { randomColor } from '../utils'
 
 function CourseCard({id, image, title, rating, price, users, category, state}) {
   return (
-    <Link state={state} to={`/course/${category.toLowerCase().replaceAll(" ", "-")}/${id}`} key={id} className="bg-white flex flex-col gap-2 max-w-[25rem] group  hover:shadow-2xl rounded-base transition-all duration-300">
+    <Link state={state} to={`/course/${category.toLowerCase().replaceAll(" ", "-")}/${id}`} key={id} className="bg-white flex flex-col gap-2 max-w-[25rem] group shadow-lg hover:shadow-2xl rounded-base transition-all duration-300">
         <div className={`relative h-[200px] sm:h-[150px] w-full hover:rounded-none rounded-md grid place-items-center overflow-hidden`} style={{background: randomColor(.5)}}>
             <img src={image} alt={title} className="absolute w-full h-full top-0 left-0 object-cover" />
         </div>
@@ -20,7 +20,7 @@ function CourseCard({id, image, title, rating, price, users, category, state}) {
                 <p className="gap-1 sm:gap-2 items-center bg-green-100 h-3 w-3 sm:h-5 sm:w-5 rounded-md grid place-items-center"><FaUserAlt className='text-green-300 text-[.5rem]' /></p>{users}+
               </div>
               <div className="flex items-center text-slate-600 gap-2 text-[.6rem] sm:text-xs">
-              <p className="gap-1 sm:gap-2 items-center bg-yellow-100 h-3 w-3 sm:h-5 sm:w-5 rounded-md grid place-items-center"><IoMdStarOutline className='text-yellow-300 text-[.5rem]' /></p>{rating.toFixed(1)}
+                <p className="gap-1 sm:gap-2 items-center bg-yellow-100 h-3 w-3 sm:h-5 sm:w-5 rounded-md grid place-items-center"><IoMdStarOutline className='text-yellow-300 text-[.5rem]' /></p>{rating.toFixed(1)}
               </div>
               <div className="flex items-center text-slate-600 gap-2 text-[.6rem] sm:text-xs">
                 <p className="gap-1 sm:gap-2 items-center bg-pink-100 h-3 w-3 sm:h-5 sm:w-5 rounded-md grid place-items-center"><IoLogoEuro className='text-pink-300 text-[.5rem]' /></p>&#8358;{price.toLocaleString()}
