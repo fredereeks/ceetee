@@ -8,6 +8,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import axios from 'axios'
 import { courses } from '../data';
 import CourseCard from '../components/CourseCard';
+import { randomNumber } from '../utils/randomNumber';
 
 function CourseSingle() {
   const location = useLocation();
@@ -88,7 +89,7 @@ function CourseSingle() {
 
 
   return (
-    <main  className='flex flex-col bg-gray-100 pt-8 justify-center'>
+    <main  className='flex flex-col bg-gray-100 pt-14 justify-center'>
       <div className="container relative mx-auto max-w-[980px] px-4 flex flex-col">
         <div className="flex flex-wrap gap-2 items-center pt-5 pb-7 text-slate-400">
           <Link to="/" className="font-bold hover:text-slate-500 px-2 text-md md:text-lg text-slate-600  ">Home</Link>
@@ -108,7 +109,7 @@ function CourseSingle() {
                 <div className="rounded-lg relative h-[300px] md:h-[400px] w-full overflow-hidden before:z-10 before:w-full before:h-[30%] before:absolute before:bottom-0 before:left-0 before:bg-gradient-to-t before:from-gray-950 before:to-transparent">
                   <img src={state?.image} alt={state?.title} className="absolute w-full h-full left-0 top-0 object-cover" />
                   <div className="flex flex-col gap-1 bottom-5 right-4 absolute z-20">
-                    <p className="text-white text-xs md:text-sm">{(+Math.ceil(state?.ratings) * 1000).toLocaleString()} reviews</p>
+                    <p className="text-white text-xs md:text-sm">{((+Math.ceil(state?.rating) * 100) - randomNumber(141,293)).toLocaleString()} reviews</p>
                     <div className="flex gap-1 items-center">
                       <FaStar className='text-xs text-yellow-500' key={12}/>
                       <FaStar className='text-xs text-yellow-500' key={23}/>

@@ -5,7 +5,7 @@ import { IoLogoFacebook, IoLogoInstagram, IoLogoTwitter } from 'react-icons/io'
 
 const Footer = () => {
   return (
-        <footer className="bg-slate-200 relative py-20 px-4">
+        <footer className="bg-gray-100 relative py-20 px-4">
             <div className="md:container md:px-10 pb-10 mx-0 md:mx-auto flex flex-col sm:flex-row justify-center md:justify-start md:grid md:grid-cols-3 lg:grid-cols-4 md:gap-4 gap-6">
                 <div className="flex flex-col">
                     <Link to="/" className='w-[70px] h-[70px] text-gray-100'>

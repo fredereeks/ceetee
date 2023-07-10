@@ -17,7 +17,7 @@ function Header(){
         resources: false,
     })
 
-    const toggleDropdown = name => {
+    const toggleDropdown = (name) => {
         const newDropdown = dropdowns
         for(let i in newDropdown) { 
             newDropdown[i] = i === name ? !newDropdown[i] : false;
@@ -47,24 +47,16 @@ function Header(){
     },[location])
 
     function checkForClick (e) {
-        // const navDimension = navRef.current.getBoundingClientRect();
         const {left, right, top, bottom} = navRef.current.getBoundingClientRect()
-        console.log({left,right,top,bottom})
-        // const {about, courses, solutions, resources} = dropdowns;
         if(e.clientX < left || e.clientX > right || e.clientY < top || e.clientY > bottom ){
-            // setNavShow(prev => !prev)
+            setNavShow(prev => !prev)
             closeDropdown()
-            // if(about || courses || solutions || resources) {
-            // document.removeEventListener("click", this, false)
-            // }
-            // document.removeEventListener("click", this, false)
         }
     }
 
     useEffect(() => {
         const {about, courses, solutions, resources} = dropdowns;
-        console.log({navshow, about, courses, solutions, resources})
-        if(!navshow || about || courses || solutions || resources){
+        if(about || courses || solutions || resources){
             document.addEventListener("click", checkForClick, false)
         }
         return () => {

@@ -20,7 +20,7 @@ function CourseCard({id, image, title, rating, price, users, category, state}) {
                 <p className="gap-1 sm:gap-2 items-center bg-green-100 h-3 w-3 sm:h-5 sm:w-5 rounded-md grid place-items-center"><FaUserAlt className='text-green-300 text-[.5rem]' /></p>{users}+
               </div>
               <div className="flex items-center text-slate-600 gap-2 text-[.6rem] sm:text-xs">
-                <p className="gap-1 sm:gap-2 items-center bg-yellow-100 h-3 w-3 sm:h-5 sm:w-5 rounded-md grid place-items-center"><IoMdStarOutline className='text-yellow-300 text-[.5rem]' /></p>{rating.toFixed(1)}
+              <p className="gap-1 sm:gap-2 items-center bg-yellow-100 h-3 w-3 sm:h-5 sm:w-5 rounded-md grid place-items-center"><IoMdStarOutline className='text-yellow-300 text-[.5rem]' /></p>{rating.toFixed(1)}
               </div>
               <div className="flex items-center text-slate-600 gap-2 text-[.6rem] sm:text-xs">
                 <p className="gap-1 sm:gap-2 items-center bg-pink-100 h-3 w-3 sm:h-5 sm:w-5 rounded-md grid place-items-center"><IoLogoEuro className='text-pink-300 text-[.5rem]' /></p>&#8358;{price.toLocaleString()}

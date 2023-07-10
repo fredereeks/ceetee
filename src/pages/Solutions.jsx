@@ -9,8 +9,8 @@ export default function Solutions() {
         <BreadCrumb key={656} page={"Solutions"}/>
         {/* <section className="py-20 px-4 bg-cyan-500 relative before:rounded-full before:border-[20px] before:border-gray-100/50 before:w-[100px] before:h-[100px] before:absolute before:z-10 before:left-10 before:top-10 before:bg-cyan-500 after:rounded-full after:border-[20px] after:border-gray-100/50 after:w-[100px] after:h-[100px] after:absolute after:z-10 after:right-10 after:-bottom-10 after:bg-cyan-500"> */}
         <section className="py-20 px-4 bg-cyan-500 overflow-hidden relative before:rounded-full before:border-[20px] before:border-gray-100/50 before:w-[100px] before:h-[100px] before:absolute before:z-10 before:left-10 before:top-10 before:bg-cyan-500 after:rounded-full after:border-[20px] after:border-gray-100/50 after:w-[300px] after:h-[300px] after:md:w-[700px] after:md:h-[700px] after:absolute after:z-10 after:right-10 after:-bottom-10 after:bg-white after:opacity-40">
-            <div className="container relative z-50 mx-auto max-w-960 py-20 grid grid-cols-2">
-              <img src={ctti_partners} alt="CTTI Solutions" className="w-[500px] h-[500px] rounded-full object-cover" />
+            <div className="container relative z-50 mx-auto max-w-960 py-20 grid grid-cols-1 sm:grid-cols-2">
+              <img src={ctti_partners} alt="CTTI Solutions" className="w-[300px] h-[300px] md:w-[500px] md:h-[500px] rounded-full object-cover" />
               <div className="flex flex-col gap-5 items-end">
                 <h2 className="text-4xl md:text-6xl font-extrabold text-white">Solutions</h2>
                 <ul className="flex flex-col items-end gap-3">
