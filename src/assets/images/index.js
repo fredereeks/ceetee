@@ -30,10 +30,29 @@ import niit_building from "./niit_building.jpeg"
 import niit_poster from "./niit_poster.jpeg" 
 import niit_swift_student from "./niit_swift_students.jpeg"
 
+import ctti_ms_chart from "./ctti_ms_chart.jpg" 
+import ctti_partners from "./ctti_partners.jpg" 
+import ctti_web_development from "./ctti_web_development.jpg" 
+import ctti_business from "./ctti_business.jpg" 
+import ctti_career from "./ctti_career.jpg" 
+import ctti_dev_ops from "./ctti_dev_ops.jpg" 
+import ctti_digital_marketing from "./ctti_digital_marketing.jpg" 
+import ctti_graphics from "./ctti_graphics.jpg" 
+import ctti_mobile_app from "./ctti_mobile_app.jpg"
+
 export {
     logo,
 rocket,
 crypto,
+ctti_ms_chart,
+ctti_partners,
+ctti_web_development,
+ctti_business,
+ctti_career,
+ctti_dev_ops,
+ctti_digital_marketing,
+ctti_graphics,
+ctti_mobile_app,
 error404,
 error500,
 exam_announcement,

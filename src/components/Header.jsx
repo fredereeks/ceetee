@@ -25,6 +25,10 @@ function Header(){
         }
     }
 
+    const closeDropdown = () => {
+        setDropdowns({ about: false, courses: false, solutions: false, resources: false,})
+    }
+
     useEffect(() => {
         window.onscroll = () => {
             if(window.scrollY > 60) {
@@ -38,24 +42,36 @@ function Header(){
             setFixed(false);
             window.scrollTo(0,0)
             setNavShow(false);
-            setDropdowns({ about: false, courses: false, solutions: false, resources: false,})
+            closeDropdown()
         }
     },[location])
 
-    /* useEffect(() => {
-        if(navshow){
-            document.addEventListener("click", (e) => {
-                const navDimension = navRef.current.getBoundingClientRect();
-                const {left, right, top, bottom} = navDimension;
-                if(e.clientX < left || e.clientX > right || e.clientY < top || e.clientY > bottom ){
-                    setNavShow(prev => !prev)
-                }
-            })
+    function checkForClick (e) {
+        // const navDimension = navRef.current.getBoundingClientRect();
+        const {left, right, top, bottom} = navRef.current.getBoundingClientRect()
+        console.log({left,right,top,bottom})
+        // const {about, courses, solutions, resources} = dropdowns;
+        if(e.clientX < left || e.clientX > right || e.clientY < top || e.clientY > bottom ){
+            // setNavShow(prev => !prev)
+            closeDropdown()
+            // if(about || courses || solutions || resources) {
+            // document.removeEventListener("click", this, false)
+            // }
+            // document.removeEventListener("click", this, false)
+        }
+    }
+
+    useEffect(() => {
+        const {about, courses, solutions, resources} = dropdowns;
+        console.log({navshow, about, courses, solutions, resources})
+        if(!navshow || about || courses || solutions || resources){
+            document.addEventListener("click", checkForClick, false)
         }
         return () => {
-            window.removeEventListener("click", document)
+            document.removeEventListener("click", checkForClick, false)
         }
-    },[dropdowns, navshow]) */
+        //eslint-disable-next-line
+    },[dropdowns, navshow])
 
     return (
         <header ref={header} className={`bg-white z-[999] p-2 fixed ${fixed ? 'shadow-md shadow-black/20' : 'shadow-none'} w-full left-0 top-0`}>

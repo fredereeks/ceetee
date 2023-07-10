@@ -1,13 +1,13 @@
-import { blog_slider1, blog_slider2, blog_slider3, blog_teaser, category_2, exam_announcement, exam_courses, exam_groupread, exam_slider, exam_study, exam_template, masonry2, masonry4, masonry6, masonry8 } from '../assets/images'
+import { blog_slider1, blog_slider2, blog_slider3, blog_teaser, category_2, ctti_business, ctti_dev_ops, ctti_digital_marketing, ctti_graphics, ctti_mobile_app, ctti_ms_chart, ctti_web_development, exam_announcement, exam_courses, exam_groupread, exam_slider, exam_study, exam_template, masonry2, masonry4, masonry6, masonry8 } from '../assets/images'
 
 export const courses = [
     {
         id: 699210,
-        image: category_2,
+        image: ctti_mobile_app,
         category: "Programming and Development",
         title: "Java Programming- Full stack",
         users: 51,
-        ratings: 4.1,
+        rating: 4.1,
         price: 250000,
         requisite: [
                 "Basic Computer Appreciation",
@@ -23,11 +23,11 @@ export const courses = [
     },
     {
         id: 699176,
-        image: blog_teaser,
+        image: ctti_web_development,
         category: "Programming and Development",
         title: "Web Development- Full Stack",
         users: 152,
-        ratings: 4.5,
+        rating: 4.5,
         price: 270000,
         requisite: [
             "Basic Computer Appreciation",
@@ -46,7 +46,7 @@ export const courses = [
         category: "Programming and Development",
         title: "Web design – Front end",
         users: 76,
-        ratings: 4.6,
+        rating: 4.6,
         price: 180000,
         requisite: [
             "Basic Computer Appreciation",
@@ -65,7 +65,7 @@ export const courses = [
         category: "Programming and Development",
         title: "Python programming",
         users: 30,
-        ratings: 4.3,
+        rating: 4.3,
         price: 245000,
         requisite: [
             "Basic Computer Appreciation",
@@ -84,7 +84,7 @@ export const courses = [
         category: "Programming and Development",
         title: "Mobile Application development",
         users: 30,
-        ratings: 4.3,
+        rating: 4.3,
         price: 189000,
         requisite: [
             "Basic Computer Appreciation",
@@ -99,11 +99,11 @@ export const courses = [
     },
     {
         id: 699154,
-        image: blog_teaser,
+        image: ctti_dev_ops,
         category: "Programming and Development",
         title: "Dev ops",
         users: 30,
-        ratings: 4.3,
+        rating: 4.3,
         price: 192000,
         requisite: [
             "Basic Computer Appreciation",
@@ -122,7 +122,7 @@ export const courses = [
         category: "Networking and Cybersecurity",
         title: "Network Fundamentals ",
         users: 30,
-        ratings: 4.3,
+        rating: 4.3,
         price: 210000,
         requisite: [
             "Basic Computer Appreciation",
@@ -141,7 +141,7 @@ export const courses = [
         category: "Networking and Cybersecurity",
         title: "IT Essentials (Computer repairs and Maintenance)",
         users: 30,
-        ratings: 4.3,
+        rating: 4.3,
         price: 160000,
         requisite: [
             "Basic Computer Appreciation",
@@ -160,7 +160,7 @@ export const courses = [
         category: "Networking and Cybersecurity",
         title: "Microsoft Certified Network Associate",
         users: 30,
-        ratings: 4.3,
+        rating: 4.3,
         price: 235000,
         requisite: [
             "Basic Computer Appreciation",
@@ -179,7 +179,7 @@ export const courses = [
         category: "Networking and Cybersecurity",
         title: "Cisco Certified Network Associate (CCNA) ",
         users: 30,
-        ratings: 4.3,
+        rating: 4.3,
         price: 195000,
         requisite: [
             "Install, configure and troubleshoot computers",
@@ -199,7 +199,7 @@ export const courses = [
         category: "Networking and Cybersecurity",
         title: "Ethical Hacking and Penetration Testing ",
         users: 30,
-        ratings: 4.3,
+        rating: 4.3,
         price: 285000,
         requisite: [
             "Basic Computer Appreciation",
@@ -218,7 +218,7 @@ export const courses = [
         category: "Networking and Cybersecurity",
         title: "Certified Information Systems Security Professional (CISSP) ",
         users: 30,
-        ratings: 4.3,
+        rating: 4.3,
         price: 265000,
         requisite: [
             "Basic Computer Appreciation",
@@ -237,7 +237,7 @@ export const courses = [
         category: "Networking and Cybersecurity",
         title: "Cyber Operations",
         users: 30,
-        ratings: 4.3,
+        rating: 4.3,
         price: 255000,
         requisite: [
             "Install, configure and troubleshoot computers",
@@ -256,7 +256,7 @@ export const courses = [
     },
     {
         id: 693123,
-        image: exam_courses,
+        image: ctti_ms_chart,
         category: "Business Applications",
         title: "Microsoft office",
         users: 89,
@@ -332,7 +332,7 @@ export const courses = [
     },
     {
         id: 699398,
-        image: blog_slider1,
+        image: ctti_digital_marketing,
         category: "Business Applications",
         title: "Digital marketing ",
         users: 78,
@@ -845,7 +845,7 @@ export const courses = [
     },
     {
         id: 699273,
-        image: category_2,
+        image: ctti_business,
         category: "Leadership",
         title: "Soft Skills",
         users: 78,
@@ -883,7 +883,7 @@ export const courses = [
     },
     {
         id: 624292,
-        image: blog_slider2,
+        image: ctti_graphics,
         category: "Design",
         title: "Graphics Design",
         users: 120,

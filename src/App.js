@@ -1,6 +1,6 @@
 /* https://www.youtube.com/watch?v=Xoz31I1FuiY */
 import React, {lazy, Suspense} from 'react'
-import { createHashRouter, RouterProvider, Outlet} from "react-router-dom"
+import { createBrowserRouter, RouterProvider, Outlet} from "react-router-dom"
 
 import Footer from './components/Footer'
 import Header from './components/Header'
@@ -21,6 +21,7 @@ const News = lazy(() => import ('./pages/News'))
 const Signup = lazy(() => import ('./pages/Signup'))
 const SingleBlog = lazy(() => import ('./pages/SingleBlog'))
 const SkillAssessment = lazy(() => import ('./pages/SkillAssessment'))
+const Solutions = lazy(() => import ('./pages/Solutions'))
 const TeamTraining = lazy(() => import ('./pages/TeamTraining'))
 const Partners = lazy(() => import ('./pages/Partners'))
 const VirtualTraining = lazy(() => import ('./pages/VirtualTraining'))
@@ -44,11 +45,10 @@ function App() {
   }
 
   const Loader = () => (<section className="min-h-[60vh] w-full flex flex-col justify-center items-center gap-3">
-    {/* <h3 className="py-20 text-xl md:text-3xl text-slate-600 text-center">Please wait a moment...</h3> */}
-    <div className="relative h-3 w-3 rounded-full transition-all duration-75 bg-blue-400 before:absolute before:-left-[200%] before:bg-cyan-600 before:animate-bounce before:h-full before:w-full before:transition-all before:duration-75 after:absolute after:left-[200%] after:bg-indigo-600 after:animate-pulse after:h-full after:w-full after:transition-all after:duration-75"></div>
+    <div className="relative h-3 w-3 rounded-full transition-all duration-75 animation-bounce delay-0 bg-blue-400 before:absolute before:-left-[200%] before:bg-cyan-600 before:rounded-full before:animate-bounce before:delay-75 before:h-full before:w-full before:transition-all before:duration-75 after:absolute after:left-[200%] after:bg-indigo-600 after:rounded-full after:animate-bounce after:delay-100 after:h-full after:w-full after:transition-all after:duration-75"></div>
   </section>)
 
-  const router = createHashRouter([
+  const router = createBrowserRouter([
     {
       path: "/",
       element: <Layout />,
@@ -103,7 +103,7 @@ function App() {
         },
         {
           path: "/solutions",
-          element: <Suspense fallback={<main><Loader /></main>}><Course /></Suspense>,
+          element: <Suspense fallback={<main><Loader /></main>}><Solutions /></Suspense>,
         },
         {
           path: "/solutions/coaching",
