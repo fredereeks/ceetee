@@ -16,16 +16,6 @@ export const headerLinks = [
                 title: "Partners"
             },
             {
-                id: 1121,
-                link: "/blogs",
-                title: "Blogs"
-            },
-            {
-                id: 1122,
-                link: "/news",
-                title: "News"
-            },
-            {
                 id: 1123,
                 link: "/clients",
                 title: "Clients"
@@ -181,16 +171,26 @@ export const headerLinks = [
         sublinks: [
             {
                 id: 1150,
+                link: "/blogs",
+                title: "Blogs"
+            },
+            {
+                id: 1151,
+                link: "/news",
+                title: "News"
+            },
+            {
+                id: 1152,
                 link: "/resource-library",
                 title: "Resource Library"
             },
             {
-                id: 1151,
+                id: 1153,
                 link: "/topics",
                 title: "Topics"
             },
             {
-                id: 1152,
+                id: 1154,
                 link: "/webinars",
                 title: "Webinars"
             },

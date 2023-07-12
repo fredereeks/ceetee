@@ -3,6 +3,7 @@ import { FaGraduationCap, FaBrain, FaBookReader, FaArchway } from 'react-icons/f
 export const differences = [
     {
         id: 234,
+        tag: 'experienced',
         icon: <FaBrain className='text-lg md:text-xl text-white' />,
         background: "bg-gradient-to-br shadow-md shadow-purple-500 from-purple-500 to-purple-600",
         title: "Experienced and Industry-Recognized Instructors",
@@ -10,6 +11,7 @@ export const differences = [
     },
     {
         id: 235,
+        tag: 'curriculum',
         icon: <FaBookReader className='text-lg md:text-xl text-white' />,
         background: "bg-gradient-to-br shadow-md shadow-yellow-400 from-yellow-400 to-orange-400",
         title: "Cutting-edge Curriculum",
@@ -17,6 +19,7 @@ export const differences = [
     },
     {
         id: 236,
+        tag: 'learning',
         icon: <FaGraduationCap className='text-lg md:text-xl text-white' />,
         background: "bg-gradient-to-br shadow-md shadow-sky-500 from-sky-500 to-sky-600",
         title: "Hands-on Learning",
@@ -24,13 +27,14 @@ export const differences = [
     },
     {
         id: 237,
+        tag: 'certifications',
         icon: <FaArchway className='text-lg md:text-xl text-white' />,
         background: "bg-gradient-to-br shadow-md shadow-pink-500 from-pink-500 to-pink-600",
         title: "Industry Partnerships and Certifications",
         text: "To ensure the relevance and value of our training, we collaborate with leading IT organisations and industry experts. We have forged partnerships with renowned companies and institutions to deliver certifications and badges that validate our students' skills and enhance their employability. Our strong industry connections also enable us to provide our students with access to internships, job placement assistance, and networking opportunities."
     },
     // {
-    //     id: 238,
+    //     tag: 238,
     //     icon: <IoMdFlashlight className='text-lg md:text-xl text-white' />,
     //     background: "bg-gradient-to-br shadow-md shadow-orange-500 from-orange-500 to-orange-600",
     //     title: "Creative Thinking",

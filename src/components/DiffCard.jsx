@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-function DiffCard({id, icon, background, title, text, full}) {
+function DiffCard({id, icon, background, tag, title, text, full}) {
 
   const handleClick = e => {
     if(full) {
@@ -14,14 +14,14 @@ function DiffCard({id, icon, background, title, text, full}) {
   }
 
   return (
-    <Link  to={`${full ? '' : '/about'}`} onClick={handleClick} key={id} className={`bg-white flex flex-col items-start gap-2 py-6 sm:p-6 sm:py-8 ${full ? 'w-full px-6' : 'max-w-[25rem] px-4'} shad hover:shadow-lg rounded-base transition-all duration-300`}>
+    <Link  to={`${full ? `id='${tag}'` : `/about#${tag}`}`} onClick={handleClick} key={id} className={`bg-white flex flex-col items-start gap-2 py-6 sm:p-6 sm:py-8 ${full ? 'w-full px-6 cursor-text' : 'cursor-pointer max-w-[25rem] px-4'} shad hover:shadow-lg rounded-base transition-all duration-300`}>
         <div className={`${full ? 'h-[55px] w-[55px]' : 'h-[40px] w-[40px]'} mb-2 rounded-md grid place-items-center ${background}`}>
-          <span className={`${full ? 'scale-125' : 'scale-100'}`}>
+          <span className={`${full ? 'scale-150' : 'scale-125'}`}>
             {icon}
           </span>
         </div>
         <h4 className={`${full ? 'text-lg md:text-xl' : 'text-base md:text-lg'} font-bold text-slate-500 capitalize`}>{title}</h4>
-        <p className={`text-md md:text-base font-normal text-justify leading-loose text-slate-400 ${full ? '' : 'overflow-hidden text-ellipsis line-clamp-2'}`}>{text}</p>
+        <p className={`normal-text text-justify leading-loose ${full ? '' : 'overflow-hidden text-ellipsis line-clamp-4'}`}>{text}</p>
     </Link>
   )
 }

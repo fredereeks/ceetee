@@ -7,8 +7,10 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { blog_slider1, blog_slider2, blog_slider3 } from '../assets/images'
 import { categories, courses, differences } from '../data'
 // import Skeleton from '../components/Skeleton'
+import Counter from '../components/Counter'
 const DiffCard = lazy(() => import ('../components/DiffCard'))
 const CategoryCard = lazy(() => import ('../components/CategoryCard'))
+// const Counter = lazy(() => import ('../components/Counter'))
 const CourseCard = lazy(() => import ('../components/CourseCard'))
 const PartnerSlide = lazy(() => import ('../components/PartnerSlide'))
 
@@ -30,25 +32,26 @@ function Home() {
 
   return (
     <>
-      <section className="bg-slate-50 pt-12">
+      <section className="bg-slate-50 pt-14">
           <div className="container mx-auto z-[500] max-w-[960px] max-h-[70vh] h-[70vh] relative overflow-hidden">
             <Carousel 
               autoPlay={true}
               className='w-full h-full flex flex-col justify-start items-stretch'
               infiniteLoop={true}
               showArrows={false}
-              showIndicators={false}
+              showIndicators={true}
               showThumbs={false}
               showStatus={false}
               preventMovementUntilSwipeScrollTolerance={true}
               emulateTouch={true}
-              stopOnHover={true}
+              stopOnHover={false}
+              interval={2000}
               // axis='vertical'
             >
             <div className="container max-w-[960px] relative z-50 mx-auto items-center px-4 grid grid-cols-1 md:grid-cols-2 gap-2">
               <div className="flex flex-col gap-2 py-24 md:py-4 px-4">
                 <h2 className="text-2xl md:text-4xl text-left text-transparent bg-gradient-to-r from-indigo-800 to-cyan-600 bg-clip-text font-bold capitalize py-2">Explore your learning area and gather knowledge</h2>
-                <p className="text-gray-600 text-left text-sm md:text-lg font-medium leading-loose pr-2 pb-2">Learning is the process of acquiring new or modifying exiting knowledge, behaviours, skills, values or preferences</p>
+                <p className="text-gray-500 text-left text-sm md:text-lg font-medium leading-loose pr-2 pb-2">Learning is the process of acquiring new or modifying exiting knowledge, behaviours, skills, values or preferences</p>
                 <Link to="/about" className="text-sm text-white w-max rounded-[2rem] mt-2 py-2 px-4 sm:px-6 bg-gradient-to-tr from-sky-500 to-indigo-600 shadow-sky-200 drop-shadow-md">Get Started</Link>
               </div>
               <div className="hidden md:flex flex-col items-center justify-center">
@@ -58,7 +61,7 @@ function Home() {
             <div className="container max-w-[960px] relative z-50 mx-auto items-center px-4 grid grid-cols-1 md:grid-cols-2 gap-2">
               <div className="flex flex-col gap-2 py-24 md:py-4 px-4">
                 <h2 className="text-2xl md:text-4xl text-left text-transparent  bg-gradient-to-r from-indigo-800 to-cyan-600 bg-clip-text font-bold capitalize py-2">Become a Certified tested and tried IT Personnel</h2>
-                <p className="text-gray-600 text-left text-sm md:text-lg font-medium leading-loose pr-2 pb-2">Our mammoth resource pool will fortify you with all you need to know in whatever course you enroll for</p>
+                <p className="text-gray-500 text-left text-sm md:text-lg font-medium leading-loose pr-2 pb-2">Our mammoth resource pool will fortify you with all you need to know in whatever course you enroll for</p>
                 <Link to="/courses" className="text-sm text-white w-max rounded-[2rem] mt-2 py-2 px-4 sm:px-6 bg-gradient-to-tr from-sky-500 to-indigo-600 shadow-sky-200 drop-shadow-md">Get Started</Link>
               </div>
               <div className="hidden md:flex flex-col items-center justify-center">
@@ -68,7 +71,7 @@ function Home() {
             <div className="container max-w-[960px] relative z-50 mx-auto items-center px-4 grid grid-cols-1 md:grid-cols-2 gap-2">
               <div className="flex flex-col gap-2 py-24 md:py-4 px-4">
                 <h2 className="text-2xl md:text-4xl text-left text-transparent  bg-gradient-to-r from-indigo-800 to-cyan-600 bg-clip-text font-bold capitalize py-2">Become a Certified tested and tried IT Personnel</h2>
-                <p className="text-gray-600 text-left text-sm md:text-lg font-medium leading-loose pr-2 pb-2">With access to an unprecedented amount of ready-to-help community of developers and like-minded peers, you are always in good hands and among 'friends'</p>
+                <p className="text-gray-500 text-left text-sm md:text-lg font-medium leading-loose pr-2 pb-2">With access to an unprecedented amount of ready-to-help community of developers and like-minded peers, you are always in good hands and among 'friends'</p>
                 <Link to="/courses" className="text-sm text-white w-max rounded-[2rem] mt-2 py-2 px-4 sm:px-6 bg-gradient-to-tr from-sky-500 to-indigo-600 shadow-sky-200 drop-shadow-md">Enroll Now</Link>
               </div>
               <div className="hidden md:flex flex-col items-center justify-center">
@@ -78,17 +81,18 @@ function Home() {
             </Carousel>
           </div>
       </section>
-      <section className="counter bg-gradient-to-l from-indigo-500 to-sky-500">
-        <div className="container mx-auto justify-center max-w-[960px] grid grid-cols-2 md:grid-cols-4 py-10 px-4">
+      <section className="counter">
+        <div className="container bg-indigo-800 mx-auto justify-center max-w-[960px] grid grid-cols-2 md:grid-cols-4 py-10 px-4">
           {
             [
-              [111, "8K+", "Online Learners", "border-2 border-r-slate-50/30"],
-              [112, "200+", "Expert Instructors", "md:border-2 md:border-r-slate-50/30"],
-              [113, "105K+", "Validated Students", "border-2 border-r-slate-50/30"],
-              [114, "310+", "Trendy Courses", "border-0"],
+              [111, <Counter key={111} className={''} speed="fast" end={3000} tag={'K+'} />, "Online Learners", "border-2 border-r-slate-50/30"],
+              [112, <Counter key={112} className={''} speed="slow" end={800} tag={'+'} />, "Expert Instructors", "md:border-2 md:border-r-slate-50/30"],
+              [113, <Counter key={113} className={''} speed="normal" end={1000} tag={'K+'} />, "Validated Students", "border-2 border-r-slate-50/30"],
+              [114, <Counter key={114} className={''} speed="slow" end={310} tag={'K+'} />, "Trendy Courses", "border-0"],
             ].map(([id, stat, text, border]) => (
               <aside key={id} className={`flex flex-col p-3 items-center justify-center gap-3 text-white border-transparent ${border}`}>
-                <h3 className="text-inherit text-xl md:text-2xl font-bold">{stat}</h3>
+                {/* <h3 className="text-inherit text-xl md:text-2xl font-bold"></h3> */}
+                {stat}
                 <p className="text-inherit text-xs md:text-sm text-center">{text}</p>
               </aside>
             ))
@@ -96,11 +100,11 @@ function Home() {
         </div>
       </section>
       <section className="difference py-20 sm:px-4 bg-[#f8f8fa90]">
-        <div className="container justify-center items-stretch grid diff sm:grid-cols-3 mx-auto py-10 gap-x-2 gap-y-4 sm:gap-y-8 sm:gap-x-6 max-w-[960px]px-2 sm:px-4">
+        <div className="container justify-center items-stretch grid diff sm:grid-cols-3 mx-auto py-10 gap-x-2 gap-y-4 sm:gap-y-8 sm:gap-x-6 max-w-[960px] px-2 sm:px-4">
           <aside className="col-span-2 flex flex-col justify-center gap-2 px-2 py-4">
-            <h3 className="text-2xl md:text-4xl font-bold text-sky-400">Why are we <span className="text-sky-600">different</span> from other?</h3>
-            <p className="leading-loose text-justify text-slate-500 text-sm py-2 pr-2">At CTTI, we are committed to nurturing the next generation of IT professionals and supporting organisations in their digital transformation journeys. Whether you are a student looking to kick-start your IT career or an organisation seeking to upskill your workforce, we invite you to join us and embark on a transformative learning experience. Discover the power of knowledge with CTTI - your trusted IT training and education partner.</p>
-            <Link to="/about" className="text-slate-50 bg-gradient-to-br from-sky-500 to-sky-600 rounded-[2rem] mt-1 text-sm px-4 md:px-6 py-2 w-max shadow-md shadow-indigo-200">Read More</Link>
+            <h3 className="text-2xl md:text-4xl font-bold text-blue-800">Why you should <span className="text-blue-800">choose us</span></h3>
+            <p className="leading-[1.8] overflow-hidden text-ellipsis line-clamp-6 text-justify normal-text py-2 pr-2">At CTTI, we are committed to nurturing the next generation of IT professionals and supporting organisations in their digital transformation journeys. Whether you are a student looking to kick-start your IT career or an organisation seeking to upskill your workforce, we invite you to join us and embark on a transformative learning experience. Discover the power of knowledge with CTTI - your trusted IT training and education partner.</p>
+            <Link to="/about" className="text-slate-50 bg-gradient-to-br from-sky-500 to-sky-600 rounded-[2rem] mt-1 text-sm px-5 md:px-7 py-2 w-max shadow-md shadow-indigo-200">Read More</Link>
           </aside>
           {
             differences.map((difference) => <DiffCard key={difference.id} full={false} {...difference} />)
@@ -132,7 +136,7 @@ function Home() {
           <div className="flex flex-wrap gap-2 items-center md:justify-between">
             <div className="flex-2 flex flex-col gap-1 pr-5">
               <h3 className="text-2xl md:text-4xl font-bold text-sky-600 capitalize"><span className="text-cyan-400">Popular Courses</span> for you</h3>
-              <p className="text-slate-400 text-md md:text-base py-2 pr-2">Get the best course, with the best price, with a world-class tutor</p>
+              <p className="normal-text py-2 pr-2">Get the best course, with the best price, with a world-class tutor</p>
             </div>
             <div className="flex-1 flex items-end justify-end">
               <button className="flex items-center gap-2 text-slate-500 group text-sm px-4 py-2 border-[1px] border-transparent border-b-2 border-b-sky-200">See All <IoIosArrowDropright className='mt-1 text-inherit group-hover:translate-x-2 transition-all duration-300' /></button>

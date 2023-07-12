@@ -14,7 +14,7 @@ function About() {
   return (
     <main className="bg-slate-50 pb-20">
       <BreadCrumb page={"About"} />
-      <div className="container pt-10 mx-auto max-w-[960px] flex flex-col">
+      <div className="container pt-10 px-4 mx-auto max-w-[960px] flex flex-col">
         <div className="flex flex-col gap-3 p-5 items-center md:items-start">
           <h3 className="text-2xl md:text-3xl font-bold text-indigo-600 capitalize">About Us at <span className="text-cyan-400">CTTI</span></h3>
               <p className="text-slate-600 text-md md:text-base leading-loose text-justify py-2 pr-2">At CTTI, we are dedicated to empowering individuals and organisations with the knowledge and skills needed to excel in the rapidly evolving world of Information Technology. As a leading IT training organisation, we offer a comprehensive range of cutting-edge programs designed to meet the diverse needs of our students and clients.</p>
@@ -44,17 +44,17 @@ function About() {
               <h3 className="text-2xl md:text-4xl font-bold text-indigo-500 md:text-center">Why are we <span className="text-sky-400">different</span> from other?</h3>
               <p className="leading-loose text-justify md:text-center text-slate-500 text-sm py-2 pr-2">At CTTI, we are committed to nurturing the next generation of IT professionals and supporting organisations in their digital transformation journeys. Whether you are a student looking to kick-start your IT career or an organisation seeking to upskill your workforce, we invite you to join us and embark on a transformative learning experience. Discover the power of knowledge with CTTI - your trusted IT training and education partner.</p>
             </aside>
-            <div className="container justify-center items-stretch grid grid-cols-1 md:grid-cols-2 mx-auto gap-x-2 gap-y-4 sm:gap-y-8 sm:gap-x-6 max-w-[960px] py-10 px-4">
+            <div className="container justify-center items-stretch grid grid-cols-1 md:grid-cols-1 mx-auto gap-x-2 gap-y-4 sm:gap-y-8 sm:gap-x-6 max-w-[960px] py-10 px-4">
               {
                 differences.map((difference) => <DiffCard key={difference.id} full={true} {...difference} />)
               }
             </div>
             <div className="container mx-auto max-w-[960px]">
               <div className="flex flex-col md:flex-row gap-3 p-5 ">
-                <p className="text-slate-600 text-md md:text-base leading-loose text-justify py-2 pr-2">Through our strategic partnerships with Microsoft, Cisco, Oracle, and PMI, CTTI can provide you with industry-recognized training that meets the highest standards of quality and excellence. These partnerships enable us to stay at the forefront of technological advancements and deliver training that is directly aligned with the needs of the IT industry.</p>
-                <p className="text-slate-600 text-md md:text-base leading-loose text-justify py-2 pr-2">By choosing CTTI, you gain access to our experienced instructors and comprehensive curriculum and the expertise and resources of our esteemed partners. We are committed to empowering you with the skills and certifications to propel your IT career forward.</p>
+                <p className="normal-text leading-loose text-justify py-2 pr-2">Through our strategic partnerships with Microsoft, Cisco, Oracle, and PMI, CTTI can provide you with industry-recognized training that meets the highest standards of quality and excellence. These partnerships enable us to stay at the forefront of technological advancements and deliver training that is directly aligned with the needs of the IT industry.</p>
+                <p className="normal-text leading-loose text-justify py-2 pr-2">By choosing CTTI, you gain access to our experienced instructors and comprehensive curriculum and the expertise and resources of our esteemed partners. We are committed to empowering you with the skills and certifications to propel your IT career forward.</p>
               </div>
-              <p className="text-slate-600 text-md md:text-base leading-loose text-justify py-2 px-5">Partner with CTTI and embark on a learning journey that will unlock endless opportunities in the world of technology.</p>
+              <p className="normal-text leading-loose text-justify py-2 px-5">Partner with CTTI and embark on a learning journey that will unlock endless opportunities in the world of technology.</p>
             </div>
         </section>
       </div>
