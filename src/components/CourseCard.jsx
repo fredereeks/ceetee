@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaUserAlt } from 'react-icons/fa'
-import { IoLogoEuro, IoMdStarOutline } from 'react-icons/io'
+import { IoMdStarOutline } from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import { randomColor } from '../utils'
 
