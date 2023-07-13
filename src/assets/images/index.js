@@ -63,6 +63,10 @@ import ctti_python from "./ctti_python.jpg"
 import ctti_sharepoint from "./ctti_sharepoint.jpg" 
 import ctti_soft_skill from "./ctti_soft_skill.jpg"
 
+import payment_key from "./payment_key.jpg" 
+import payment_master_card from "./payment_master_card.jpg" 
+import payment_secure from "./payment_secure.jpg"
+
 export {
     logo,
 rocket,
@@ -124,4 +128,7 @@ blog_slider1,
 blog_slider2,
 blog_slider3,
 blog_teaser,
+payment_key,
+payment_master_card,
+payment_secure,
 }

@@ -195,8 +195,8 @@ export const headerLinks = [
                 title: "Webinars"
             },
             {
-                id: 1153,
-                link: "/data-collection-form",
+                id: 1155,
+                link: "/contact",
                 title: "Contact"
             },
         ]

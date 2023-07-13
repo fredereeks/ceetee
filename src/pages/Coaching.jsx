@@ -12,7 +12,7 @@ function Coaching() {
 
   return (
     <main className="bg-slate-50 pb-20">
-      <section className="bg-gradient-to-l from-cyan-600 to-blue-600 py-20 px-4">
+      <section className="bg-cyan-700 pt-20 pb-10 px-4">
         <div className="container relative mx-auto max-w-[980px] flex flex-col">
           <div className="flex flex-wrap gap-2 items-center pt-5 pb-10 text-slate-50">
             <Link to="/" className="font-bold hover:text-slate-50 px-2 text-md md:text-lg text-white  ">Home</Link>
@@ -30,10 +30,10 @@ function Coaching() {
       <section className="bg-gray-100 pb-10">
           <div className="container max-w-[960px] mx-auto py-10 flex flex-col gap-5">
               <article className="flex flex-col gap-3">
-                  <h3 className="text-2xl md:text-3xl font-bold text-indigo-600 capitalize p-5 pt-8">Customized <span className="text-cyan-400">Corporate</span> Training</h3>
+                  <h3 className="text-2xl md:text-3xl font-bold text-indigo-600 capitalize p-5 pt-8">Customized Corporate Training</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-2">
                       {
-                          corporates.map(corporate => <CoachingCard key={corporate.id} {...corporate} />)
+                          corporates.map(corporate => <CoachingCard state={true} key={corporate.id} {...corporate} />)
                       }
                   </div>
               </article>
@@ -42,10 +42,10 @@ function Coaching() {
       <section className="bg-white">
           <div className="container max-w-[960px] mx-auto py-10 flex flex-col gap-5">
               <article className="flex flex-col gap-3">
-                  <h3 className="text-2xl md:text-3xl font-bold text-cyan-500 capitalize p-5 pt-8">Customized <span className="text-indigo-600">Individual</span> Training</h3>
+                  <h3 className="text-2xl md:text-3xl font-bold text-cyan-600 capitalize p-5 pt-8">Customized Individual Training</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 p-2">
                       {
-                          individuals.map(individual => <CoachingCard key={individual.id} {...individual} />)
+                          individuals.map(individual => <CoachingCard state={false} key={individual.id} {...individual} />)
                       }
                   </div>
               </article>

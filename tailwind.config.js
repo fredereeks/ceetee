@@ -11,7 +11,8 @@ module.exports = {
         sec: "hsl(381, 88%, 56.1%)",
         "pri-light": "hsla(171, 86%, 40.1%, 15%)",
         "sec-light": "hsla(381, 88%, 56.1%, 15%)",
-        secondary: "#fee800"
+        secondary: "#fee800",
+        "site": "#0a67c6",
       },
     },
   },  

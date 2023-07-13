@@ -7,17 +7,21 @@ import Header from './components/Header'
 import ErrorBoundary from './components/ErrorBoundary'
 
 const About = lazy(() => import ('./pages/About'))
+const Benefits = lazy(() => import ('./pages/Benefits'))
 const BlogPage = lazy(() => import ('./pages/BlogPage'))
+const Clients = lazy(() => import ('./pages/Clients'))
 const Coaching = lazy(() => import ('./pages/Coaching'))
 const Contact = lazy(() => import ('./pages/Contact'))
 const Course = lazy(() => import ('./pages/Course'))
 const CourseSingle = lazy(() => import ('./pages/CourseSingle'))
 const CoursesPage = lazy(() => import ('./pages/CoursesPage'))
 const CustomizedTraining = lazy(() => import ('./pages/CustomizedTraining'))
+const Delivery = lazy(() => import ('./pages/Delivery'))
 const Error = lazy(() => import ('./pages/Error'))
 const Home = lazy(() => import ('./pages/Home'))
 const Login = lazy(() => import ('./pages/Login'))
 const News = lazy(() => import ('./pages/News'))
+const Resources = lazy(() => import ('./pages/Resources'))
 const Signup = lazy(() => import ('./pages/Signup'))
 const SingleBlog = lazy(() => import ('./pages/SingleBlog'))
 const SkillAssessment = lazy(() => import ('./pages/SkillAssessment'))
@@ -62,8 +66,16 @@ function App() {
           element: <Suspense fallback={<main><Loader /></main>}><About /></Suspense>,
         },
         {
+          path: "/benefits",
+          element: <Suspense fallback={<main><Loader /></main>}><Benefits /></Suspense>,
+        },
+        {
           path: "/blogs",
           element: <Suspense fallback={<main><Loader /></main>}><BlogPage /></Suspense>,
+        },
+        {
+          path: "/clients",
+          element: <Suspense fallback={<main><Loader /></main>}><Clients /></Suspense>,
         },
         {
           path: "/contact",
@@ -82,6 +94,10 @@ function App() {
           element: <Suspense fallback={<main><Loader /></main>}><CoursesPage /></Suspense>,
         },
         {
+          path: "/delivery",
+          element: <Suspense fallback={<main><Loader /></main>}><Delivery /></Suspense>,
+        },
+        {
           path: "/login",
           element: <Suspense fallback={<main><Loader /></main>}><Login /></Suspense>,
         },
@@ -92,6 +108,10 @@ function App() {
         {
           path: "/partners",
           element: <Suspense fallback={<main><Loader /></main>}><Partners /></Suspense>,
+        },
+        {
+          path: "/resources",
+          element: <Suspense fallback={<main><Loader /></main>}><Resources /></Suspense>,
         },
         {
           path: "/signup",

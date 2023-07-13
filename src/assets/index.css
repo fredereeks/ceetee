@@ -21,10 +21,13 @@
         line-height: 2 !important;
     }
     .bold-text{
-        @apply text-slate-600 text-sm sm:text-base md:text-lg font-bold;
+        @apply text-slate-500 text-sm sm:text-base md:text-lg font-bold;
+    }
+    .thin-text{
+        @apply text-slate-500 text-sm sm:text-base md:text-lg font-normal;
     }
     .normal-text{
-        @apply text-slate-600 text-sm sm:text-base md:text-lg font-medium;
+        @apply text-slate-500 text-sm sm:text-base md:text-lg font-medium;
     }
     .styled-heading{
         @apply font-serif text-2xl sm:text-3xl md:text-4xl;

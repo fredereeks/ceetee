@@ -10,6 +10,7 @@ export const courses = [
         users: 51,
         rating: 4.1,
         price: 250000,
+        featured: false,
         requisite: [
                 "Basic Computer Appreciation",
                 "Quality Laptop",
@@ -30,6 +31,7 @@ export const courses = [
         users: 152,
         rating: 4.5,
         price: 270000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -49,6 +51,7 @@ export const courses = [
         users: 76,
         rating: 4.6,
         price: 180000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -68,6 +71,7 @@ export const courses = [
         users: 30,
         rating: 4.3,
         price: 245000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -87,6 +91,7 @@ export const courses = [
         users: 30,
         rating: 4.3,
         price: 189000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -106,6 +111,7 @@ export const courses = [
         users: 30,
         rating: 4.3,
         price: 192000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -125,6 +131,7 @@ export const courses = [
         users: 30,
         rating: 4.3,
         price: 210000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -144,6 +151,7 @@ export const courses = [
         users: 30,
         rating: 4.3,
         price: 160000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -163,6 +171,7 @@ export const courses = [
         users: 30,
         rating: 4.3,
         price: 235000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -182,6 +191,7 @@ export const courses = [
         users: 30,
         rating: 4.3,
         price: 195000,
+        featured: false,
         requisite: [
             "Install, configure and troubleshoot computers",
             "Identify common security threats like phishing and spoofing",
@@ -202,6 +212,7 @@ export const courses = [
         users: 30,
         rating: 4.3,
         price: 285000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -221,6 +232,7 @@ export const courses = [
         users: 30,
         rating: 4.3,
         price: 265000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -240,6 +252,7 @@ export const courses = [
         users: 30,
         rating: 4.3,
         price: 255000,
+        featured: false,
         requisite: [
             "Install, configure and troubleshoot computers",
             "Identify common security threats like phishing and spoofing",
@@ -263,6 +276,7 @@ export const courses = [
         users: 89,
         rating: 4.1,
         price: 770000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -282,6 +296,7 @@ export const courses = [
         users: 58,
         rating: 4.2,
         price: 770000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -301,6 +316,7 @@ export const courses = [
         users: 65,
         rating: 4.0,
         price: 770000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -320,6 +336,7 @@ export const courses = [
         users: 78,
         rating: 4.6,
         price: 770000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -339,6 +356,7 @@ export const courses = [
         users: 78,
         rating: 4.1,
         price: 770000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -358,6 +376,7 @@ export const courses = [
         users: 52,
         rating: 4.5,
         price: 200000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -377,6 +396,7 @@ export const courses = [
         users: 71,
         rating: 4.0,
         price: 250000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -396,6 +416,7 @@ export const courses = [
         users: 55,
         rating: 4.2,
         price: 210000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -415,6 +436,7 @@ export const courses = [
         users: 146,
         rating: 4.6,
         price: 264000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -434,6 +456,7 @@ export const courses = [
         users: 16,
         rating: 4.3,
         price: 250000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -453,6 +476,7 @@ export const courses = [
         users: 141,
         rating: 4.3,
         price: 140000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -472,6 +496,7 @@ export const courses = [
         users: 105,
         rating: 4.1,
         price: 260000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -491,6 +516,7 @@ export const courses = [
         users: 121,
         rating: 4.2,
         price: 160000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -510,6 +536,7 @@ export const courses = [
         users: 116,
         rating: 4.3,
         price: 125000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -529,6 +556,7 @@ export const courses = [
         users: 78,
         rating: 4.2,
         price: 77000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -548,6 +576,7 @@ export const courses = [
         users: 42,
         rating: 4.1,
         price: 89000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -567,6 +596,7 @@ export const courses = [
         users: 89,
         rating: 3.8,
         price: 210000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -586,6 +616,7 @@ export const courses = [
         users: 78,
         rating: 3.9,
         price: 170000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -605,6 +636,7 @@ export const courses = [
         users: 78,
         rating: 4.1,
         price: 135000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -624,6 +656,7 @@ export const courses = [
         users: 78,
         rating: 4.2,
         price: 215000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -643,6 +676,7 @@ export const courses = [
         users: 90,
         rating: 4.1,
         price: 220000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -662,6 +696,7 @@ export const courses = [
         users: 86,
         rating: 4.2,
         price: 280000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -681,6 +716,7 @@ export const courses = [
         users: 60,
         rating: 4.0,
         price: 180000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -700,6 +736,7 @@ export const courses = [
         users: 60,
         rating: 4.6,
         price: 205000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -719,6 +756,7 @@ export const courses = [
         users: 85,
         rating: 4.6,
         price: 150000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -738,6 +776,7 @@ export const courses = [
         users: 59,
         rating: 4.0,
         price: 120000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -757,6 +796,7 @@ export const courses = [
         users: 56,
         rating: 4.2,
         price: 190000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -776,6 +816,7 @@ export const courses = [
         users: 102,
         rating: 4.5,
         price: 195000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -795,6 +836,7 @@ export const courses = [
         users: 52,
         rating: 4.5,
         price: 210000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -814,6 +856,7 @@ export const courses = [
         users: 98,
         rating: 4.6,
         price: 185000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -833,6 +876,7 @@ export const courses = [
         users: 121,
         rating: 4.1,
         price: 147000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -852,6 +896,7 @@ export const courses = [
         users: 78,
         rating: 4.3,
         price: 205000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -871,6 +916,7 @@ export const courses = [
         users: 89,
         rating: 4.2,
         price: 230000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -890,6 +936,7 @@ export const courses = [
         users: 120,
         rating: 4.1,
         price: 160000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",
@@ -909,6 +956,7 @@ export const courses = [
         users: 100,
         rating: 4.0,
         price: 145000,
+        featured: false,
         requisite: [
             "Basic Computer Appreciation",
             "Quality Laptop",

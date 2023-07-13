@@ -15,8 +15,8 @@ function SkillAssessment() {
       <section className="bg-white">
         <div className="container relative mx-auto max-w-[980px] pt-20 px-4 flex flex-col">
             <div className="flex flex-col gap-3 p-5 items-center">
-              <h3 className="text-2xl md:text-3xl font-bold text-blue-600 capitalize">Our <span className="text-indigo-400">Skill</span> Assessment</h3>
-                  <p className="text-slate-400 text-md md:text-base leading-loose text-justify py-2 pr-2">At CTTI, we are dedicated to supporting your organisation's growth and success through comprehensive skills assessment services.</p>
+              <h3 className="text-2xl md:text-3xl font-bold text-indigo-700 capitalize">Our Skill Assessment Services</h3>
+                  <p className="normal-text leading-loose text-justify py-2 pr-2">At CTTI, we are dedicated to supporting your organisation's growth and success through comprehensive skills assessment services.</p>
             </div>
             <div className="flex flex-col gap-2 py-10">
               {
