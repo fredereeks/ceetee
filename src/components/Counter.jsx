@@ -10,17 +10,16 @@ function Counter({speed, end, tag, className}) {
         let timeout = null, timer = null;
         timeout = setTimeout(() => {
             timer = setInterval(() => {
-                    setIndex(prev => {
-                        if(prev < stop.current){
-                            return prev + increment.current;
-                        }else{
-                            console.log("Right here!")
-                            clearInterval(timer);
-                            clearTimeout(timeout);
-                            return(`${prev > 999 ? prev.toString().slice(0,1) : prev}${tag}`)
-                        }
-                    })
+                setIndex(prev => {
+                    if(prev < stop.current){
+                        return prev + increment.current;
+                    }else{
+                        clearInterval(timer);
+                        clearTimeout(timeout);
+                        return(`${prev > 999 ? prev.toString().slice(0,1) : prev}${tag}`)
+                    }
                 })
+            })
         },begin)
         return () => {
             clearInterval(timer)

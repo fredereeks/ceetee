@@ -1,4 +1,5 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useRef} from 'react'
+import { useLocation } from 'react-router-dom';
 import {
   exam_groupread,
   exam_announcement,
@@ -8,9 +9,16 @@ import DiffCard from '../components/DiffCard'
 import { BreadCrumb } from '../components';
 
 function About() {
+  const diffRef = useRef(null)
+  const location = useLocation();
+  
   useEffect(() => {
     document.title = "CTTI e-learning Centre :: About";
-},[]);
+    if(location.hash){
+      diffRef.current.querySelector(location.hash).scrollIntoView(true)
+    }
+  },[location.hash]);
+
   return (
     <main className="bg-slate-50 pb-20">
       <BreadCrumb page={"About"} />
@@ -44,7 +52,7 @@ function About() {
               <h3 className="text-2xl md:text-4xl font-bold text-indigo-500 md:text-center">Why are we <span className="text-sky-400">different</span> from other?</h3>
               <p className="leading-loose text-justify normal-text py-2 pr-2">At CTTI, we are committed to nurturing the next generation of IT professionals and supporting organisations in their digital transformation journeys. Whether you are a student looking to kick-start your IT career or an organisation seeking to upskill your workforce, we invite you to join us and embark on a transformative learning experience. Discover the power of knowledge with CTTI - your trusted IT training and education partner.</p>
             </aside>
-            <div className="container justify-center items-stretch grid grid-cols-1 md:grid-cols-1 mx-auto gap-x-2 gap-y-4 sm:gap-y-8 sm:gap-x-6 max-w-[960px] py-10 px-4">
+            <div ref={diffRef} className="container justify-center items-stretch grid grid-cols-1 md:grid-cols-1 mx-auto gap-x-2 gap-y-4 sm:gap-y-8 sm:gap-x-6 max-w-[960px] py-10 px-4">
               {
                 differences.map((difference) => <DiffCard key={difference.id} full={true} {...difference} />)
               }

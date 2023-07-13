@@ -14,7 +14,7 @@ function DiffCard({id, icon, background, tag, title, text, full}) {
   }
 
   return (
-    <Link  to={`${full ? `id='${tag}'` : `/about#${tag}`}`} onClick={handleClick} key={id} className={`bg-white flex flex-col items-start gap-2 py-6 sm:p-6 sm:py-8 ${full ? 'w-full px-6 cursor-text' : 'cursor-pointer max-w-[25rem] px-4'} shad hover:shadow-lg rounded-base transition-all duration-300`}>
+    <Link  to={`${full ? `` : `/about#${tag}`}`} onClick={handleClick} key={id} className={`bg-white flex flex-col items-start gap-2 py-6 sm:p-6 sm:py-8 ${full ? 'w-full px-6 cursor-text' : 'cursor-pointer w-full px-4'} shad hover:shadow-lg rounded-base transition-all duration-300`} id={full ? `${tag}` : ''}>
         <div className={`${full ? 'h-[55px] w-[55px]' : 'h-[50px] w-[50px]'} mb-2 rounded-md grid place-items-center ${background}`}>
           <span className={`${full ? 'scale-150' : 'scale-125'}`}>
             {icon}

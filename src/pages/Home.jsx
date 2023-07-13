@@ -99,7 +99,7 @@ function Home() {
           }
         </div>
       </section>
-      <section className="difference py-20 sm:px-4 bg-[#f8f8fa90]">
+      <section className="difference py-10 sm:px-4 bg-[#f8f8fa90]">
         <div className="container justify-center items-stretch grid diff sm:grid-cols-3 mx-auto py-10 gap-x-2 gap-y-4 sm:gap-y-8 sm:gap-x-6 max-w-[960px] px-2 sm:px-4">
           <aside className="col-span-2 flex flex-col justify-center gap-2 px-2 py-4">
             <h3 className="text-2xl md:text-4xl font-bold text-indigo-600">Why you should choose us</h3>
@@ -111,20 +111,20 @@ function Home() {
           }
         </div>
       </section>
-      <section className="courses py-20 px-2 sm:px-4 bg-gray-100">
-        <div className="container max-w-[960px] flex flex-col gap-3 mx-auto py-20 px-4">
+      <section className="courses py-10 px-3 sm:px-4 bg-gray-100">
+        <div className="container max-w-[960px] flex flex-col gap-3 mx-auto py-10">
           <div className="flex flex-wrap gap-2 items-center md:justify-between">
             <div className="flex-2 flex flex-col gap-1 pr-5">
               <h3 className="text-2xl md:text-4xl font-bold text-indigo-600 capitalize">Popular Courses for you</h3>
               <p className="normal-text py-2 pr-2">Get the best course, with the best price, with a world-class tutor</p>
             </div>
-            <div className="flex-1 flex items-end justify-end">
-              <button className="flex items-center gap-2 bg-indigo-600 text-white rounded-md group text-sm px-4 py-2">See All <IoIosArrowDropright className='text-inherit group-hover:translate-x-1 transition-all duration-300' /></button>
+            <div className="flex-1 flex items-end md:justify-end">
+              <Link to="/courses" className="flex items-center gap-2 bg-indigo-600 text-white rounded-md group text-sm px-5 py-2">See All <IoIosArrowDropright className='text-inherit group-hover:translate-x-1 transition-all duration-300' /></Link>
             </div>
           </div>
           <div className="py-5 grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3">
             {
-              courses.slice(4,10).map(course => (<CourseCard key={course.id} state={course} {...course} />))
+              courses.filter(course => course.featured === true).map(course => (<CourseCard key={course.id} state={course} {...course} />))
             }
           </div>
         </div>
@@ -150,7 +150,7 @@ function Home() {
             </div>
         </div>
       </section>
-      <section className="newsletter py-20 bg-gray-100">
+      <section className="newsletter py-10 bg-gray-100">
         <div className="container mx-auto max-w-[960px] flex flex-col gap-3 items-center justify-center py-20 px-4">
             <div className="flex-1 flex flex-col gap-1 p-5 items-center">
               <h3 className="text-2xl md:text-3xl font-bold text-indigo-600 capitalize">Subscribe to our Newsletter</h3>

@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 // import { man_image } from '../assets/images'
 import { Link, useLocation } from 'react-router-dom'
 import { FaCheck, FaStar, FaStarHalfAlt } from 'react-icons/fa'
-import { IoMdCart, IoMdGift } from 'react-icons/io'
+import { IoMdCart, IoMdHeadset } from 'react-icons/io'
 import { usePaystackPayment } from 'react-paystack';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import axios from 'axios'
@@ -138,8 +138,8 @@ function CourseSingle() {
                         <p className="text-white text-sm md:text-md">{loading ? 'Please wait...' : 'Enroll for Course'}</p>
                     </button>
                     <button type="button" disabled={loading} className="flex-1 w-[3rem] border-[1px] border-indigo-500 p-3 rounded-lg flex items-center justify-center gap-2">
-                        <IoMdGift className='text-sm md:text-md text-gray-500'/>
-                        <p className="text-gray-500 text-sm md:text-md">Buy as Gift</p>
+                        <IoMdHeadset className='text-sm md:text-md text-gray-500'/>
+                        <p className="text-gray-500 text-sm md:text-md">Inquire About Course</p>
                     </button>
                   </form>
                   <div className="flex flex-col gap-2">
