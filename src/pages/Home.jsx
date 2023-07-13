@@ -111,34 +111,32 @@ function Home() {
           }
         </div>
       </section>
-      <section className="courses py-20 px-2 sm:px-4 bg-indigo-50">
+      <section className="courses py-20 px-2 sm:px-4 bg-gray-100">
         <div className="container max-w-[960px] flex flex-col gap-3 mx-auto py-20 px-4">
           <div className="flex flex-wrap gap-2 items-center md:justify-between">
             <div className="flex-2 flex flex-col gap-1 pr-5">
-              <h3 className="text-2xl md:text-4xl font-bold text-sky-600 capitalize"><span className="text-cyan-400">Popular Courses</span> for you</h3>
+              <h3 className="text-2xl md:text-4xl font-bold text-indigo-600 capitalize">Popular Courses for you</h3>
               <p className="normal-text py-2 pr-2">Get the best course, with the best price, with a world-class tutor</p>
             </div>
             <div className="flex-1 flex items-end justify-end">
-              <button className="flex items-center gap-2 text-slate-500 group text-sm px-4 py-2 border-[1px] border-transparent border-b-2 border-b-sky-200">See All <IoIosArrowDropright className='mt-1 text-inherit group-hover:translate-x-2 transition-all duration-300' /></button>
+              <button className="flex items-center gap-2 bg-indigo-600 text-white rounded-md group text-sm px-4 py-2">See All <IoIosArrowDropright className='text-inherit group-hover:translate-x-1 transition-all duration-300' /></button>
             </div>
           </div>
           <div className="py-5 grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3">
             {
-              courses.slice(0,6).map(course => (<CourseCard key={course.id} state={course} {...course} />))
+              courses.slice(4,10).map(course => (<CourseCard key={course.id} state={course} {...course} />))
             }
           </div>
         </div>
       </section>
-      <section className="categories py-20 bg-white">
+      <section className="categories py-10 bg-white">
         <div className="container max-w-[960px] flex flex-col gap-8 mx-auto py-20 px-4">
           <div className="flex flex-wrap gap-2 items-center md:justify-between">
             <div className="flex-2 flex flex-col gap-1 pr-5">
-              <h3 className="text-2xl md:text-4xl font-bold text-sky-600 capitalize">Browse through our Course Catalogue</h3>
-              <p className="text-slate-400 text-md md:text-base py-2 pr-2">Browse through our courses categories to choose the best for your career and/or academic pursuits</p>
+              <h3 className="text-2xl md:text-4xl font-bold text-sky-500 capitalize">Browse through our Course Catalogue</h3>
+              <p className="normal-text py-2 pr-2">Browse through our courses categories to choose the best for your career and/or academic pursuits</p>
             </div>
-            <div className="flex-1 flex items-end justify-center md:justify-end">
-              <Link to="/courses" className="flex items-center gap-2 text-slate-500 group text-sm px-4 py-2 border-[1px] border-transparent border-b-2 border-b-sky-200">Explore More <IoIosArrowDropright className='mt-1 text-inherit group-hover:translate-x-2 transition-all duration-300' /></Link>
-            </div>
+            
           </div>
           <div className="py-5 grid grid-cols-2 md:grid-cols-3 gap-x-3 gap-y-8">
             {
@@ -147,6 +145,9 @@ function Home() {
               categories.slice(0,6).map(category => (<CategoryCard key={category.id} {...category} />))
             }
           </div>
+          <div className="flex-1 flex items-center justify-center">
+              <Link to="/courses" className="flex items-center gap-2 bg-sky-500 text-white group text-sm px-4 py-2">Explore More <IoIosArrowDropright className='mt-1 text-inherit group-hover:translate-x-2 transition-all duration-300' /></Link>
+            </div>
         </div>
       </section>
       <section className="newsletter py-20 bg-gray-100">
