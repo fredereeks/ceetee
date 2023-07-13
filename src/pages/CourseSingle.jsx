@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 // import { man_image } from '../assets/images'
 import { Link, useLocation } from 'react-router-dom'
-import { FaCheck, FaStar, FaStarHalfAlt } from 'react-icons/fa'
+import { FaCheck, FaStar } from 'react-icons/fa'
 import { IoMdCart, IoMdHeadset } from 'react-icons/io'
 import { usePaystackPayment } from 'react-paystack';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
@@ -110,12 +110,20 @@ function CourseSingle() {
                   <img src={state?.image} alt={state?.title} className="absolute w-full h-full left-0 top-0 object-cover" />
                   <div className="flex flex-col gap-1 bottom-5 right-4 absolute z-20">
                     <p className="text-white text-xs md:text-sm">{((+Math.ceil(state?.rating) * 100) - randomNumber(141,293)).toLocaleString()} reviews</p>
-                    <div className="flex gap-1 items-center">
+                    {/* <div className="flex gap-1 items-center">
                       <FaStar className='text-xs text-yellow-500' key={12}/>
                       <FaStar className='text-xs text-yellow-500' key={23}/>
                       <FaStar className='text-xs text-yellow-500' key={56}/>
                       <FaStar className='text-xs text-yellow-500' key={87}/>
                       <FaStarHalfAlt className='text-xs text-yellow-500' key={782}/>
+                    </div> */}
+                    <div className="flex items-center gap-1">
+                        {
+                            new Array(state?.rating).fill(1).map((el, i) => (<FaStar key={i} className="text-yellow-500 text-xs sm:text-sm" />))
+                        }
+                        {
+                            // (5-state?.rating) > 0 ? new Array(5-state?.rating).fill(1).map((el, i) => (<FaStar key={i} className="text-slate-100 text-xs sm:text-sm" />)) : ""
+                        }
                     </div>
                   </div>
                 </div>
@@ -129,17 +137,27 @@ function CourseSingle() {
               </aside>
               <aside className="col-span-1 md:col-span-2 flex flex-col gap-3 md:px-4">
                 <div className="flex flex-col gap-2">
-                  <h3 className="text-xl md:text-2xl text-gray-600">&#8358;{(state?.price).toLocaleString()}</h3>
+                  <div className="flex relative gap-2 items-center">
+                    <h3 className="text-xl md:text-2xl text-gray-600">&#8358;{(state?.price).toLocaleString()}</h3>
+                    <label htmlFor='payment' className="text-sm sm:text-md px-2 bg-indigo-100 w-max text-indigo-400 py-2 rounded-[2rem] my-1">See Payment Options</label>
+                    <input type="checkbox" className="hidden peer" id="payment" />
+                    <div className="scale-0 peer-checked:scale-100 fixed bg-gray-100 w-screen h-screen p-10 grid place-items-center top-0 left-0">
+                    <label htmlFor='payment' className="flex flex-col bg-gray-100 rounded-md p-4">
+                        <p className="text-slate-800 py-1 leading-loose text-sm flex items-center gap-2 border-0 border-b-[1px] border-b-slate-300"><FaCheck className='bg-green-400 text-white h-[15px] w-[15px] flex-shrink-0 text-xs p-1 grid place-items-center rounded-full' /> Full Payment - &#8358;{state?.price}</p>
+                        <p className="text-slate-800 py-1 leading-loose text-sm flex items-center gap-2 border-0 border-b-[1px] border-b-slate-300"><FaCheck className='bg-green-400 text-white h-[15px] w-[15px] flex-shrink-0 text-xs p-1 grid place-items-center rounded-full' /> Part-Payment - &#8358;{(state?.price)/2}</p>
+                    </label>
+                    </div>
+                  </div>
                     {success && <div className="text-sm text-white py-2 my-2 px-4 bg-green-500 text-center rounded-md">{success}</div>}
                     {error && <div className="text-sm text-white py-2 my-2 px-4 bg-pink-500 text-center rounded-md">{error}</div>}
                   <form ref={formRef} onSubmit={handleSubmit} className="flex gap-2">
-                    <button type="submit" disabled={loading} className="flex-1 w-[3rem] bg-indigo-500 p-3 rounded-lg flex items-center justify-center gap-2">
+                    <button type="submit" disabled={loading} className="flex-1 w-[3rem] bg-indigo-500 p-2 rounded-lg flex items-center justify-center gap-2">
                         <IoMdCart className='text-sm md:text-md text-white'/>
                         <p className="text-white text-sm md:text-md">{loading ? 'Please wait...' : 'Enroll for Course'}</p>
                     </button>
-                    <button type="button" disabled={loading} className="flex-1 w-[3rem] border-[1px] border-indigo-500 p-3 rounded-lg flex items-center justify-center gap-2">
+                    <button type="button" disabled={loading} className="flex-1 w-[3rem] border-[1px] border-indigo-500 p-2 rounded-lg flex items-center justify-center gap-2">
                         <IoMdHeadset className='text-sm md:text-md text-gray-500'/>
-                        <p className="text-gray-500 text-sm md:text-md">Inquire About Course</p>
+                        <p className="text-gray-500 text-sm md:text-md">Inquire Course</p>
                     </button>
                   </form>
                   <div className="flex flex-col gap-2">
