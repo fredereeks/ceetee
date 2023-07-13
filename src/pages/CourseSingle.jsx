@@ -119,10 +119,10 @@ function CourseSingle() {
                     </div> */}
                     <div className="flex items-center gap-1">
                         {
-                            new Array(state?.rating).fill(1).map((el, i) => (<FaStar key={i} className="text-yellow-500 text-xs sm:text-sm" />))
+                            new Array(parseInt(state?.rating)).fill(1).map((el, i) => (<FaStar key={i} className="text-yellow-500 text-xs sm:text-sm" />))
                         }
                         {
-                            // (5-state?.rating) > 0 ? new Array(5-state?.rating).fill(1).map((el, i) => (<FaStar key={i} className="text-slate-100 text-xs sm:text-sm" />)) : ""
+                            (5-parseInt(state?.rating)) > 0 ? new Array(5-parseInt(state?.rating)).fill(1).map((el, i) => (<FaStar key={i} className="text-slate-100 text-xs sm:text-sm" />)) : ""
                         }
                     </div>
                   </div>
@@ -137,27 +137,32 @@ function CourseSingle() {
               </aside>
               <aside className="col-span-1 md:col-span-2 flex flex-col gap-3 md:px-4">
                 <div className="flex flex-col gap-2">
-                  <div className="flex relative gap-2 items-center">
-                    <h3 className="text-xl md:text-2xl text-gray-600">&#8358;{(state?.price).toLocaleString()}</h3>
-                    <label htmlFor='payment' className="text-sm sm:text-md px-2 bg-indigo-100 w-max text-indigo-400 py-2 rounded-[2rem] my-1">See Payment Options</label>
+                  <div className="flex relative gap-2 py-2 items-center">
+                    <h3 className="text-xl md:text-2xl text-gray-600 blur-sm">&#8358;{(state?.price).toLocaleString()}</h3>
+                    <label htmlFor='payment' className="cursor-pointer text-xs px-4 bg-indigo-100 w-max text-indigo-400 py-1 rounded-[2rem] my-1">See Payment Options</label>
                     <input type="checkbox" className="hidden peer" id="payment" />
-                    <div className="scale-0 peer-checked:scale-100 fixed bg-gray-100 w-screen h-screen p-10 grid place-items-center top-0 left-0">
-                    <label htmlFor='payment' className="flex flex-col bg-gray-100 rounded-md p-4">
-                        <p className="text-slate-800 py-1 leading-loose text-sm flex items-center gap-2 border-0 border-b-[1px] border-b-slate-300"><FaCheck className='bg-green-400 text-white h-[15px] w-[15px] flex-shrink-0 text-xs p-1 grid place-items-center rounded-full' /> Full Payment - &#8358;{state?.price}</p>
-                        <p className="text-slate-800 py-1 leading-loose text-sm flex items-center gap-2 border-0 border-b-[1px] border-b-slate-300"><FaCheck className='bg-green-400 text-white h-[15px] w-[15px] flex-shrink-0 text-xs p-1 grid place-items-center rounded-full' /> Part-Payment - &#8358;{(state?.price)/2}</p>
+                    <label htmlFor='payment' className="scale-0 peer-checked:scale-100 fixed bg-gray-800/50 w-screen h-screen p-10 grid place-items-center top-0 left-0">
+                      <div className="flex flex-col bg-gray-100 rounded-md p-4 w-[25rem]">
+                          <div className="py-3 mb-2 flex flex-col gap-1 bg-gray-500 px-3">
+                            <h3 className="text-xl md:text-2xl text-thin text-white text-center capitalize">Available Payment Plans</h3>
+                            <p className="text-white text-center leading-loose text-sm">We offer three payment options for {state?.title} and they are as follows:</p>
+                          </div>
+                          <p className="text-slate-800 py-1 leading-loose text-sm flex items-center gap-2 border-0 border-b-[1px] border-b-slate-300"><FaCheck className='bg-green-400 text-white h-[15px] w-[15px] flex-shrink-0 text-xs p-1 grid place-items-center rounded-full' /> Full Payment - &#8358;{(state?.price).toLocaleString()}</p>
+                          <p className="text-slate-800 py-1 leading-loose text-sm flex items-center gap-2 border-0 border-b-[1px] border-b-slate-300"><FaCheck className='bg-green-400 text-white h-[15px] w-[15px] flex-shrink-0 text-xs p-1 grid place-items-center rounded-full' /> Two-Time Payment - &#8358;{(((state?.price)/2).toLocaleString())}</p>
+                          <p className="text-slate-800 py-1 leading-loose text-sm flex items-center gap-2 border-0 border-b-[1px] border-b-slate-300"><FaCheck className='bg-green-400 text-white h-[15px] w-[15px] flex-shrink-0 text-xs p-1 grid place-items-center rounded-full' /> Three-Time Payment - &#8358;{((Math.ceil(state?.price)/1.5).toFixed(0).toLocaleString())} (Inital Deposit)</p>
+                      </div>
                     </label>
-                    </div>
                   </div>
                     {success && <div className="text-sm text-white py-2 my-2 px-4 bg-green-500 text-center rounded-md">{success}</div>}
                     {error && <div className="text-sm text-white py-2 my-2 px-4 bg-pink-500 text-center rounded-md">{error}</div>}
                   <form ref={formRef} onSubmit={handleSubmit} className="flex gap-2">
-                    <button type="submit" disabled={loading} className="flex-1 w-[3rem] bg-indigo-500 p-2 rounded-lg flex items-center justify-center gap-2">
-                        <IoMdCart className='text-sm md:text-md text-white'/>
-                        <p className="text-white text-sm md:text-md">{loading ? 'Please wait...' : 'Enroll for Course'}</p>
+                    <button type="submit" disabled={loading} className="flex-1 w-[3rem] bg-indigo-500 p-2 rounded-lg flex items-center justify-center gap-1">
+                        <IoMdCart className='text-md md:text-base text-white'/>
+                        <p className="text-white text-sm md:text-md">{loading ? 'Please wait...' : 'Pay for Course'}</p>
                     </button>
                     <button type="button" disabled={loading} className="flex-1 w-[3rem] border-[1px] border-indigo-500 p-2 rounded-lg flex items-center justify-center gap-2">
                         <IoMdHeadset className='text-sm md:text-md text-gray-500'/>
-                        <p className="text-gray-500 text-sm md:text-md">Inquire Course</p>
+                        <p className="text-gray-500 text-sm md:text-md">Course Enquiry</p>
                     </button>
                   </form>
                   <div className="flex flex-col gap-2">
