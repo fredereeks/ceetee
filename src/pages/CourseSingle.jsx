@@ -177,7 +177,7 @@ function CourseSingle() {
                         <p className="text-gray-500 text-sm md:text-md">Course Enquiry</p>
                     </label>
                     <input type="checkbox" className="hidden peer" id="inquiry" />
-                    <label htmlFor='inquiry' className="scale-0 peer-checked:scale-100 fixed bg-gray-800/50 w-screen h-screen p-10 grid place-items-center top-0 left-0">
+                    <label htmlFor='inquiry' className="scale-0 peer-checked:scale-100 z-[889] fixed bg-gray-800/50 w-screen h-screen p-10 grid place-items-center top-0 left-0">
                       <form className="flex flex-col bg-gray-100 rounded-md p-4 min-w-[300px] max-w-[35rem]">
                           <div className="py-3 mb-2 flex flex-col gap-1 bg-gray-400 px-3">
                             <h3 className="text-xl md:text-2xl text-thin text-white text-center capitalize">Make Enquiry on {state?.title}</h3>
@@ -187,8 +187,8 @@ function CourseSingle() {
                             <input type="text" onChange={handleFormChange} className={`outline-none placeholder-opacity-70 text-slate-500 text-sm sm:text-md bg-transparent border-[1px] border-zinc-200 rounded-[.25rem] py-2 px-4`} required name="fullname" placeholder="Full Name e.g. John Doe" />
                             <input type="email" onChange={handleFormChange} required className={`outline-none placeholder-opacity-70 text-slate-500 text-sm sm:text-md bg-transparent border-[1px] border-zinc-200 rounded-[.25rem] py-2 px-4`} name="email" placeholder="someone@gmail.com" />
                             <input type="text" onChange={handleFormChange} className={`outline-none placeholder-opacity-70 text-slate-500 text-sm sm:text-md bg-transparent border-[1px] border-zinc-200 rounded-[.25rem] py-2 px-4`} name="phone" placeholder="+2349012345678" />
-                            <textarea type="text" onChange={handleFormChange} className={`outline-none placeholder-opacity-70 text-slate-500 text-sm sm:text-md bg-transparent border-[1px] border-zinc-200 rounded-[.25rem] py-2 px-4`} name="fullname" placeholder="Please, write your message here" ></textarea>
-                            <button type="submit" className={`outline-none placeholder-opacity-70 text-slate-500 text-sm sm:text-md bg-transparent border-[1px] border-zinc-200 rounded-[.25rem] py-2 px-4`} >Send Message</button>
+                            <textarea type="text" onChange={handleFormChange} className={`outline-none placeholder-opacity-70 h-[150px] text-slate-500 text-sm sm:text-md bg-transparent border-[1px] border-zinc-200 rounded-[.25rem] py-2 px-4`} name="fullname" placeholder="Please, write your message here" ></textarea>
+                            <button type="submit" className={`outline-none bg-indigo-500 text-white text-sm sm:text-md  rounded-[.25rem] py-2 px-4`} >Send Message</button>
                           </div>
                       </form>
                     </label>
