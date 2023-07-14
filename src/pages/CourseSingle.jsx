@@ -25,9 +25,20 @@ function CourseSingle() {
       reference: '',
       course: state?.title,
   });
+  const [form,setForm] = useState({
+    fullname: '',
+    phone: '',
+    email: '',
+    message: '',
+  })
   const [error, setError] = useState(undefined)
   const [success, setSuccess] = useState('')
   const [loading, setLoading] = useState(false)
+
+  const handleFormChange = e => {
+    setForm(prev => ({...prev, [e.target.name] : e.target.value}))
+    console.log({form})
+  }
   
   useEffect(() => {
       document.title = `CTTI e-learning Centre: ${state?.title}`;
@@ -142,7 +153,7 @@ function CourseSingle() {
                     <label htmlFor='payment' className="cursor-pointer text-xs px-4 bg-indigo-100 w-max text-indigo-400 py-1 rounded-[2rem] my-1">See Payment Options</label>
                     <input type="checkbox" className="hidden peer" id="payment" />
                     <label htmlFor='payment' className="scale-0 peer-checked:scale-100 fixed bg-gray-800/50 w-screen h-screen p-10 grid place-items-center top-0 left-0">
-                      <div className="flex flex-col bg-gray-100 rounded-md p-4 w-[25rem]">
+                      <div className="flex flex-col bg-gray-100 rounded-md p-4 min-w-[300px] max-w-[25rem]">
                           <div className="py-3 mb-2 flex flex-col gap-1 bg-gray-500 px-3">
                             <h3 className="text-xl md:text-2xl text-thin text-white text-center capitalize">Available Payment Plans</h3>
                             <p className="text-white text-center leading-loose text-sm">We offer three payment options for {state?.title} and they are as follows:</p>
@@ -150,6 +161,7 @@ function CourseSingle() {
                           <p className="text-slate-800 py-1 leading-loose text-sm flex items-center gap-2 border-0 border-b-[1px] border-b-slate-300"><FaCheck className='bg-green-400 text-white h-[15px] w-[15px] flex-shrink-0 text-xs p-1 grid place-items-center rounded-full' /> Full Payment - &#8358;{(state?.price).toLocaleString()}</p>
                           <p className="text-slate-800 py-1 leading-loose text-sm flex items-center gap-2 border-0 border-b-[1px] border-b-slate-300"><FaCheck className='bg-green-400 text-white h-[15px] w-[15px] flex-shrink-0 text-xs p-1 grid place-items-center rounded-full' /> Two-Time Payment - &#8358;{(((state?.price)/2).toLocaleString())}</p>
                           <p className="text-slate-800 py-1 leading-loose text-sm flex items-center gap-2 border-0 border-b-[1px] border-b-slate-300"><FaCheck className='bg-green-400 text-white h-[15px] w-[15px] flex-shrink-0 text-xs p-1 grid place-items-center rounded-full' /> Three-Time Payment - &#8358;{((Math.ceil(state?.price)/1.5).toFixed(0).toLocaleString())} (Inital Deposit)</p>
+                          <p className="p-2 text-slate-800 text-xs text-center">You can request a call back or make more enquiry about this course by clicking the 'Course Enquiry' button</p>
                       </div>
                     </label>
                   </div>
@@ -160,10 +172,26 @@ function CourseSingle() {
                         <IoMdCart className='text-md md:text-base text-white'/>
                         <p className="text-white text-sm md:text-md">{loading ? 'Please wait...' : 'Pay for Course'}</p>
                     </button>
-                    <button type="button" disabled={loading} className="flex-1 w-[3rem] border-[1px] border-indigo-500 p-2 rounded-lg flex items-center justify-center gap-2">
+                    <label htmlFor='inquiry' type="button" disabled={loading} className="cursor-pointer flex-1 w-[3rem] border-[1px] border-indigo-500 p-2 rounded-lg flex items-center justify-center gap-2">
                         <IoMdHeadset className='text-sm md:text-md text-gray-500'/>
                         <p className="text-gray-500 text-sm md:text-md">Course Enquiry</p>
-                    </button>
+                    </label>
+                    <input type="checkbox" className="hidden peer" id="inquiry" />
+                    <label htmlFor='inquiry' className="scale-0 peer-checked:scale-100 fixed bg-gray-800/50 w-screen h-screen p-10 grid place-items-center top-0 left-0">
+                      <form className="flex flex-col bg-gray-100 rounded-md p-4 min-w-[300px] max-w-[35rem]">
+                          <div className="py-3 mb-2 flex flex-col gap-1 bg-gray-400 px-3">
+                            <h3 className="text-xl md:text-2xl text-thin text-white text-center capitalize">Make Enquiry on {state?.title}</h3>
+                            <p className="text-white text-center leading-loose text-sm">Fill out your details in the form below and we would get back to you as sooon as possible.</p>
+                          </div>
+                          <div className="flex flex-col gap-2 p-5">
+                            <input type="text" onChange={handleFormChange} className={`outline-none placeholder-opacity-70 text-slate-500 text-sm sm:text-md bg-transparent border-[1px] border-zinc-200 rounded-[.25rem] py-2 px-4`} required name="fullname" placeholder="Full Name e.g. John Doe" />
+                            <input type="email" onChange={handleFormChange} required className={`outline-none placeholder-opacity-70 text-slate-500 text-sm sm:text-md bg-transparent border-[1px] border-zinc-200 rounded-[.25rem] py-2 px-4`} name="email" placeholder="someone@gmail.com" />
+                            <input type="text" onChange={handleFormChange} className={`outline-none placeholder-opacity-70 text-slate-500 text-sm sm:text-md bg-transparent border-[1px] border-zinc-200 rounded-[.25rem] py-2 px-4`} name="phone" placeholder="+2349012345678" />
+                            <textarea type="text" onChange={handleFormChange} className={`outline-none placeholder-opacity-70 text-slate-500 text-sm sm:text-md bg-transparent border-[1px] border-zinc-200 rounded-[.25rem] py-2 px-4`} name="fullname" placeholder="Please, write your message here" ></textarea>
+                            <button type="submit" className={`outline-none placeholder-opacity-70 text-slate-500 text-sm sm:text-md bg-transparent border-[1px] border-zinc-200 rounded-[.25rem] py-2 px-4`} >Send Message</button>
+                          </div>
+                      </form>
+                    </label>
                   </form>
                   <div className="flex flex-col gap-2">
                     <p className="text-lg md:text-xl pt-2 text-thin text-slate-800">Prerequisite</p>
