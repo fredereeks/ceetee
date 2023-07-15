@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { BreadCrumb } from '../components'
-import { skills } from '../data'
-import SkillCard from '../components/SkillCard'
+import { virtuals } from '../data'
+import VirtualCard from '../components/VirtualCard'
 import { category_2, masonry9 } from '../assets/images'
 
 function VirtualTraining() {
@@ -28,11 +28,10 @@ function VirtualTraining() {
                     <p className="text-slate-600 text-justify text-md md:text-base leading-loose py-2 pr-2">In today's digital age, virtual training has become preferred for organisations seeking flexible and efficient learning solutions. CTTI offers comprehensive virtual training programs designed specifically for corporate clients. Our virtual training services provide a dynamic and interactive learning experience that allows your employees to develop new skills and enhance their knowledge from the comfort of their workspace. Discover the benefits of virtual training with CTTI.</p>
                 </div>
             </aside>
-            <div className="flex flex-col gap-2 py-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 justify-center gap-5 py-10">
               {
-                skills.map((skill,i) => {
-                  const direction = i % 2 === 0 ? true : false;
-                  return (<SkillCard key={skill.id} direction={direction} {...skill} />)
+                virtuals.map((virtual) => {
+                  return (<VirtualCard key={virtual.id} {...virtual} />)
                 })
               }
             </div>

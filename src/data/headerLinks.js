@@ -194,11 +194,17 @@ export const headerLinks = [
                 link: "/webinars",
                 title: "Webinars"
             },
-            {
-                id: 1155,
-                link: "/contact",
-                title: "Contact"
-            },
+            // {
+            //     id: 1155,
+            //     link: "/contact",
+            //     title: "Contact"
+            // },
         ]
-    }
+    },
+    {
+        id: 117, 
+        link: "/contact",
+        title: "Contact Us",
+        sublinks: []
+    },
 ]

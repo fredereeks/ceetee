@@ -1,14 +1,14 @@
 import React from 'react'
 
-function VirtualCard({image, title, text, direction}) {
+function VirtualCard({icon, title, text}) {
   return (
-    <aside className={`group py-8 px-4 flex flex-col items-stretch gap-3 md:gap-5 ${direction ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
-        <div className="relative flex-1 mx-auto flex h-full py-4 flex-shrink-0 group-hover:shad bg-white rounded-md overflow-hidden">
-            <img src={image} alt={title} className="h-full w-full rounded-md hover:shadow-xl shadow-lg object-cover scale-100 group-hover:scale-150" />
+    <aside className={`group p-5 border-3 border-transparent hover:border-indigo-600 transition-all duration-300 rounded-md shad hover:drop-shadow-2xl bg-white flex flex-col gap-2`}>
+        <div className="relative mx-3 mt-3 h-[50px] w-[50px] md:h-[80px] md:w-[80px] flex-shrink-0 group-hover:shad bg-white group-hover:bg-indigo-600 rounded-full grid place-items-center overflow-hidden">
+          {icon}
         </div>
-        <div className="flex-1 flex flex-col justify-center gap-2 py-4 flex-shrink-0 ">
-            <h4 className={`text-xl md:text-3xl text-transparent font-bold bg-gradient-to-r from-indigo-800 to-cyan-800 bg-clip-text`}>{title}</h4>
-            <p className="text-slate-600 text-justify text-md md:text-base leading-loose py-2 pr-2">{text}</p>
+        <div className="flex-1 flex flex-col justify-center gap-2 flex-shrink-0">
+            <h4 className={`text-lg md:text-xl font-bold text-indigo-600`}>{title}</h4>
+            <p className="text-sm md:text-base text-slate-500 font-medium text-justify leading-loose py-2 pr-2">{text}</p>
         </div>
     </aside>
   )

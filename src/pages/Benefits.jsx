@@ -47,7 +47,7 @@ function Benefits() {
             </section>
             <section className="bg-gray-200 py-20">
                 <div className="container max-w-[960px] mx-auto flex flex-col md:flex-row md:justify-center md:items-center gap-2 px-4">
-                    <div className="flex flex-col gap-3 md:flex-1 md:pr-2">
+                    <div className="flex flex-col gap-3 md:flex-1 md:pr-2 py-4">
                         <h3 className="text-blue-700 font-bold text-2xl md:text-3xl">One-on-One Discussions</h3>
                         <p className="thin-text leading-[1.8]">As a student, you get both a group as well as a one-on-one access to our world class instructors during your training period. </p>
                         <p className="thin-text leading-[1.8]">We also provide you with both online and offline study materials to further facilitate your learning.</p>
@@ -101,7 +101,7 @@ function Benefits() {
                             </div>
                         </aside>
                     </div>
-                    <div className="flex flex-col gap-3 md:flex-1 md:pl-2">
+                    <div className="flex flex-col gap-3 md:flex-1 md:pl-2 py-4">
                         <h3 className="text-blue-700 font-bold text-2xl md:text-3xl">Access to a Community of Highly Skilled Tutors</h3>
                         <p className="thin-text leading-[1.8]">As a student, you get both a group as well as a one-on-one access to our world class instructors during your training period. </p>
                         <p className="thin-text leading-[1.8]">We also provide you with both online and offline study materials to further facilitate your learning.</p>

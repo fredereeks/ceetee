@@ -7,10 +7,10 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import { blog_slider1, blog_slider2, blog_slider3 } from '../assets/images'
 import { categories, courses, differences } from '../data'
 // import Skeleton from '../components/Skeleton'
-import Counter from '../components/Counter'
+// import Counter from '../components/Counter'
 const DiffCard = lazy(() => import ('../components/DiffCard'))
 const CategoryCard = lazy(() => import ('../components/CategoryCard'))
-// const Counter = lazy(() => import ('../components/Counter'))
+const Counter = lazy(() => import ('../components/Counter'))
 const CourseCard = lazy(() => import ('../components/CourseCard'))
 const PartnerSlide = lazy(() => import ('../components/PartnerSlide'))
 
@@ -99,6 +99,7 @@ function Home() {
           }
         </div>
       </section>
+      {/* <CarouselSlide /> */}
       <section className="difference py-10 sm:px-4 bg-[#f8f8fa90]">
         <div className="container justify-center items-stretch grid diff sm:grid-cols-3 mx-auto py-10 gap-x-2 gap-y-4 sm:gap-y-8 sm:gap-x-6 max-w-[960px] px-2 sm:px-4">
           <aside className="col-span-2 flex flex-col justify-center gap-2 px-2 py-4">

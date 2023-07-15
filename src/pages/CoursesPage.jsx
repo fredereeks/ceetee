@@ -33,23 +33,23 @@ function CoursesPage() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div className="flex md:hidden flex-row gap-2 justify-start md:justify-start items-center md:items-stretch py-5 px-4 bg-slate-100">
               <Carousel 
-                className='w-full h-full flex flex-col justify-start items-center'
-                // infiniteLoop={true}
+                className='w-full h-full flex justify-start items-center'
                 showArrows={true}
                 showIndicators={false}
                 showThumbs={false}
                 showStatus={false}
                 centerMode={true}
-                centerSlidePercentage={20}
+                centerSlidePercentage={35}
                 preventMovementUntilSwipeScrollTolerance={true}
                 emulateTouch={true}
-                stopOnHover={true}
               >
-                <button onClick={() => changeSelectedCourse("All")} className={`py-2 px-4 w-full ${active === "All" ? 'bg-gradient-to-l from-blue-500 to-indigo-500 text-white' : 'hover:bg-indigo-500 hover:text-white'} rounded-br-full rounded-tr-full text-slate-600 text-xs md:text-sm text-center md:text-left`} >All</button>
+                <button onClick={() => changeSelectedCourse("All")} className={`py-2 px-4 w-full flex flex-nowrap mx-2 ${active === "All" ? 'bg-gradient-to-l from-blue-500 to-indigo-500 text-white' : 'hover:bg-indigo-500 hover:text-white'} rounded-br-full rounded-tr-full text-slate-600 mt-5 text-xs md:text-sm text-center md:text-left`} >All</button>
                 {
                   categories.map((category) => {
                     const link = {...category}
-                    return(<button onClick={() => changeSelectedCourse(link.title)} className={`py-2 px-4 w-full hover:text-white ${active === link.title ? 'bg-gradient-to-l from-blue-500 to-indigo-500 text-white' : 'hover:bg-indigo-500 hover:text-white'} rounded-sm md:rounded-br-full md:rounded-tr-full text-slate-600 text-xs md:text-sm text-center md:text-left`} key={link.id} >{link.title}</button>)
+                    const marginTop = link.title.length < 15 ? 'mt-5' : link.title.length <= 26 ? 'mt-3' : 'mt-0'
+                    console.log({title: link.title, length: link.title.length})
+                    return(<button onClick={() => changeSelectedCourse(link.title)} className={` ${marginTop} py-2 px-4 w-full flex flex-nowrap mx-2 hover:text-white ${active === link.title ? 'bg-gradient-to-l from-blue-500 to-indigo-500 text-white' : 'hover:bg-indigo-500 hover:text-white'} rounded-sm md:rounded-br-full md:rounded-tr-full text-slate-600 text-xs md:text-sm text-center md:text-left`} key={link.id} >{link.title}</button>)
                   })
                 }
               </Carousel>

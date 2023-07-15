@@ -30,7 +30,7 @@ function PartnerSlide() {
               showThumbs={false}
               showStatus={false}
               centerMode={true}
-              centerSlidePercentage={20}
+              centerSlidePercentage={40}
               preventMovementUntilSwipeScrollTolerance={true}
               emulateTouch={true}
               stopOnHover={true}
