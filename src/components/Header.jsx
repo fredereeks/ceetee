@@ -82,7 +82,7 @@ function Header(){
                     <div className="md:ml-auto flex flex-col justify-center pt-1 h-full w-full md:w-max md:flex-row md:gap-3">
                         <Link to="/login" className="text-sm grid place-items-center md:border-[1px] md:border-indigo-600 text-indigo-600 md:rounded-md h-10 md:h-8 w-full md:w-max px-2 md:px-4 relative">Login
                         </Link>
-                        <Link to="/signup" className="text-sm grid place-items-center text-white bg-indigo-600 md:rounded-md h-10 md:h-8 w-full md:w-max px-2 md:px-4 relative">Make an Enquiry
+                        <Link to="/enquiry" className="text-sm grid place-items-center text-white bg-indigo-600 md:rounded-md h-10 md:h-8 w-full md:w-max px-2 md:px-4 relative">Make an Enquiry
                         </Link>
                     </div>
                 </nav>

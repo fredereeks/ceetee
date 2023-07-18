@@ -17,12 +17,12 @@ const CourseSingle = lazy(() => import ('./pages/CourseSingle'))
 const CoursesPage = lazy(() => import ('./pages/CoursesPage'))
 const CustomizedTraining = lazy(() => import ('./pages/CustomizedTraining'))
 const Delivery = lazy(() => import ('./pages/Delivery'))
+const Enquiry = lazy(() => import ('./pages/Enquiry'))
 const Error = lazy(() => import ('./pages/Error'))
 const Home = lazy(() => import ('./pages/Home'))
 const Login = lazy(() => import ('./pages/Login'))
 const News = lazy(() => import ('./pages/News'))
 const Resources = lazy(() => import ('./pages/Resources'))
-const Signup = lazy(() => import ('./pages/Signup'))
 const SingleBlog = lazy(() => import ('./pages/SingleBlog'))
 const SkillAssessment = lazy(() => import ('./pages/SkillAssessment'))
 const Solutions = lazy(() => import ('./pages/Solutions'))
@@ -114,8 +114,8 @@ function App() {
           element: <Suspense fallback={<main><Loader /></main>}><Resources /></Suspense>,
         },
         {
-          path: "/signup",
-          element: <Suspense fallback={<main><Loader /></main>}><Signup /></Suspense>,
+          path: "/enquiry",
+          element: <Suspense fallback={<main><Loader /></main>}><Enquiry /></Suspense>,
         },
         {
           path: "/post/:id",

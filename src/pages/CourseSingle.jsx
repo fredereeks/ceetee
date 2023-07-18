@@ -18,7 +18,7 @@ function CourseSingle() {
   const [inputs, setInputs] = useState({
       fullname: "John Doe",
       email: "johndoe@gmail.com",
-      amount: state?.price*100 || 100000000,
+      amount: 25000*100 || 100000000,
       currency: "NGN",
       phone: "",
       message: "",
@@ -169,7 +169,7 @@ function CourseSingle() {
               <aside className="col-span-1 md:col-span-2 flex flex-col gap-3 md:px-4">
                 <div className="flex flex-col gap-2">
                   <div className="flex relative gap-2 py-2 items-center">
-                    <h3 className="text-xl md:text-2xl text-gray-600 blur-sm">&#8358;{(state?.price).toLocaleString()}</h3>
+                    <h3 className="text-xl md:text-2xl text-gray-600">&#8358;<span className="blur-sm">{(state?.duration).toLocaleString()}</span></h3>
                     <label htmlFor='payment' className="cursor-pointer text-xs px-4 bg-indigo-100 w-max text-indigo-400 py-1 rounded-[2rem] my-1">See Payment Options</label>
                     <input type="checkbox" className="hidden peer" id="payment" />
                     <label htmlFor='payment' className="scale-0 peer-checked:scale-100 duration-100 fixed z-[1000] bg-gray-800/50 w-screen h-screen p-10 grid place-items-center top-0 left-0">
@@ -178,9 +178,9 @@ function CourseSingle() {
                             <h3 className="text-xl md:text-2xl text-thin text-white text-center capitalize">Available Payment Plans</h3>
                             <p className="text-white text-center leading-loose text-sm">We offer three payment options for {state?.title} and they are as follows:</p>
                           </div>
-                          <p className="text-slate-800 py-1 leading-loose text-sm flex items-center gap-2 border-0 border-b-[1px] border-b-slate-300"><FaCheck className='bg-green-400 text-white h-[15px] w-[15px] flex-shrink-0 text-xs p-1 grid place-items-center rounded-full' /> Full Payment - &#8358;{(state?.price).toLocaleString()}</p>
-                          <p className="text-slate-800 py-1 leading-loose text-sm flex items-center gap-2 border-0 border-b-[1px] border-b-slate-300"><FaCheck className='bg-green-400 text-white h-[15px] w-[15px] flex-shrink-0 text-xs p-1 grid place-items-center rounded-full' /> Two-Time Payment - &#8358;{(((state?.price)/2).toLocaleString())}</p>
-                          <p className="text-slate-800 py-1 leading-loose text-sm flex items-center gap-2 border-0 border-b-[1px] border-b-slate-300"><FaCheck className='bg-green-400 text-white h-[15px] w-[15px] flex-shrink-0 text-xs p-1 grid place-items-center rounded-full' /> Three-Time Payment - &#8358;{((Math.round(state?.price)/1.5).toLocaleString())} (Inital Deposit)</p>
+                          <p className="text-slate-800 py-1 leading-loose text-sm flex items-center gap-2 border-0 border-b-[1px] border-b-slate-300"><FaCheck className='bg-green-400 text-white h-[15px] w-[15px] flex-shrink-0 text-xs p-1 grid place-items-center rounded-full' /> Full Payment </p>
+                          <p className="text-slate-800 py-1 leading-loose text-sm flex items-center gap-2 border-0 border-b-[1px] border-b-slate-300"><FaCheck className='bg-green-400 text-white h-[15px] w-[15px] flex-shrink-0 text-xs p-1 grid place-items-center rounded-full' /> Two-Time Payment </p>
+                          <p className="text-slate-800 py-1 leading-loose text-sm flex items-center gap-2 border-0 border-b-[1px] border-b-slate-300"><FaCheck className='bg-green-400 text-white h-[15px] w-[15px] flex-shrink-0 text-xs p-1 grid place-items-center rounded-full' /> Three-Time Payment </p>
                           <p className="p-2 text-slate-800 text-xs text-center">You can request a call back or make more enquiry about this course by clicking the 'Make Enquiry' button</p>
                       </div>
                     </label>
