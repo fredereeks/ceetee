@@ -3,9 +3,10 @@ import { FaUserAlt } from 'react-icons/fa'
 import { IoMdStarOutline } from 'react-icons/io'
 import { Link } from 'react-router-dom'
 import { randomColor } from '../utils'
+import { IoTimeOutline } from 'react-icons/io5'
 
-function CourseCard({id, image, title, rating, users, category, state}) {
-  return (
+function CourseCard({id, image, title, rating, duration, users, category, state}) {
+return (
     <Link state={state} to={`/course/${category.toLowerCase().replaceAll(" ", "-")}/${id}`} key={id} className="bg-white flex flex-col gap-2 max-w-[25rem] group shadow-lg hover:shadow-2xl rounded-base transition-all duration-300">
         <div className={`relative h-[130px] sm:h-[150px] w-full hover:rounded-none rounded-md grid place-items-center overflow-hidden`} style={{background: randomColor(.5)}}>
             <img src={image} alt={title} className="absolute w-full h-full top-0 left-0 object-cover" />
@@ -22,10 +23,12 @@ function CourseCard({id, image, title, rating, users, category, state}) {
               <div className="flex items-center text-slate-600 gap-2 text-[.6rem] sm:text-xs">
                 <p className="gap-1 sm:gap-2 items-center bg-yellow-100 h-3 w-3 sm:h-5 sm:w-5 rounded-md grid place-items-center"><IoMdStarOutline className='text-yellow-300 text-[.5rem]' /></p>{rating.toFixed(1)}
               </div>
-              <div className="flex items-center text-slate-600 gap-1 text-[.6rem] sm:text-xs">
-                <p className="gap-1 sm:gap-2 items-center text-pink-400 bg-pink-100 h-3 w-3 sm:h-5 sm:w-5 rounded-md grid place-items-center">&#8358;</p>Inside
-                {/* &#8358;{price.toLocaleString()} */}
+              <div className="flex items-center text-slate-600 gap-2 text-[.6rem] sm:text-xs">
+                <p className="gap-1 sm:gap-2 items-center bg-indigo-100 h-3 w-3 sm:h-5 sm:w-5 rounded-md grid place-items-center"><IoTimeOutline className='text-indigo-600 text-[.5rem]' /></p>{duration}
               </div>
+              {/* <div className="flex items-center text-slate-600 gap-1 text-[.6rem] sm:text-xs">
+                <p className="gap-1 sm:gap-2 items-center text-pink-400 bg-pink-100 h-3 w-3 sm:h-5 sm:w-5 rounded-md grid place-items-center">&#8358;</p>Inside
+              </div> */}
             </div>
         </div>
     </Link>

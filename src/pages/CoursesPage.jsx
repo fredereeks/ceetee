@@ -48,7 +48,6 @@ function CoursesPage() {
                   categories.map((category) => {
                     const link = {...category}
                     const marginTop = link.title.length < 15 ? 'mt-5' : link.title.length <= 26 ? 'mt-3' : 'mt-0'
-                    console.log({title: link.title, length: link.title.length})
                     return(<button onClick={() => changeSelectedCourse(link.title)} className={` ${marginTop} py-2 px-4 w-full flex flex-nowrap mx-2 hover:text-white ${active === link.title ? 'bg-gradient-to-l from-blue-500 to-indigo-500 text-white' : 'hover:bg-indigo-500 hover:text-white'} rounded-sm md:rounded-br-full md:rounded-tr-full text-slate-600 text-xs md:text-sm text-center md:text-left`} key={link.id} >{link.title}</button>)
                   })
                 }

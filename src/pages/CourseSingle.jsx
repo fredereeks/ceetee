@@ -57,7 +57,7 @@ function CourseSingle() {
         setInputs(prev => ({...prev, reference}))
         try{
             const res = await axios.post("http://localhost:4119/api/course/purchase", inputs)
-            console.log({data: res.data})
+            // console.log({data: res.data})
             setSuccess(res.data)
         }catch(err){
             if(err.response){
@@ -139,6 +139,7 @@ function CourseSingle() {
               <aside className="col-span-1 md:col-span-3 flex flex-col gap-4">
                 <div className="rounded-lg relative h-[300px] md:h-[400px] w-full overflow-hidden before:z-10 before:w-full before:h-[30%] before:absolute before:bottom-0 before:left-0 before:bg-gradient-to-t before:from-gray-950 before:to-transparent">
                   <img src={state?.image} alt={state?.title} className="absolute w-full h-full left-0 top-0 object-cover" />
+                  <p className="flex flex-col gap-1 bottom-5 left-4 absolute z-20 text-sm sm:text-base text-white"> {state?.duration}</p>
                   <div className="flex flex-col gap-1 bottom-5 right-4 absolute z-20">
                     <p className="text-white text-xs md:text-sm">{((+Math.ceil(state?.rating) * 100) - randomNumber(141,293)).toLocaleString()} reviews</p>
                     {/* <div className="flex gap-1 items-center">
@@ -169,7 +170,7 @@ function CourseSingle() {
               <aside className="col-span-1 md:col-span-2 flex flex-col gap-3 md:px-4">
                 <div className="flex flex-col gap-2">
                   <div className="flex relative gap-2 py-2 items-center">
-                    <h3 className="text-xl md:text-2xl text-gray-600">&#8358;<span className="blur-sm">{(state?.duration).toLocaleString()}</span></h3>
+                  <h3 className="text-xl md:text-2xl text-gray-600">&#8358;<span className="blur-sm">{(state?.duration)}</span></h3>
                     <label htmlFor='payment' className="cursor-pointer text-xs px-4 bg-indigo-100 w-max text-indigo-400 py-1 rounded-[2rem] my-1">See Payment Options</label>
                     <input type="checkbox" className="hidden peer" id="payment" />
                     <label htmlFor='payment' className="scale-0 peer-checked:scale-100 duration-100 fixed z-[1000] bg-gray-800/50 w-screen h-screen p-10 grid place-items-center top-0 left-0">

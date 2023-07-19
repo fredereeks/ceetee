@@ -10,7 +10,7 @@ export const courses = [
         users: 51,
         rating: 4.1,
         // price: 250000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
                 "Basic Computer Appreciation",
@@ -33,7 +33,7 @@ export const courses = [
         users: 152,
         rating: 4.5,
         // price: 270000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: true,
         requisite: [
             "Basic Computer Appreciation",
@@ -60,7 +60,7 @@ export const courses = [
         users: 76,
         rating: 4.6,
         // price: 180000,
-        duation: "4 Months",
+        duration: "4Months",
         featured: true,
         requisite: [
             "Basic Computer Appreciation",
@@ -100,13 +100,13 @@ export const courses = [
     },
     {
         id: 699100,
-        image: ctti_python,
+        image: ctti_powerbi,
         category: "Programming and Development",
         title: "Diploma in Python",
         users: 57,
         rating: 4.8,
         // price: 245000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -135,7 +135,7 @@ export const courses = [
         users: 30,
         rating: 4.3,
         // price: 189000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -156,7 +156,7 @@ export const courses = [
         users: 30,
         rating: 4.3,
         // price: 192000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -177,7 +177,7 @@ export const courses = [
         users: 30,
         rating: 4.3,
         // price: 210000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -198,7 +198,7 @@ export const courses = [
         users: 40,
         rating: 4.3,
         // price: 160000,
-        duation: "2 Months",
+        duration: "2Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -221,7 +221,7 @@ export const courses = [
         users: 30,
         rating: 4.3,
         // price: 235000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -242,7 +242,7 @@ export const courses = [
         users: 30,
         rating: 4.3,
         // price: 195000,
-        duation: "5 Months",
+        duration: "5Months",
         featured: true,
         requisite: [
             "Install, configure and troubleshoot computers",
@@ -264,7 +264,7 @@ export const courses = [
         users: 30,
         rating: 4.3,
         // price: 285000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -285,7 +285,7 @@ export const courses = [
         users: 30,
         rating: 4.3,
         // price: 265000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -313,7 +313,7 @@ export const courses = [
         users: 30,
         rating: 4.3,
         // price: 255000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Install, configure and troubleshoot computers",
@@ -338,7 +338,7 @@ export const courses = [
         users: 89,
         rating: 4.1,
         // price: 770000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: true,
         requisite: [
             "Basic Computer Appreciation",
@@ -361,7 +361,7 @@ export const courses = [
         users: 58,
         rating: 4.2,
         // price: 770000,
-        duation: "5 Months",
+        duration: "5Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -383,7 +383,7 @@ export const courses = [
         users: 65,
         rating: 4.0,
         // price: 770000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: true,
         requisite: [
             "Basic Computer Appreciation",
@@ -404,7 +404,7 @@ export const courses = [
         users: 78,
         rating: 4.6,
         // price: 770000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -425,7 +425,7 @@ export const courses = [
         users: 78,
         rating: 4.1,
         // price: 770000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: true,
         requisite: [
             "Basic Computer Appreciation",
@@ -446,7 +446,7 @@ export const courses = [
         users: 52,
         rating: 4.5,
         // price: 200000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -467,7 +467,7 @@ export const courses = [
         users: 71,
         rating: 4.0,
         // price: 250000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -488,7 +488,7 @@ export const courses = [
         users: 55,
         rating: 4.2,
         // price: 210000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: true,
         requisite: [
             "Basic Computer Appreciation",
@@ -509,7 +509,7 @@ export const courses = [
         users: 146,
         rating: 4.6,
         // price: 264000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -530,7 +530,7 @@ export const courses = [
         users: 16,
         rating: 4.3,
         // price: 250000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -551,7 +551,7 @@ export const courses = [
         users: 141,
         rating: 4.3,
         // price: 140000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -572,7 +572,7 @@ export const courses = [
         users: 105,
         rating: 4.1,
         // price: 260000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -593,7 +593,7 @@ export const courses = [
         users: 121,
         rating: 4.2,
         // price: 160000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -614,7 +614,7 @@ export const courses = [
         users: 116,
         rating: 4.3,
         // price: 125000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -635,7 +635,7 @@ export const courses = [
         users: 78,
         rating: 4.2,
         // price: 77000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -656,7 +656,7 @@ export const courses = [
         users: 42,
         rating: 4.1,
         // price: 89000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -677,7 +677,7 @@ export const courses = [
         users: 89,
         rating: 3.8,
         // price: 210000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -698,7 +698,7 @@ export const courses = [
         users: 78,
         rating: 3.9,
         // price: 170000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -719,7 +719,7 @@ export const courses = [
         users: 78,
         rating: 4.1,
         // price: 135000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -740,7 +740,7 @@ export const courses = [
         users: 78,
         rating: 4.2,
         // price: 215000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -761,7 +761,7 @@ export const courses = [
         users: 90,
         rating: 4.1,
         // price: 220000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -782,7 +782,7 @@ export const courses = [
         users: 86,
         rating: 4.2,
         // price: 280000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -803,7 +803,7 @@ export const courses = [
         users: 60,
         rating: 4.0,
         // price: 180000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -824,7 +824,7 @@ export const courses = [
         users: 60,
         rating: 4.6,
         // price: 205000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -845,7 +845,7 @@ export const courses = [
         users: 85,
         rating: 4.6,
         // price: 150000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -866,7 +866,7 @@ export const courses = [
         users: 59,
         rating: 4.0,
         // price: 120000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -887,7 +887,7 @@ export const courses = [
         users: 56,
         rating: 4.2,
         // price: 190000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -908,7 +908,7 @@ export const courses = [
         users: 102,
         rating: 4.5,
         // price: 195000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -929,7 +929,7 @@ export const courses = [
         users: 52,
         rating: 4.5,
         // price: 210000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: true,
         requisite: [
             "Basic Computer Appreciation",
@@ -950,7 +950,7 @@ export const courses = [
         users: 98,
         rating: 4.6,
         // price: 185000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -971,7 +971,7 @@ export const courses = [
         users: 121,
         rating: 4.1,
         // price: 147000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -992,7 +992,7 @@ export const courses = [
         users: 78,
         rating: 4.3,
         // price: 205000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -1013,7 +1013,7 @@ export const courses = [
         users: 89,
         rating: 4.2,
         // price: 230000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -1034,7 +1034,7 @@ export const courses = [
         users: 120,
         rating: 4.1,
         // price: 160000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: false,
         requisite: [
             "Basic Computer Appreciation",
@@ -1055,7 +1055,7 @@ export const courses = [
         users: 100,
         rating: 4.0,
         // price: 145000,
-        duation: "6 Months",
+        duration: "6Months",
         featured: true,
         requisite: [
             "Basic Computer Appreciation",
