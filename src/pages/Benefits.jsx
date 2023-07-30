@@ -23,7 +23,7 @@ function Benefits() {
                                 <span className="shad h-[30px] w-[30px] md:w-[45px] md:h-[45px] flex-shrink-0 rounded-full grid place-items-center bg-white">
                                     <FaCloudUploadAlt className="text-lg md:text-2xl text-[#09dba0]"/>
                                 </span>
-                                <p className="thin-text text-sm md:text-base leading-tight">We offer a wide range of lecture <Link className="font-medium text-blue-700" to="/delivery">delivery Options</Link></p>
+                                <p className="thin-text text-sm md:text-base leading-tight">We offer a wide range of lecture <Link className="font-medium text-blue-700" to="/delivery">options</Link></p>
                             </div>
                             <div className="flex gap-2 items-center">
                                 <span className="shad h-[30px] w-[30px] md:w-[45px] md:h-[45px] flex-shrink-0 rounded-full grid place-items-center bg-white">
@@ -35,7 +35,7 @@ function Benefits() {
                                 <span className="shad h-[30px] w-[30px] md:w-[45px] md:h-[45px] flex-shrink-0 rounded-full grid place-items-center bg-white">
                                     <FaCertificate className="text-lg md:text-2xl text-[#ec1c3e]"/>
                                 </span>
-                                <p className="thin-text text-sm md:text-base leading-tight">Our certificates is recognized in most popular countries across the world</p>
+                                <p className="thin-text text-sm md:text-base leading-tight">Our certificates are industry recognized in most popular countries across the world</p>
                             </div>
                         </div>
                     </div>

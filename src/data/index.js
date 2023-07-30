@@ -7,6 +7,7 @@ import {headerLinks} from "./headerLinks"
 import {individuals} from "./individuals"
 import {partners} from "./partners"
 import {skills} from "./skills"
+import {slides} from "./slides"
 import {trainings} from "./trainings"
 import {virtuals} from "./virtuals"
 
@@ -20,6 +21,7 @@ export {
     individuals,
     partners,
     skills,
+    slides,
     trainings,
     virtuals,
 }

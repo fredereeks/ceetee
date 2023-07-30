@@ -12,7 +12,7 @@ export const virtuals = [
         id: 38924,
         icon: <IoGlobeOutline  className="text-3xl md:text-5xl transition-none group-hover:text-white text-indigo-500"/>,
         title: "Flexible and Convenient Learning",
-        text: "With CTTI's virtual training, you can say goodbye to the limitations of time and location. Our flexible training schedules and virtual platforms allow your employees to access training sessions from anywhere worldwide, eliminating the need for travel or disruption to daily operations. This flexibility enables your team to learn without compromising their work commitments.",
+        text: "With our virtual training, you can say goodbye to the limitations of time and location. Our flexible training schedules and virtual platforms allow your employees to access training sessions from anywhere worldwide, eliminating the need for travel or disruption to daily operations. This flexibility enables your team to learn without compromising their work commitments.",
     },
     {
         id: 38925,

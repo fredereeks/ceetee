@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function CategoryCard({id, icon, background, title, courses}) {
   return (
-    <Link to={`/courses?category=${id}`} key={id} className="bg-white flex flex-col md:flex-row items-center gap-2 p-3 sm:p-4 max-w-[25rem] group shad hover:shadow-2xl rounded-base transition-all duration-300">
+    <Link to={`/courses/${title}`} key={id} className="bg-white flex flex-col md:flex-row items-center gap-2 p-3 sm:p-4 max-w-[25rem] group shad hover:shadow-2xl rounded-base transition-all duration-300">
         <div className={`h-[70px] w-[70px] mb-2 rounded-md grid place-items-center ${background}`}>
             {icon}
         </div>

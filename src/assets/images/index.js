@@ -63,6 +63,20 @@ import ctti_python from "./ctti_python.jpg"
 import ctti_sharepoint from "./ctti_sharepoint.jpg" 
 import ctti_soft_skill from "./ctti_soft_skill.jpg"
 
+import ctti_female_partners from "./ctti_female_partners.jpg" 
+import ctti_black_pollution_bg from "./ctti_black_pollution_bg.jpg" 
+import ctti_city_silhoutte from "./ctti_city_silhoutte.png" 
+import ctti_arrow_bg from "./ctti_arrow_bg.jpg" 
+import ctti_slide1 from "./ctti_slide1.jpg" 
+import ctti_home_traing from "./ctti_home_traing.jpg" 
+import ctti_msword from "./ctti_msword.jpg" 
+import ctti_slide4 from "./ctti_slide4.jpg" 
+import ctti_coder from "./ctti_coder.jpg" 
+import ctti_personal_session from "./ctti_personal_session.jpg" 
+import ctti_slide3 from "./ctti_slide3.jpg" 
+import ctti_slide2 from "./ctti_slide2.jpg" 
+import ctti_cybersecurity from "./ctti_cybersecurity.jpg" 
+import ctti_outdoor from "./ctti_outdoor.jpg"
 import payment_key from "./payment_key.jpg" 
 import payment_master_card from "./payment_master_card.jpg" 
 import payment_secure from "./payment_secure.jpg"
@@ -128,6 +142,20 @@ blog_slider1,
 blog_slider2,
 blog_slider3,
 blog_teaser,
+ctti_female_partners,
+ctti_black_pollution_bg,
+ctti_city_silhoutte,
+ctti_arrow_bg,
+ctti_slide1,
+ctti_home_traing,
+ctti_msword,
+ctti_slide4,
+ctti_coder,
+ctti_personal_session,
+ctti_slide3,
+ctti_slide2,
+ctti_cybersecurity,
+ctti_outdoor,
 payment_key,
 payment_master_card,
 payment_secure,

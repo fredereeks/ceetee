@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom'
 import { IoIosArrowDropright } from 'react-icons/io'
 import {Carousel} from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
-
-import { blog_slider1, blog_slider2, blog_slider3 } from '../assets/images'
-import { categories, courses, differences } from '../data'
+import { categories, courses, differences, slides } from '../data'
 // import Skeleton from '../components/Skeleton'
 // import Counter from '../components/Counter'
 const DiffCard = lazy(() => import ('../components/DiffCard'))
@@ -32,7 +30,7 @@ function Home() {
 
   return (
     <>
-      <section className="bg-slate-50 pt-14">
+      <section className="bg-gradient pt-[3.48rem] pl-5">
           <div className="container mx-auto z-[500] max-w-[960px] max-h-[70vh] h-[70vh] relative overflow-hidden">
             <Carousel 
               autoPlay={true}
@@ -42,55 +40,40 @@ function Home() {
               showIndicators={true}
               showThumbs={false}
               showStatus={false}
-              preventMovementUntilSwipeScrollTolerance={true}
-              emulateTouch={true}
+              // preventMovementUntilSwipeScrollTolerance={true}
+              // emulateTouch={true}
               stopOnHover={false}
               interval={2000}
+              animationHandler={'fade'}
               // axis='vertical'
             >
-            <div className="container max-w-[960px] relative z-50 mx-auto items-center px-4 grid grid-cols-1 md:grid-cols-2 gap-2">
-              <div className="flex flex-col gap-2 py-24 md:py-4 px-4">
-                <h2 className="text-2xl md:text-4xl text-left text-transparent bg-indigo-600 bg-clip-text font-bold capitalize py-2">Explore your learning area and gather knowledge</h2>
-                <p className="text-gray-500 text-left text-sm md:text-lg font-medium leading-loose pr-2 pb-2">Learning is the process of acquiring new or modifying exiting knowledge, behaviours, skills, values or preferences</p>
-                <Link to="/about" className="text-sm text-white w-max rounded-[2rem] mt-2 py-2 px-4 sm:px-6 bg-site shadow-sky-200 drop-shadow-md">Get Started</Link>
-              </div>
-              <div className="hidden md:flex flex-col items-center justify-center">
-                <img src={blog_slider1} alt="Hero Student" className="h-120 w-120 rounded-t-r-full rounded-t-r-xl object-cover rounded-full" />
-              </div>
-            </div>
-            <div className="container max-w-[960px] relative z-50 mx-auto items-center px-4 grid grid-cols-1 md:grid-cols-2 gap-2">
-              <div className="flex flex-col gap-2 py-24 md:py-4 px-4">
-                <h2 className="text-2xl md:text-4xl text-left text-transparent  bg-indigo-600 bg-clip-text font-bold capitalize py-2">Become a Certified tested and tried IT Personnel</h2>
-                <p className="text-gray-500 text-left text-sm md:text-lg font-medium leading-loose pr-2 pb-2">Our mammoth resource pool will fortify you with all you need to know in whatever course you enroll for</p>
-                <Link to="/courses" className="text-sm text-white w-max rounded-[2rem] mt-2 py-2 px-4 sm:px-6 bg-site shadow-sky-200 drop-shadow-md">Get Started</Link>
-              </div>
-              <div className="hidden md:flex flex-col items-center justify-center">
-                <img src={blog_slider2} alt="Hero Student" className="h-120 w-120 rounded-t-r-full rounded-t-r-xl object-cover rounded-full" />
-              </div>
-            </div>
-            <div className="container max-w-[960px] relative z-50 mx-auto items-center px-4 grid grid-cols-1 md:grid-cols-2 gap-2">
-              <div className="flex flex-col gap-2 py-24 md:py-4 px-4">
-                <h2 className="text-2xl md:text-4xl text-left text-transparent  bg-indigo-600 bg-clip-text font-bold capitalize py-2">Become a Certified tested and tried IT Personnel</h2>
-                <p className="text-gray-500 text-left text-sm md:text-lg font-medium leading-loose pr-2 pb-2">With access to an unprecedented amount of ready-to-help community of developers and like-minded peers, you are always in good hands and among 'friends'</p>
-                <Link to="/courses" className="text-sm text-white w-max rounded-[2rem] mt-2 py-2 px-4 sm:px-6 bg-site shadow-sky-200 drop-shadow-md">Enroll Now</Link>
-              </div>
-              <div className="hidden md:flex flex-col items-center justify-center">
-                <img src={blog_slider3} alt="Hero Student" className="h-120 w-120 rounded-t-r-full rounded-t-r-xl object-cover rounded-full" />
-              </div>
-            </div>
+            {
+              slides.map(slide => (
+                <aside key={slide.id} className="container max-w-[960px] relative z-50 mx-auto items-center grid grid-cols-1 md:grid-cols-2 gap-2">
+                  <div className="flex flex-col gap-2">
+                    <h2 className="text-2xl md:text-4xl text-left text-white bg-indigo-600 bg-clip-text font-bold capitalize py-2">{slide.title}</h2>
+                    <p className="text-gray-50 text-left text-sm md:text-lg font-medium leading-loose pr-2 pb-2">{slide.text}</p>
+                    <Link to={slide.link} className="text-sm text-indigo-600 font-medium w-max rounded-[2rem] mt-2 py-2 px-4 sm:px-6 bg-white shadow-sky-200">{slide.tag}</Link>
+                  </div>
+                  <div className="hidden md:flex flex-col h-[70vh] py-24 md:py-4 relative items-center justify-center">
+                    <img src={slide.image} alt="Hero Student" className="h-120 w-120 rounded-t-r-full rounded-t-r-xl md:absolute md:h-full md:w-full object-cover" />
+                  </div>
+                </aside>
+              ))
+            }
             </Carousel>
           </div>
       </section>
-      <section className="counter">
-        <div className="container bg-site mx-auto justify-center max-w-[960px] grid grid-cols-2 md:grid-cols-4 py-10 px-4">
+      <section className="counter bg-slate-200">
+        <div className="container mx-auto justify-center max-w-[960px] grid grid-cols-2 md:grid-cols-4 py-10 px-4">
           {
             [
-              [111, <Counter key={111} className={''} speed="fast" end={3000} tag={'K+'} />, "Online Learners", "border-2 border-r-slate-50/30"],
-              [112, <Counter key={112} className={''} speed="slow" end={800} tag={'+'} />, "Expert Instructors", "md:border-2 md:border-r-slate-50/30"],
-              [113, <Counter key={113} className={''} speed="normal" end={1000} tag={'K+'} />, "Validated Students", "border-2 border-r-slate-50/30"],
-              [114, <Counter key={114} className={''} speed="slow" end={310} tag={'+'} />, "Trendy Courses", "border-0"],
+              [111, <Counter key={111} speed="fast" end={2140} tag={'K+'} />, "Online Learners", "border-2 border-r-indigo-50/30"],
+              [112, <Counter key={112} speed="slow" end={50} tag={'+'} />, "Expert Instructors", "md:border-2 md:border-r-indigo-50/30"],
+              [113, <Counter key={113} speed="normal" end={2000} tag={'K+'} />, "Validated Students", "border-2 border-r-indigo-50/30"],
+              [114, <Counter key={114} speed="slow" end={67} tag={'+'} />, "Trendy Courses", "border-0"],
             ].map(([id, stat, text, border]) => (
-              <aside key={id} className={`flex flex-col p-3 items-center justify-center gap-3 text-white border-transparent ${border}`}>
+              <aside key={id} className={`flex flex-col p-3 items-center justify-center gap-3 text-site  border-transparent ${border}`}>
                 {/* <h3 className="text-inherit text-xl md:text-2xl font-bold"></h3> */}
                 {stat}
                 <p className="text-inherit text-xs md:text-sm text-center">{text}</p>

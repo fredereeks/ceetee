@@ -17,14 +17,17 @@ function PartnerSlide() {
   const slide = React.useRef(null);
 
   React.useEffect(() => {
-    const slideWidth = slide.current.firstElementChild.getBoundingClientRect().width;
-    const total = slide.current.children.length;
-  // slide.current.style.width = `${100 * total}px`
-    const timer = setInterval(() => {
-        let counter = +index.current % (total/2);
-        slide.current.style.transform = `translateX(-${counter * slideWidth + 16}px)`
-        index.current = +index.current + 1; 
-    },3000)
+    let timer = null;
+    if(slide?.current){
+      const slideWidth = slide?.current?.firstElementChild.getBoundingClientRect().width;
+      const total = slide?.current?.children.length;
+    // slide?.current.style.width = `${100 * total}px`
+      timer = setInterval(() => {
+          let counter = +index.current % (total/2);
+          if(slide?.current){ slide.current.style.transform = `translateX(-${counter * slideWidth + 16}px)` }
+          index.current = +index.current + 1; 
+      },3000)
+    }
     return () => {
       clearInterval(timer)
     }

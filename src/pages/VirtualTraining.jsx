@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { BreadCrumb } from '../components'
 import { virtuals } from '../data'
 import VirtualCard from '../components/VirtualCard'
-import { category_2, masonry9 } from '../assets/images'
+import { category_2 } from '../assets/images'
 
 function VirtualTraining() {
 
@@ -14,12 +14,12 @@ function VirtualTraining() {
     <main  className='flex flex-col justify-center'>
       <BreadCrumb extra={{name: "Solutions", link: "/solutions"}} page={"Virtual Corporate Training"} />
       <section className="bg-white">
-        <div className="container relative mx-auto max-w-[980px] pt-20 px-4 flex flex-col">
-            {/* <div className="flex flex-col gap-3 p-5 items-center">
-              <h3 className="text-2xl md:text-3xl font-bold text-blue-600 capitalize"><span className="text-indigo-400">Virtual</span> Corporate Training</h3>
-                  <p className="text-slate-400 text-md md:text-base leading-loose text-justify py-2 pr-2">At CTTI, we are dedicated to supporting your organisation's growth and success through comprehensive skills assessment services.</p>
-            </div> */}
-            <aside className={`group py-0 px-4 flex flex-col items-stretch sm:items-center md:items-stretch gap-3 md:gap-5 md:flex-row`}>
+        <div className="container relative mx-auto max-w-[980px] pt-10 px-4 flex flex-col">
+            <div className="flex flex-col gap-3 p-5 items-center">
+              <h3 className="text-2xl md:text-3xl font-bold text-indigo-600 capitalize">Virtual Corporate Training</h3>
+                  <p className="normal-text leading-loose text-justify py-2 pr-2">At CTTI, we are dedicated to supporting your organisation's growth and success through comprehensive skills assessment services.</p>
+            </div>
+            {/* <aside className={`group py-0 px-4 flex flex-col items-stretch sm:items-center md:items-stretch gap-3 md:gap-5 md:flex-row`}>
                 <div className="relative flex-1 mx-auto flex h-full w-full py-4 md:w-[400px] flex-shrink-0 group-hover:shad bg-white rounded-md overflow-hidden rounded-ss-[2rem] rounded-se-[2rem]">
                     <img src={masonry9} alt={"Virtual Corporate Training"} className="h-full w-full rounded-md hover:shadow-xl shadow-lg object-cover md:object-cover scale-[1.5] group-hover:rotate-6 group-hover:scale-[1.3]" />
                 </div>
@@ -27,7 +27,11 @@ function VirtualTraining() {
                     <h3 className="text-2xl md:text-3xl font-bold text-blue-600 capitalize">Experience Convenient and <span className="text-indigo-700">Engaging Virtual Training</span> with CTTI</h3>
                     <p className="text-slate-600 text-justify text-md md:text-base leading-loose py-2 pr-2">In today's digital age, virtual training has become preferred for organisations seeking flexible and efficient learning solutions. CTTI offers comprehensive virtual training programs designed specifically for corporate clients. Our virtual training services provide a dynamic and interactive learning experience that allows your employees to develop new skills and enhance their knowledge from the comfort of their workspace. Discover the benefits of virtual training with CTTI.</p>
                 </div>
-            </aside>
+            </aside> */}
+        </div> 
+      </section>
+      <section className="bg-slate-50">
+        <div className="container relative mx-auto max-w-[980px] pb-20 pt-5 px-4 flex flex-col">
             <div className="grid grid-cols-1 sm:grid-cols-2 justify-center gap-5 py-10">
               {
                 virtuals.map((virtual) => {

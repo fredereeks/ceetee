@@ -38,79 +38,63 @@ export const headerLinks = [
         title: "Courses",
         opened: false,
         sublinks: [
-            {
-                id: 1130,
-                link: "/courses/career-development-course",
-                title: "Career Development Courses"
+            {   id: 1130,
+                link: "/courses/programming-and-development",
+                title: "Programming and Development",
             },
-            {
-                id: 1131,
-                link: "/courses/agile-and-scrum",
-                title: "Agile and Scrum"
+            {   id: 1131,
+                link: "/courses/networking-and-cybersecurity",
+                title: "Networking and Cybersecurity",
             },
-            {
-                id: 1132,
+            {   id: 1132,
                 link: "/courses/business-applications",
-                title: "Business Applications"
+                title: "Business Applications",
             },
-            {
-                id: 1133,
-                link: "/courses/it-infrastructure",
-                title: "IT Infrastructure"
+            {   id: 1133,
+                link: "/courses/cloud-computing-and-virtualization",
+                title: "Cloud Computing and Virtualization",
             },
-            {
-                id: 1134,
-                link: "/courses/cybersecurity",
-                title: "Cybersecurity"
+            {   id: 1134,
+                link: "/courses/data-science-and-analytics",
+                title: "Data Science and Analytics",
             },
-            {
-                id: 1135,
-                link: "/courses/web-development",
-                title: "Web Development"
-            },
-            {
-                id: 1136,
-                link: "/courses/software-development",
-                title: "Software Development"
-            },
-            {
-                id: 1137,
-                link: "/courses/office-applications",
-                title: "Office Applications"
-            },
-            {
-                id: 1138,
-                link: "/courses/data-analytics-and-ai",
-                title: "Data Analytics and AI"
-            },
-            {
-                id: 1139,
-                link: "/courses/cloud-computing",
-                title: "Cloud Computing"
-            },
-            {
-                id: 1140,
-                link: "/courses/it-service-management",
-                title: "IT Service Management"
-            },
-            {
-                id: 1141,
+            {   id: 1135,
                 link: "/courses/project-management",
-                title: "Project Management"
+                title: "Project Management",
+            },
+            {   id: 1136,
+                link: "/courses/database-administration",
+                title: "Database Administration",
+            },
+            {   id: 1137,
+                link: "/courses/it-service-management",
+                title: "IT Service Management",
+            },
+            {   id: 1138,
+                link: "/courses/business-analysis",
+                title: "Business Analysis",
+            },
+            {   id: 1139,
+                link: "/courses/leadership",
+                title: "Leadership",
+            },
+            {   id: 1140,
+                link: "/courses/design",
+                title: "Design",
             },
             {
                 id: 1142,
-                link: "/courses/cerfitications",
+                link: "/cerfitications",
                 title: "Cerfitications"
             },
             {
                 id: 1143,
-                link: "/courses/vendors",
+                link: "/vendors",
                 title: "Vendors"
             },
             {
                 id: 1144,
-                link: "/courses/courses-schedule",
+                link: "/courses-schedule",
                 title: "Courses Schedule"
             },
         ]
